@@ -6,3 +6,4 @@ test.ipynb
 .env
 full_metadata.json
 law_vector/chroma.sqlite3
+v1_db구축방식/law_data.db

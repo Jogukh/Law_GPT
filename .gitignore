@@ -1,0 +1,8 @@
+law_vector/index.faiss
+law_vector/index.pkl
+law_vector_with_metadata_test/index.faiss
+law_vector_with_metadata_test/index.pkl
+test.ipynb
+.env
+full_metadata.json
+law_vector/chroma.sqlite3

@@ -1,157 +1,124 @@
 import os
-import json
-import random
-from dotenv import load_dotenv
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
-from chromadb.config import Settings
+from glob import glob
+from langchain_community.document_loaders import JSONLoader
+from langchain_core.documents import Document
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import PromptTemplate
+from langgraph.graph import START, StateGraph
+from typing_extensions import List, TypedDict
 
 # 환경 변수 로드
+from dotenv import load_dotenv
 load_dotenv()
 
-# 임베딩 모델 및 경로 설정
+FOLDER_PATH = os.getenv("FOLDER_PATH", "law_contents")  # 기본 폴더 경로
+VECTOR_STORE_PATH = os.getenv("VECTORSTORE_PATH", "law_vector")
 EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME", "sentence-transformers/all-MiniLM-L6-v2")
-VECTORSTORE_PATH = os.getenv("VECTORSTORE_PATH", "chroma_vectorstore")
-FOLDER_PATH = os.getenv("FOLDER_PATH")
 
-if not FOLDER_PATH:
-    raise ValueError(".env 파일에서 FOLDER_PATH를 설정해야 합니다.")
-
-print(f"VECTORSTORE_PATH: {VECTORSTORE_PATH}")
-print(f"FOLDER_PATH: {FOLDER_PATH}")
-
-embedding_model = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL_NAME)
-
-
-# 텍스트 및 메타데이터 추출 함수
-def extract_texts_and_metadata(folder_path, selected_files=None):
-    texts, metadatas = [], []
-    for root, _, files in os.walk(folder_path):
-        if selected_files:
-            files = [f for f in files if os.path.join(root, f) in selected_files]
+# JSON 데이터 로드 함수 (하위 폴더 포함)
+def load_json_documents(folder_path):
+    """하위 폴더의 모든 JSON 파일을 Document로 로드합니다."""
+    documents = []
+    for root, dirs, files in os.walk(folder_path):  # 폴더 및 하위 폴더 탐색
         for file in files:
-            if file.endswith(".json"):
+            if file.endswith(".json"):  # JSON 파일만 처리
                 file_path = os.path.join(root, file)
-                with open(file_path, "r", encoding="utf-8") as f:
-                    try:
-                        data = json.load(f)
-                        extracted_texts = extract_text_from_json(data)
-                        for text in extracted_texts:
-                            texts.append(text)
-                            metadatas.append({"source": file_path})
-                    except Exception as e:
-                        print(f"파일 처리 중 오류 발생: {file_path}, {e}")
-    return texts, metadatas
+                loader = JSONLoader(
+                    file_path=file_path,
+                    jq_schema='.["본문"]["법령"]["조문내용"][]',  # 특수 문자를 처리하도록 수정
+                    metadata_func=lambda record, metadata: {
+                        "법령명": record.get("법령명", "알 수 없음"),
+                        "조문번호": record.get("조문번호", "알 수 없음"),
+                        "source": file_path,
+                    }
+                )
+                documents.extend(loader.load())
+    return documents
 
+# 데이터 로드
+try:
+    docs = load_json_documents(FOLDER_PATH)
+    print(f"Loaded {len(docs)} documents from JSON files.")
+except Exception as e:
+    print(f"Error loading documents: {e}")
+    raise
 
-def extract_text_from_json(data):
-    texts = []
-    if isinstance(data, dict):
-        for key, value in data.items():
-            texts.extend(extract_text_from_json(value))
-    elif isinstance(data, list):
-        for item in data:
-            texts.extend(extract_text_from_json(item))
-    elif isinstance(data, str) and data.strip():
-        texts.append(data.strip())
-    return texts
+# 텍스트 분할
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+all_splits = text_splitter.split_documents(docs)
+print(f"Split into {len(all_splits)} text chunks.")
 
+# 유효한 텍스트만 필터링
+all_splits = [doc for doc in all_splits if doc.page_content.strip()]
+if not all_splits:
+    raise ValueError("No valid documents found for vector store.")
+print(f"Filtered down to {len(all_splits)} valid text chunks.")
 
-# 텍스트 분할 함수
-def split_texts(texts):
-    splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=10)
-    documents = [Document(page_content=text) for text in texts]
-    return splitter.split_documents(documents)
+# 벡터 스토어 설정
+embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL_NAME)
+vector_store = Chroma(embedding_function=embeddings, persist_directory=VECTOR_STORE_PATH)
+vector_store.add_documents(all_splits)
 
+# LLM 설정
+llm = ChatOpenAI(model="gpt-4o-mini", api_key=os.getenv("OPENAI_API_KEY"))
 
-# Chroma 초기화 및 데이터 추가
-def create_and_add_to_chroma_store(texts, metadatas, collection_name="law_documents"):
-    if not texts:
-        raise ValueError("유효한 텍스트가 없습니다. 데이터를 확인하세요.")
-    
-    print(f"컬렉션 '{collection_name}' 생성 및 문서 추가 중...")
+# 프롬프트 정의
+prompt_template = """You are a legal assistant specializing in Korean building laws. Answer the user's query based on the provided context.
+If the answer cannot be found, respond with "정보를 찾을 수 없습니다."
 
-    # 로컬 DB 설정
-    settings = Settings(
-        chroma_db_impl="duckdb+parquet",  # 로컬 DB 설정
-        persist_directory=VECTORSTORE_PATH
-    )
+[법령명]: {law_name}
+[문맥]:
+{context}
 
-    # 벡터 스토어 초기화
-    vectorstore = Chroma(
-        collection_name=collection_name,
-        persist_directory=VECTORSTORE_PATH,
-        embedding_function=embedding_model,
-        client_settings=settings
-    )
+[질문]:
+{question}
 
-    # 텍스트를 문서로 변환하여 추가
-    documents = [
-        Document(page_content=text, metadata=metadata) 
-        for text, metadata in zip(texts, metadatas)
-    ]
-    vectorstore.add_documents(documents=documents)
-    vectorstore.persist()
-    print(f"벡터스토어가 '{VECTORSTORE_PATH}' 경로에 저장되었습니다.")
+[답변]:
+"""
+prompt = PromptTemplate.from_template(prompt_template)
 
-# 랜덤 테스트 함수
-def select_random_folder_and_files(base_path, max_files=3):
-    folders = [os.path.join(base_path, folder) for folder in os.listdir(base_path) if os.path.isdir(os.path.join(base_path, folder))]
-    if not folders:
-        raise ValueError("데이터 폴더가 비어 있습니다.")
-    random_folder = random.choice(folders)
-    files = [os.path.join(random_folder, file) for file in os.listdir(random_folder) if file.endswith(".json")]
-    selected_files = random.sample(files, min(len(files), max_files))
-    return random_folder, selected_files
+# 상태(State) 정의
+class State(TypedDict):
+    question: str
+    context: List[Document]
+    answer: str
 
+# 검색 및 생성 단계 정의
+def retrieve(state: State):
+    """사용자의 질문을 기반으로 벡터 스토어에서 관련 문서를 검색합니다."""
+    retrieved_docs = vector_store.similarity_search(state["question"])
+    return {"context": retrieved_docs}
 
-# 문서 검색 함수
-def search_documents(query, collection_name="law_documents", k=3):
-    try:
-        settings = Settings(
-            chroma_db_impl="duckdb+parquet",
-            persist_directory=VECTORSTORE_PATH
+def generate(state: State):
+    """검색된 문서를 바탕으로 LLM을 사용해 답변을 생성합니다."""
+    docs_content = "\n\n".join(doc.page_content for doc in state["context"])
+    if state["context"]:
+        metadata = state["context"][0].metadata
+        formatted_prompt = prompt.format(
+            question=state["question"],
+            context=docs_content,
+            law_name=metadata.get("법령명", "알 수 없음"),
         )
-        vectorstore = Chroma(
-            collection_name=collection_name,
-            persist_directory=VECTORSTORE_PATH,
-            embedding_function=embedding_model,
-            client_settings=settings
-        )
-        results = vectorstore.similarity_search(query=query, k=k)
-        if not results:
-            print("검색 결과가 없습니다.")
-        else:
-            for result in results:
-                print(f"내용: {result.page_content}")
-                print(f"메타데이터: {result.metadata}")
-                print("="*50)
-    except Exception as e:
-        print(f"검색 중 오류 발생: {e}")
+        response = llm.invoke({"text": formatted_prompt})
+        return {"answer": response.content}
+    return {"answer": "정보를 찾을 수 없습니다."}
 
+# LangGraph로 워크플로우 정의
+graph_builder = StateGraph(State).add_sequence([retrieve, generate])
+graph_builder.add_edge(START, "retrieve")
+graph = graph_builder.compile()
 
-# 주요 실행 로직
+# 테스트 실행
+def run_legal_qa(question):
+    """질문을 입력받아 답변을 생성합니다."""
+    response = graph.invoke({"question": question})
+    return response["answer"]
+
+# 테스트
 if __name__ == "__main__":
-    mode = input("실행 모드 선택 (1: 랜덤 테스트, 2: 전체 처리): ")
-    
-    if mode == "1":
-        print("랜덤 테스트 실행 중...")
-        random_folder, selected_files = select_random_folder_and_files(FOLDER_PATH, max_files=3)
-        print(f"랜덤 선택 폴더: {random_folder}")
-        print("선택된 파일:")
-        for file in selected_files:
-            print(f"  - {file}")
-        texts, metadatas = extract_texts_and_metadata(FOLDER_PATH, selected_files=selected_files)
-    elif mode == "2":
-        print("전체 데이터 처리 중...")
-        texts, metadatas = extract_texts_and_metadata(FOLDER_PATH)
-    else:
-        raise ValueError("잘못된 모드 선택. 1 또는 2를 입력하세요.")
-    
-    print(f"총 텍스트 개수: {len(texts)}")
-    create_and_add_to_chroma_store(texts, metadatas, collection_name="law_documents")
-    
-    query = input("검색어를 입력하세요: ")
-    search_documents(query=query, collection_name="law_documents")
+    question = "다중생활시설에 대한 건축 기준은 무엇인가요?"
+    answer = run_legal_qa(question)
+    print(f"질문: {question}\n답변: {answer}")

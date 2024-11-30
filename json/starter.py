@@ -8,7 +8,7 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-BASE_PATH = "법령자료"
+BASE_PATH = "/Users/joguk/Library/CloudStorage/OneDrive-우미건설/01. 문서/★ LLM 도입 프로젝트/자동화/법령 json"
 
 def create_directory(base_path, folder_name):
     """

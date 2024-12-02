@@ -1,6 +1,9 @@
+pandas
 python-dotenv
-langchain>=0.0.200
-sentence-transformers>=2.2.2
-chromadb>=0.3.25
-duckdb
-numpy
+torch
+transformers
+langchain
+langchain-chroma
+langchain-huggingface
+langchain-openai
+openai

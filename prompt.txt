@@ -15,6 +15,8 @@ If the context is insufficient, respond with "잘 모르겠습니다."
 [제목]
 [시행일자]
 [내용]
+[출처]
 
 Answer concisely and include references to specific articles or clauses, if available.
 다른 수식어 없이 원문 그대로 가져와서 대답하세요.
+답변을 작성할 때, 관련 법규의 출처를 정확하게 명시해 주세요.

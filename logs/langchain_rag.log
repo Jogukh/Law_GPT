@@ -1,0 +1,52 @@
+2024-12-02 20:39:26,889 - INFO - 사용 중인 디바이스: cpu
+2024-12-02 20:39:28,872 - INFO - Use pytorch device_name: cpu
+2024-12-02 20:39:28,872 - INFO - Load pretrained SentenceTransformer: jhgan/ko-sroberta-nli
+2024-12-02 20:39:31,507 - INFO - 임베딩 모델 'jhgan/ko-sroberta-nli' 로드 완료
+2024-12-02 20:39:31,524 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-02 20:39:31,823 - INFO - Chroma 벡터스토어 로드 완료
+2024-12-02 20:39:32,278 - INFO - 쿼리 실행 중: 폐수 배출 기준?
+2024-12-02 20:39:32,410 - WARNING - Number of requested results 20 is greater than number of elements in index 3, updating n_results = 3
+2024-12-02 20:39:32,431 - INFO - 검색된 문서 수: 3
+2024-12-02 20:39:33,798 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-02 20:39:33,812 - INFO - 
+[LLM 응답]:
+2024-12-02 20:39:33,813 - INFO - content='[제목] 수질오염물질의 배출허용기준 중 별도 배출허용기준 개정·고시  \n[시행일자] 2024년 4월 1일  \n[내용] "이 고시는 발령한 날부터 시행한다." (부칙)' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 68, 'prompt_tokens': 7477, 'total_tokens': 7545, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0705bf87c0', 'finish_reason': 'stop', 'logprobs': None} id='run-7c5fb979-8597-4497-9525-a62a5d2c282b-0' usage_metadata={'input_tokens': 7477, 'output_tokens': 68, 'total_tokens': 7545, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}
+2024-12-02 20:43:43,851 - INFO - 사용 중인 디바이스: cpu
+2024-12-02 20:43:45,734 - INFO - Use pytorch device_name: cpu
+2024-12-02 20:43:45,734 - INFO - Load pretrained SentenceTransformer: jhgan/ko-sroberta-nli
+2024-12-02 20:43:48,774 - INFO - 임베딩 모델 'jhgan/ko-sroberta-nli' 로드 완료
+2024-12-02 20:43:48,793 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-02 20:43:49,085 - INFO - Chroma 벡터스토어 로드 완료
+2024-12-02 20:43:49,521 - INFO - 쿼리 실행 중: 폐수 배출 기준?
+2024-12-02 20:43:49,648 - WARNING - Number of requested results 20 is greater than number of elements in index 3, updating n_results = 3
+2024-12-02 20:43:49,667 - INFO - 검색된 문서 수: 3
+2024-12-02 20:43:51,039 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-02 20:43:51,054 - INFO - 
+[LLM 응답]:
+2024-12-02 20:43:51,055 - INFO - content='[제목] 수질오염물질의 배출허용기준 중 별도 배출허용기준 개정·고시  \n[시행일자] 2024년 4월 1일  \n[내용] "이 고시는 발령한 날부터 시행한다." (부칙)' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 68, 'prompt_tokens': 7477, 'total_tokens': 7545, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0705bf87c0', 'finish_reason': 'stop', 'logprobs': None} id='run-e8a0c71c-b4c3-43fc-b232-360ba274169c-0' usage_metadata={'input_tokens': 7477, 'output_tokens': 68, 'total_tokens': 7545, 'input_token_details': {'audio': 0, 'cache_read': 0}, 'output_token_details': {'audio': 0, 'reasoning': 0}}
+2024-12-02 20:46:11,967 - INFO - 사용 중인 디바이스: cpu
+2024-12-02 20:46:14,141 - INFO - Use pytorch device_name: cpu
+2024-12-02 20:46:14,141 - INFO - Load pretrained SentenceTransformer: jhgan/ko-sroberta-nli
+2024-12-02 20:46:16,749 - INFO - 임베딩 모델 'jhgan/ko-sroberta-nli' 로드 완료
+2024-12-02 20:46:16,768 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-02 20:46:17,061 - INFO - Chroma 벡터스토어 로드 완료
+2024-12-02 20:46:17,500 - INFO - 쿼리 실행 중: 폐수 배출 기준?
+2024-12-02 20:46:17,631 - WARNING - Number of requested results 20 is greater than number of elements in index 3, updating n_results = 3
+2024-12-02 20:46:17,650 - INFO - 검색된 문서 수: 3
+2024-12-02 20:46:22,366 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-02 20:46:22,379 - INFO - 
+[LLM 응답]:
+2024-12-02 20:46:22,380 - INFO - content='[제목] 수질오염물질의 배출허용기준 중 별도 배출허용기준 개정·고시  \n[시행일자] 2024년 4월 1일  \n[내용] 「물환경보전법」 제32조제9항에 따라 수질오염물질의 배출허용기준 중 별도배출허용기준 고시(원주지방환경청 고시 제2023-131호, 2023.10.17.)를 다음과 같이 일부 개정ㆍ고시합니다. 이 고시는 발령한 날부터 시행한다. 원주지방환경청 제2023-131호는 폐지한다.' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 155, 'prompt_tokens': 7477, 'total_tokens': 7632, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 7296}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0705bf87c0', 'finish_reason': 'stop', 'logprobs': None} id='run-80ea9734-56c2-41c4-bdfc-ae901fbbc1df-0' usage_metadata={'input_tokens': 7477, 'output_tokens': 155, 'total_tokens': 7632, 'input_token_details': {'audio': 0, 'cache_read': 7296}, 'output_token_details': {'audio': 0, 'reasoning': 0}}
+2024-12-02 20:48:40,971 - INFO - 사용 중인 디바이스: cpu
+2024-12-02 20:48:42,882 - INFO - Use pytorch device_name: cpu
+2024-12-02 20:48:42,882 - INFO - Load pretrained SentenceTransformer: jhgan/ko-sroberta-nli
+2024-12-02 20:48:46,030 - INFO - 임베딩 모델 'jhgan/ko-sroberta-nli' 로드 완료
+2024-12-02 20:48:46,047 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-02 20:48:46,345 - INFO - Chroma 벡터스토어 로드 완료
+2024-12-02 20:48:46,778 - INFO - 쿼리 실행 중: 폐수 배출 기준?
+2024-12-02 20:48:46,905 - WARNING - Number of requested results 20 is greater than number of elements in index 3, updating n_results = 3
+2024-12-02 20:48:46,924 - INFO - 검색된 문서 수: 3
+2024-12-02 20:48:49,935 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-02 20:48:49,949 - INFO - 
+[LLM 응답]:
+2024-12-02 20:48:49,950 - INFO - content='[제목] 수질오염물질의 배출허용기준 중 별도 배출허용기준 개정·고시  \n[시행일자] 2024년 4월 1일  \n[내용] 「물환경보전법」 제32조제9항에 따라 수질오염물질의 배출허용기준 중 별도배출허용기준 고시(원주지방환경청 고시 제2023-131호, 2023.10.17.)를 다음과 같이 일부 개정ㆍ고시합니다.  \n[출처] 원주지방환경청 고시 제2024-59호' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 146, 'prompt_tokens': 7481, 'total_tokens': 7627, 'completion_tokens_details': {'accepted_prediction_tokens': 0, 'audio_tokens': 0, 'reasoning_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 7296}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0705bf87c0', 'finish_reason': 'stop', 'logprobs': None} id='run-776dca2b-e301-48c8-9e2d-f4962d75b0f6-0' usage_metadata={'input_tokens': 7481, 'output_tokens': 146, 'total_tokens': 7627, 'input_token_details': {'audio': 0, 'cache_read': 7296}, 'output_token_details': {'audio': 0, 'reasoning': 0}}

@@ -59,39 +59,52 @@ logger.info("Chroma 벡터스토어 로드 완료")
 llm = ChatOpenAI(temperature=0.1, model="gpt-4o-mini")
 
 # 질의 수행
-query = "폐수 배출 기준?"
+query = "착공 이전 확인 해야할 사항?"
 logger.info(f"쿼리 실행 중: {query}")
 
 # 검색 수행
-retrieved_docs = vectorstore.similarity_search(query, k=20)
+retrieved_docs = vectorstore.similarity_search(query, k=3)
 if not retrieved_docs:
     logger.error("검색 결과가 없습니다.")
     raise ValueError("검색 결과가 없습니다.")
 logger.info(f"검색된 문서 수: {len(retrieved_docs)}")
 
+# 검색된 문서 정보 로깅 추가
+for idx, doc in enumerate(retrieved_docs, 1):
+    logger.info(f"\n문서 {idx} 정보:")
+    # 전체 메타데이터 출력
+    logger.info(f"전체 메타데이터: {doc.metadata}")
+    
+    # 가능한 모든 출처 관련 키 확인
+    possible_source_keys = ['source', 'Source', '출처', 'filename', 'file_name', 'path']
+    source = next((doc.metadata.get(key) for key in possible_source_keys if key in doc.metadata), '출처 정보 없음')
+    
+    logger.info(f"출처: {source}")
+    logger.info(f"시행일자: {doc.metadata.get('시행일자', '시행일자 없음')}")
+    logger.info(f"문서 내용 미리보기: {doc.page_content[:100]}...")  # 내용 미리보기 추가
+
 # 검색된 문서의 컨텍스트 생성
 def generate_context(docs):
     """
     검색된 문서에서 컨텍스트를 생성.
-    메타데이터를 그대로 포함하여 구성.
-    각 문서의 출처를 명확히 포함.
+    메타데이터와 전체 내용을 포함하여 구성.
     """
     context_list = []
     for doc in docs:
         metadata = doc.metadata
-
-        # 메타데이터를 키-값 쌍으로 정리 (출처 정보만 포함)
-        metadata_text = "\n".join(f"{key}: {value}" for key, value in metadata.items() if value and key.lower() in ['출처', 'source'])
-
-        # 문서의 원본 내용 포함
         content_text = doc.page_content
 
-        # 컨텍스트 구성
+        # 메타데이터에서 출처 정보 추출
+        source_info = "\n".join(f"{key}: {value}" for key, value in metadata.items() 
+                              if value and key.lower() in ['출처', 'source', '시행일자'])
+
+        # 전체 내용을 포함하여 컨텍스트 구성
         context_list.append(
-            f"메타데이터:\n{metadata_text if metadata_text else '출처 정보 없음'}\n\n"
-            f"문서 원본:\n{content_text}\n"
+            f"출처 정보:\n{source_info}\n\n"
+            f"전체 내용:\n{content_text}\n"
         )
-    return "\n\n".join(context_list)
+    
+    return "\n\n---\n\n".join(context_list)  # 문서 구분을 위해 구분자 추가
 
 # 컨텍스트 생성
 context = generate_context(retrieved_docs)
@@ -113,10 +126,6 @@ full_prompt = prompt_template.format(
 # 디버깅: 생성된 프롬프트 확인
 logger.debug("\n[디버깅] 생성된 프롬프트:")
 logger.debug(full_prompt)
-
-# 검색된 문서의 메타데이터 확인
-for idx, doc in enumerate(retrieved_docs):
-    logger.debug(f"문서 {idx + 1} 메타데이터: {doc.metadata}")
 
 # LLM 호출 및 응답 처리
 try:

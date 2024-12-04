@@ -16,6 +16,7 @@ EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME")
 DATA_FOLDER_PATH = os.getenv("FOLDER_PATH")
 RESPONSE_FIELDS_PATH = os.getenv("RESPONSE_FIELDS_PATH")
 TEST_MODE = os.getenv("TEST_MODE", "on").lower() == "on"
+DELETE_STORE = os.getenv("DELETE_STORE", "on").lower() == "on"
 
 if not VECTOR_STORE_PATH:
     raise ValueError("VECTOR_STORE_PATH 환경 변수가 설정되지 않았습니다.")
@@ -26,11 +27,13 @@ if not DATA_FOLDER_PATH:
 if not RESPONSE_FIELDS_PATH:
     raise ValueError("RESPONSE_FIELDS_PATH 환경 변수가 설정되지 않았습니다.")
 
-# 기존 벡터스토어 삭제
-if os.path.exists(VECTOR_STORE_PATH):
+# 기존 벡터스토어 삭제 (옵션에 따라)
+if DELETE_STORE and os.path.exists(VECTOR_STORE_PATH):
     print(f"기존 벡터스토어 삭제 중: {VECTOR_STORE_PATH}")
     shutil.rmtree(VECTOR_STORE_PATH)
     print("기존 벡터스토어 삭제 완료")
+elif os.path.exists(VECTOR_STORE_PATH):
+    print("기존 벡터스토어 유지")
 
 # 임베딩 모델 로드
 embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL_NAME)
@@ -116,13 +119,16 @@ def process_json_with_dynamic_mapping(file_path, output_fields):
 
     # 동적 매핑을 통한 메타데이터 추출
     metadata = generate_dynamic_mapping(flat_data, output_fields)
+    
+    # 파일 이름 추출 및 메타데이터에 추가
+    file_name = os.path.basename(file_path)
+    metadata['file_name'] = file_name
+    
+    print(f"처리 중인 파일: {file_name} (메타데이터 필드 수: {len(metadata)}개)")
 
-    # 디버깅: 추출된 메타데이터 확인
-    print(f"처리된 파일 메타데이터: {metadata}")
-
-    # 문서 생성
+    # 전체 문서 내용 생성 (제한 없음)
     document_content = "\n".join([f"{k}: {v}" for k, v in flat_data.items()])
-
+    
     return Document(page_content=document_content, metadata=metadata)
 
 def load_all_documents_from_folder(folder_path, output_fields):
@@ -134,12 +140,14 @@ def load_all_documents_from_folder(folder_path, output_fields):
         for root, _, files in os.walk(folder_path)
         for file in files if file.endswith(".json")
     ]
-
+    total_files = len(all_files)
+    
     documents = []
-    for file_path in all_files:
-        print(f"파일 처리 중: {file_path}")
+    for idx, file_path in enumerate(all_files, 1):
+        print(f"\r진행률: [{idx}/{total_files}] ({(idx/total_files)*100:.1f}%)", end="")
         doc = process_json_with_dynamic_mapping(file_path, output_fields)
         documents.append(doc)
+    print()  # 진행률 표시 후 줄바꿈
 
     return documents
 
@@ -159,11 +167,14 @@ try:
     else:
         documents = load_all_documents_from_folder(DATA_FOLDER_PATH, RESPONSE_FIELDS)
 
-    print(f"로딩된 문서 수: {len(documents)}")
+    print(f"\n로딩된 문서 수: {len(documents)}")
 
-    print("벡터스토어에 추가 중...")
-    vectorstore.add_documents(documents)
-    print("문서를 벡터스토어에 성공적으로 추가했습니다.")
+    print("\n벡터스토어에 추가 중...")
+    total_docs = len(documents)
+    for idx, doc_batch in enumerate(documents):
+        vectorstore.add_documents([doc_batch])
+        print(f"\r진행률: [{idx+1}/{total_docs}] ({((idx+1)/total_docs)*100:.1f}%)", end="")
+    print("\n문서를 벡터스토어에 성공적으로 추가했습니다.")
 except Exception as e:
     print(f"오류 발생: {e}")
     raise

@@ -1,0 +1,134 @@
+2024-12-06 17:04:19,190 - ERROR - LOCAL_LLM_MODEL_NAME 환경 변수가 설정되지 않았습니다.
+2024-12-06 17:04:29,366 - INFO - 사용 중인 디바이스: cuda
+2024-12-06 17:04:29,400 - INFO - Use pytorch device_name: cuda
+2024-12-06 17:04:29,400 - INFO - Load pretrained SentenceTransformer: jhgan/ko-sroberta-nli
+2024-12-06 17:04:29,402 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-06 17:04:29,613 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/modules.json HTTP/11" 200 0
+2024-12-06 17:04:30,128 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-06 17:04:30,360 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/README.md HTTP/11" 200 0
+2024-12-06 17:04:30,533 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/modules.json HTTP/11" 200 0
+2024-12-06 17:04:30,713 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-06 17:04:30,899 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-06 17:04:31,081 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/config.json HTTP/11" 200 0
+2024-12-06 17:04:31,344 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/model.safetensors HTTP/11" 404 0
+2024-12-06 17:04:31,345 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-06 17:04:31,534 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli HTTP/11" 200 1727
+2024-12-06 17:04:31,565 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-06 17:04:31,723 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/commits/main HTTP/11" 200 1084
+2024-12-06 17:04:31,771 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/revision/main HTTP/11" 200 1727
+2024-12-06 17:04:31,908 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/discussions?p=0 HTTP/11" 200 1040
+2024-12-06 17:04:31,958 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli HTTP/11" 200 1727
+2024-12-06 17:04:32,102 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/commits/refs%2Fpr%2F2 HTTP/11" 200 2049
+2024-12-06 17:04:32,103 - DEBUG - Starting new HTTPS connection (1): safetensors-convert.hf.space:443
+2024-12-06 17:04:32,434 - INFO - 임베딩 모델 'jhgan/ko-sroberta-nli' 로드 완료
+2024-12-06 17:04:32,442 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-06 17:04:32,498 - DEBUG - Starting component System
+2024-12-06 17:04:32,498 - DEBUG - Starting component Posthog
+2024-12-06 17:04:32,498 - DEBUG - Starting component OpenTelemetryClient
+2024-12-06 17:04:32,498 - DEBUG - Starting component SqliteDB
+2024-12-06 17:04:32,504 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-06 17:04:32,504 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-06 17:04:32,504 - DEBUG - Starting component LocalSegmentManager
+2024-12-06 17:04:32,504 - DEBUG - Starting component LocalExecutor
+2024-12-06 17:04:32,504 - DEBUG - Starting component SegmentAPI
+2024-12-06 17:04:32,507 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-06 17:04:32,507 - INFO - Chroma 벡터스토어 로드 완료
+2024-12-06 17:04:32,688 - DEBUG - https://huggingface.co:443 "HEAD /llama3.1/resolve/main/tokenizer_config.json HTTP/11" 401 0
+2024-12-06 17:04:32,854 - DEBUG - https://safetensors-convert.hf.space:443 "POST /call/run HTTP/11" 503 30
+2024-12-06 17:04:33,006 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-06 17:04:37,380 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-06 17:05:38,726 - INFO - 사용 중인 디바이스: cuda
+2024-12-06 17:05:38,761 - INFO - Use pytorch device_name: cuda
+2024-12-06 17:05:38,761 - INFO - Load pretrained SentenceTransformer: jhgan/ko-sroberta-nli
+2024-12-06 17:05:38,762 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-06 17:05:38,945 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/modules.json HTTP/11" 200 0
+2024-12-06 17:05:39,136 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-06 17:05:39,318 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/README.md HTTP/11" 200 0
+2024-12-06 17:05:39,501 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/modules.json HTTP/11" 200 0
+2024-12-06 17:05:39,705 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-06 17:05:39,885 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-06 17:05:40,087 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/config.json HTTP/11" 200 0
+2024-12-06 17:05:40,375 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/model.safetensors HTTP/11" 404 0
+2024-12-06 17:05:40,376 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-06 17:05:40,566 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli HTTP/11" 200 1727
+2024-12-06 17:05:40,615 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-06 17:05:40,749 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/commits/main HTTP/11" 200 1084
+2024-12-06 17:05:40,817 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/revision/main HTTP/11" 200 1727
+2024-12-06 17:05:40,947 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/discussions?p=0 HTTP/11" 200 1040
+2024-12-06 17:05:41,003 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli HTTP/11" 200 1727
+2024-12-06 17:05:41,137 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/commits/refs%2Fpr%2F2 HTTP/11" 200 2049
+2024-12-06 17:05:41,138 - DEBUG - Starting new HTTPS connection (1): safetensors-convert.hf.space:443
+2024-12-06 17:05:41,390 - INFO - 임베딩 모델 'jhgan/ko-sroberta-nli' 로드 완료
+2024-12-06 17:05:41,396 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-06 17:05:41,448 - DEBUG - Starting component System
+2024-12-06 17:05:41,449 - DEBUG - Starting component Posthog
+2024-12-06 17:05:41,449 - DEBUG - Starting component OpenTelemetryClient
+2024-12-06 17:05:41,449 - DEBUG - Starting component SqliteDB
+2024-12-06 17:05:41,454 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-06 17:05:41,454 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-06 17:05:41,454 - DEBUG - Starting component LocalSegmentManager
+2024-12-06 17:05:41,454 - DEBUG - Starting component LocalExecutor
+2024-12-06 17:05:41,454 - DEBUG - Starting component SegmentAPI
+2024-12-06 17:05:41,457 - DEBUG - Collection langchain already exists, returning existing collection.
+2024-12-06 17:05:41,457 - INFO - Chroma 벡터스토어 로드 완료
+2024-12-06 17:05:41,646 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-06 17:05:41,650 - DEBUG - Attempting to acquire lock 139654920161600 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/fd1a0abe1f0ba0ce67a998a371143ea46d8631c0.lock
+2024-12-06 17:05:41,650 - DEBUG - Lock 139654920161600 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/fd1a0abe1f0ba0ce67a998a371143ea46d8631c0.lock
+2024-12-06 17:05:41,837 - DEBUG - https://huggingface.co:443 "GET /hyokwan/llama31_common/resolve/main/tokenizer_config.json HTTP/11" 200 57443
+2024-12-06 17:05:41,840 - DEBUG - Attempting to release lock 139654920161600 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/fd1a0abe1f0ba0ce67a998a371143ea46d8631c0.lock
+2024-12-06 17:05:41,840 - DEBUG - Lock 139654920161600 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/fd1a0abe1f0ba0ce67a998a371143ea46d8631c0.lock
+2024-12-06 17:05:41,904 - DEBUG - https://safetensors-convert.hf.space:443 "POST /call/run HTTP/11" 503 30
+2024-12-06 17:05:41,957 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-06 17:05:42,031 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/tokenizer.json HTTP/11" 200 0
+2024-12-06 17:05:42,032 - DEBUG - Attempting to acquire lock 139655090892768 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/cc06257ab9b15034e91626e2a9458f5f06714489.lock
+2024-12-06 17:05:42,032 - DEBUG - Lock 139655090892768 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/cc06257ab9b15034e91626e2a9458f5f06714489.lock
+2024-12-06 17:05:42,220 - DEBUG - https://huggingface.co:443 "GET /hyokwan/llama31_common/resolve/main/tokenizer.json HTTP/11" 200 9085758
+2024-12-06 17:05:42,728 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-06 17:05:43,413 - DEBUG - Attempting to release lock 139655090892768 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/cc06257ab9b15034e91626e2a9458f5f06714489.lock
+2024-12-06 17:05:43,413 - DEBUG - Lock 139655090892768 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/cc06257ab9b15034e91626e2a9458f5f06714489.lock
+2024-12-06 17:05:43,596 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/tokenizer.model HTTP/11" 404 0
+2024-12-06 17:05:43,785 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/added_tokens.json HTTP/11" 404 0
+2024-12-06 17:05:43,975 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/special_tokens_map.json HTTP/11" 200 0
+2024-12-06 17:05:43,975 - DEBUG - Attempting to acquire lock 139655090388848 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/4eae993ff61a8332ae51d8c6bab81f8064c62e95.lock
+2024-12-06 17:05:43,975 - DEBUG - Lock 139655090388848 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/4eae993ff61a8332ae51d8c6bab81f8064c62e95.lock
+2024-12-06 17:05:44,162 - DEBUG - https://huggingface.co:443 "GET /hyokwan/llama31_common/resolve/main/special_tokens_map.json HTTP/11" 200 342
+2024-12-06 17:05:44,163 - DEBUG - Attempting to release lock 139655090388848 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/4eae993ff61a8332ae51d8c6bab81f8064c62e95.lock
+2024-12-06 17:05:44,163 - DEBUG - Lock 139655090388848 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/4eae993ff61a8332ae51d8c6bab81f8064c62e95.lock
+2024-12-06 17:05:44,513 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/config.json HTTP/11" 200 0
+2024-12-06 17:05:44,515 - DEBUG - Attempting to acquire lock 139655090750896 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/307eb137765ad84162be500081fb13e8712c8a65.lock
+2024-12-06 17:05:44,515 - DEBUG - Lock 139655090750896 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/307eb137765ad84162be500081fb13e8712c8a65.lock
+2024-12-06 17:05:44,704 - DEBUG - https://huggingface.co:443 "GET /hyokwan/llama31_common/resolve/main/config.json HTTP/11" 200 953
+2024-12-06 17:05:44,706 - DEBUG - Attempting to release lock 139655090750896 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/307eb137765ad84162be500081fb13e8712c8a65.lock
+2024-12-06 17:05:44,706 - DEBUG - Lock 139655090750896 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/307eb137765ad84162be500081fb13e8712c8a65.lock
+2024-12-06 17:05:48,502 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/model.safetensors HTTP/11" 404 0
+2024-12-06 17:05:48,685 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/model.safetensors.index.json HTTP/11" 200 0
+2024-12-06 17:05:48,686 - DEBUG - Attempting to acquire lock 139655090889264 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/c4b1c21adf4b759917fabfc88e2c895bd9921732.lock
+2024-12-06 17:05:48,686 - DEBUG - Lock 139655090889264 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/c4b1c21adf4b759917fabfc88e2c895bd9921732.lock
+2024-12-06 17:05:48,878 - DEBUG - https://huggingface.co:443 "GET /hyokwan/llama31_common/resolve/main/model.safetensors.index.json HTTP/11" 200 24248
+2024-12-06 17:05:48,879 - DEBUG - Attempting to release lock 139655090889264 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/c4b1c21adf4b759917fabfc88e2c895bd9921732.lock
+2024-12-06 17:05:48,879 - DEBUG - Lock 139655090889264 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/c4b1c21adf4b759917fabfc88e2c895bd9921732.lock
+2024-12-06 17:05:49,060 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/model-00001-of-00004.safetensors HTTP/11" 302 0
+2024-12-06 17:05:49,061 - DEBUG - Attempting to acquire lock 139654920163952 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/097d16051f83a57f19f95236cf7f208c311ae78dbd3bfe7a36cdd6bae43809bf.lock
+2024-12-06 17:05:49,062 - DEBUG - Lock 139654920163952 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/097d16051f83a57f19f95236cf7f208c311ae78dbd3bfe7a36cdd6bae43809bf.lock
+2024-12-06 17:05:49,064 - DEBUG - Starting new HTTPS connection (1): cdn-lfs-us-1.hf.co:443
+2024-12-06 17:05:49,570 - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/ca/6f/ca6fa86a32574ba0b5529d0925fef0dfea3d1ed3706cca5366284a172bd5ca9a/097d16051f83a57f19f95236cf7f208c311ae78dbd3bfe7a36cdd6bae43809bf?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00001-of-00004.safetensors%3B+filename%3D%22model-00001-of-00004.safetensors%22%3B&Expires=1733731549&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMzczMTU0OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2NhLzZmL2NhNmZhODZhMzI1NzRiYTBiNTUyOWQwOTI1ZmVmMGRmZWEzZDFlZDM3MDZjY2E1MzY2Mjg0YTE3MmJkNWNhOWEvMDk3ZDE2MDUxZjgzYTU3ZjE5Zjk1MjM2Y2Y3ZjIwOGMzMTFhZTc4ZGJkM2JmZTdhMzZjZGQ2YmFlNDM4MDliZj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=SPWbx18wyJChkaXBbtvxUod6qBDHU4oVRZCgfEzFFHx4mLY6-DNXKje7wLWwCNuc-Wj090Ylqv8IWNT6kcrKJ8gYdllOSAMLTjOWTakqmCrxMQ7i2PIenIIdvczKmd~uBD5JYR4Rexs6MLKghXkmBlBa0sEFub1bXo7MNGeP0PYHNkphtkA3WrFNW~hid7l2tddH8tWMn~lXhmprqBePug8q5RBxk5Da-gcevikoUwZ5YdFR5SdbdxWp4ghmmBwbeD5tQPUtRmv2YvB~uP~pD1sb39QPwVDzxasRporSOcy1WDb82y5n9w5qDXD3s7PUuj3OJUWlMWVwFhk6Vn8rUg__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 4976698592
+2024-12-06 17:08:36,388 - DEBUG - Attempting to release lock 139654920163952 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/097d16051f83a57f19f95236cf7f208c311ae78dbd3bfe7a36cdd6bae43809bf.lock
+2024-12-06 17:08:36,388 - DEBUG - Lock 139654920163952 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/097d16051f83a57f19f95236cf7f208c311ae78dbd3bfe7a36cdd6bae43809bf.lock
+2024-12-06 17:08:36,605 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/model-00002-of-00004.safetensors HTTP/11" 302 0
+2024-12-06 17:08:36,606 - DEBUG - Attempting to acquire lock 139655090388800 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/9971b05d49fa29a5de57d2162ef8e0e3c263600bb71309249f77fe0fd236a196.lock
+2024-12-06 17:08:36,606 - DEBUG - Lock 139655090388800 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/9971b05d49fa29a5de57d2162ef8e0e3c263600bb71309249f77fe0fd236a196.lock
+2024-12-06 17:08:36,978 - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/ca/6f/ca6fa86a32574ba0b5529d0925fef0dfea3d1ed3706cca5366284a172bd5ca9a/9971b05d49fa29a5de57d2162ef8e0e3c263600bb71309249f77fe0fd236a196?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00002-of-00004.safetensors%3B+filename%3D%22model-00002-of-00004.safetensors%22%3B&Expires=1733731719&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMzczMTcxOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2NhLzZmL2NhNmZhODZhMzI1NzRiYTBiNTUyOWQwOTI1ZmVmMGRmZWEzZDFlZDM3MDZjY2E1MzY2Mjg0YTE3MmJkNWNhOWEvOTk3MWIwNWQ0OWZhMjlhNWRlNTdkMjE2MmVmOGUwZTNjMjYzNjAwYmI3MTMwOTI0OWY3N2ZlMGZkMjM2YTE5Nj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=LDHGEezR6ztod4lB8QG0u-5k40OmbF9hfZWBS59JKzXnltVmuREd1cES0ssuYs5QoeyJ1mnfeqjnrdYMLJBxg4eEOooKLo6IP2GYwvQZOOfnK30msIKrn6QCA6LJhJR-bG5nCxSqtRgVcQT-35JolSRpzWuWc5IMwdyuzHRWArh3SeYee74tk4iB4vt6MDH876pnxr~o~4IyKRAFRpcTNzL03blzBGkyRpTUWU2MuWDpUwQjWlXjWG~ZQQ5Qo0ohwsl6ZfjxQpLLy5OT9F1s1ixhoHMCrmf~6saNth-FSlFhI~RiFQkq-m692as2jMND0yWz8LdZ6eAEj3p41Xkhyw__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 4999802616
+2024-12-06 17:11:32,199 - DEBUG - Attempting to release lock 139655090388800 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/9971b05d49fa29a5de57d2162ef8e0e3c263600bb71309249f77fe0fd236a196.lock
+2024-12-06 17:11:32,199 - DEBUG - Lock 139655090388800 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/9971b05d49fa29a5de57d2162ef8e0e3c263600bb71309249f77fe0fd236a196.lock
+2024-12-06 17:11:32,416 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/model-00003-of-00004.safetensors HTTP/11" 302 0
+2024-12-06 17:11:32,417 - DEBUG - Attempting to acquire lock 139655090383136 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/cd3f59310d88f3e0f5ab88f9a74e4af99ef7c847eef801150c867ccd6e7e9da4.lock
+2024-12-06 17:11:32,417 - DEBUG - Lock 139655090383136 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/cd3f59310d88f3e0f5ab88f9a74e4af99ef7c847eef801150c867ccd6e7e9da4.lock
+2024-12-06 17:11:32,947 - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/ca/6f/ca6fa86a32574ba0b5529d0925fef0dfea3d1ed3706cca5366284a172bd5ca9a/cd3f59310d88f3e0f5ab88f9a74e4af99ef7c847eef801150c867ccd6e7e9da4?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00003-of-00004.safetensors%3B+filename%3D%22model-00003-of-00004.safetensors%22%3B&Expires=1733731894&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMzczMTg5NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2NhLzZmL2NhNmZhODZhMzI1NzRiYTBiNTUyOWQwOTI1ZmVmMGRmZWEzZDFlZDM3MDZjY2E1MzY2Mjg0YTE3MmJkNWNhOWEvY2QzZjU5MzEwZDg4ZjNlMGY1YWI4OGY5YTc0ZTRhZjk5ZWY3Yzg0N2VlZjgwMTE1MGM4NjdjY2Q2ZTdlOWRhND9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=cKQ0Ezc9svk8KHe5IwkF3iA1OQoIMwBdVlv292YDr9yQmJvsmwHZgnCnxUeE6mh6Sh0c~QZxiMCi~CWFPXZozE5i4etsyq8pJXJMqNiVdVbFlXQALTvamnQ~Xln3CeQxksvecOPpfr95WsT-eeq9XQYJjBHNDyov~ZKQhHPIy26vC-MGhdSE2f5X9xMTswsaQeqixlnKgW3p8MnVr~GoFwTmsdv~9aXk1H1Gy7K8cYh143ahTwP2xHs5IuTObjxoOqSNMqnty~91441Dv3xzhjpRtBXXdvFWemE4NAfGPD~S1XLljC-nM64F~y7ZarSmmZIBdBHq0iwQ~Od-s3-lWA__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 4915916080
+2024-12-06 17:14:31,603 - DEBUG - Attempting to release lock 139655090383136 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/cd3f59310d88f3e0f5ab88f9a74e4af99ef7c847eef801150c867ccd6e7e9da4.lock
+2024-12-06 17:14:31,603 - DEBUG - Lock 139655090383136 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/cd3f59310d88f3e0f5ab88f9a74e4af99ef7c847eef801150c867ccd6e7e9da4.lock
+2024-12-06 17:14:31,791 - DEBUG - https://huggingface.co:443 "HEAD /hyokwan/llama31_common/resolve/main/model-00004-of-00004.safetensors HTTP/11" 302 0
+2024-12-06 17:14:31,792 - DEBUG - Attempting to acquire lock 139655090388656 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/013bc9e3d5d06232d8a358ad3cd323b732255d31e2debe3bf0c6325b88110ae0.lock
+2024-12-06 17:14:31,792 - DEBUG - Lock 139655090388656 acquired on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/013bc9e3d5d06232d8a358ad3cd323b732255d31e2debe3bf0c6325b88110ae0.lock
+2024-12-06 17:14:32,225 - DEBUG - https://cdn-lfs-us-1.hf.co:443 "GET /repos/ca/6f/ca6fa86a32574ba0b5529d0925fef0dfea3d1ed3706cca5366284a172bd5ca9a/013bc9e3d5d06232d8a358ad3cd323b732255d31e2debe3bf0c6325b88110ae0?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00004-of-00004.safetensors%3B+filename%3D%22model-00004-of-00004.safetensors%22%3B&Expires=1733732074&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczMzczMjA3NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zL2NhLzZmL2NhNmZhODZhMzI1NzRiYTBiNTUyOWQwOTI1ZmVmMGRmZWEzZDFlZDM3MDZjY2E1MzY2Mjg0YTE3MmJkNWNhOWEvMDEzYmM5ZTNkNWQwNjIzMmQ4YTM1OGFkM2NkMzIzYjczMjI1NWQzMWUyZGViZTNiZjBjNjMyNWI4ODExMGFlMD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=bBNVWqBw-7AoYyKQUpN0k1wVLbEXVlURp1Ge3PDfOZETEm1OVxrd57pHSF-FZEtdC83t0r4nRHlrUChJsIZOUfKXNu7A4q6uoHYvI-pdkmPcZ86G1TJd9F8Lk~ygaewtCxIqTqw9d4rxoWECvakIf3N7~h33NZE20Tx3U8rQ3z-JtJWyNZII4fUg85oGPzWhUNcJ7PrzKXH1v5jhaiUQT5PXXvtnfhxthwyBX~vchDfQA9hYuslox01Gs~J-DKpTFiK8EPamiU1QpzJHfW3u5Bsu4GzRQzpeTOq1AvlID1tM9676L8NkvNEE~hACPLKSVJWPSHPd2MRhSiZuesgKkg__&Key-Pair-Id=K24J24Z295AEI9 HTTP/11" 200 1168138808
+2024-12-06 17:15:14,200 - DEBUG - Attempting to release lock 139655090388656 on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/013bc9e3d5d06232d8a358ad3cd323b732255d31e2debe3bf0c6325b88110ae0.lock
+2024-12-06 17:15:14,200 - DEBUG - Lock 139655090388656 released on /home/ubuntu-lynn/.cache/huggingface/hub/.locks/models--hyokwan--llama31_common/013bc9e3d5d06232d8a358ad3cd323b732255d31e2debe3bf0c6325b88110ae0.lock

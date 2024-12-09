@@ -1,0 +1,1398 @@
+2024-12-09 15:23:23,540 - INFO - 기존 벡터스토어 삭제 중: /home/ubuntu-lynn/law_vector
+2024-12-09 15:23:23,543 - INFO - 기존 벡터스토어 삭제 완료
+2024-12-09 15:23:23,545 - INFO - 응답 필드 로드 완료: ['법령ID', '공포일자', '공포번호', '언어', '법종구분', '법종구분코드', '법령명_한글', '법령명_한자', '법령명약칭', '제명변경여부', '한글법령여부', '편장절관', '소관부처코드', '소관부처', '전화번호', '시행일자', '제개정구분', '별표편집여부', '공포법령여부', '소관부처명', '소관부처코드', '부서명', '부서연락처', '공동부령구분', '구분코드', '공포번호', '조문번호', '조문여부', '조문제목', '조문시행일자', '조문제개정유형', '조문이동이전', '조문이동이후', '조문변경여부', '조문내용', '항번호', '항제개정유형', '항내용', '호번호', '호내용', '부칙공포일자', '부칙공포번호', '부칙내용', '별표번호', '별표가지번호', '별표구분', '별표제목', '별표서식파일링크', '별표HWP파일명', '별표서식PDF파일링크', '별표PDF파일명', '별표이미지파일명', '별표내용', '개정문내용', '제개정이유내용', '법령키', '법령ID', '공포일자', '공포번호', '언어', '법령명_한글', '법령명_한자', '법종구분코드', '법종구분명', '제명변경여부', '한글법령여부', '편장절관', '소관부처코드', '소관부처', '전화번호', '시행일자', '제개정구분', '조문별시행일자', '별표편집여부', '공포법령여부', '시행일기준편집여부', '조문번호', '조문여부', '조문제목', '조문시행일자', '조문이동이전', '조문이동이후', '조문변경여부', '조문내용', '항번호', '항내용', '호번호', '호내용', '목번호', '목내용', '행정규칙일련번호', '행정규칙명', '행정규칙종류', '행정규칙종류코드', '발령일자', '발령번호', '제개정구분명', '제개정구분코드', '조문형식여부', '행정규칙ID', '소관부처명', '소관부처코드', '상위부처명', '담당부서기관코드', '담당부서기관명', '담당자명', '전화번호', '현행여부', '시행일자', '생성일자', '조문내용', '부칙', '부칙공포일자', '부칙공포번호', '부칙내용', '별표', '별표번호', '별표가지번호', '별표구분', '별표제목', '별표서식파일링크', '별표서식PDF파일링크', '별표내용']
+2024-12-09 15:23:25,511 - INFO - Use pytorch device_name: cuda
+2024-12-09 15:23:25,511 - INFO - Load pretrained SentenceTransformer: jhgan/ko-sroberta-nli
+2024-12-09 15:23:25,513 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-09 15:23:25,746 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/modules.json HTTP/11" 200 0
+2024-12-09 15:23:25,942 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/config_sentence_transformers.json HTTP/11" 200 0
+2024-12-09 15:23:26,127 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/README.md HTTP/11" 200 0
+2024-12-09 15:23:26,312 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/modules.json HTTP/11" 200 0
+2024-12-09 15:23:26,495 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/sentence_bert_config.json HTTP/11" 200 0
+2024-12-09 15:23:26,681 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/adapter_config.json HTTP/11" 404 0
+2024-12-09 15:23:26,863 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/config.json HTTP/11" 200 0
+2024-12-09 15:23:27,152 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/model.safetensors HTTP/11" 404 0
+2024-12-09 15:23:27,153 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2024-12-09 15:23:27,367 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli HTTP/11" 200 1727
+2024-12-09 15:23:27,392 - DEBUG - https://huggingface.co:443 "HEAD /jhgan/ko-sroberta-nli/resolve/main/tokenizer_config.json HTTP/11" 200 0
+2024-12-09 15:23:27,594 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/revision/main HTTP/11" 200 1727
+2024-12-09 15:23:27,601 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/commits/main HTTP/11" 200 1084
+2024-12-09 15:23:27,775 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli HTTP/11" 200 1727
+2024-12-09 15:23:27,804 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/discussions?p=0 HTTP/11" 200 1040
+2024-12-09 15:23:28,002 - DEBUG - https://huggingface.co:443 "GET /api/models/jhgan/ko-sroberta-nli/commits/refs%2Fpr%2F2 HTTP/11" 200 2049
+2024-12-09 15:23:28,002 - DEBUG - Starting new HTTPS connection (1): safetensors-convert.hf.space:443
+2024-12-09 15:23:28,244 - INFO - 임베딩 모델 'jhgan/ko-sroberta-nli' 로드 완료
+2024-12-09 15:23:28,407 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2024-12-09 15:23:28,462 - DEBUG - Starting component System
+2024-12-09 15:23:28,462 - DEBUG - Starting component Posthog
+2024-12-09 15:23:28,462 - DEBUG - Starting component OpenTelemetryClient
+2024-12-09 15:23:28,462 - DEBUG - Starting component SqliteDB
+2024-12-09 15:23:28,780 - DEBUG - https://safetensors-convert.hf.space:443 "POST /call/run HTTP/11" 503 30
+2024-12-09 15:23:28,898 - DEBUG - Starting component SimpleQuotaEnforcer
+2024-12-09 15:23:28,899 - DEBUG - Starting component SimpleRateLimitEnforcer
+2024-12-09 15:23:28,899 - DEBUG - Starting component LocalSegmentManager
+2024-12-09 15:23:28,899 - DEBUG - Starting component LocalExecutor
+2024-12-09 15:23:28,899 - DEBUG - Starting component SegmentAPI
+2024-12-09 15:23:28,929 - INFO - Chroma 벡터스토어 초기화 완료
+2024-12-09 15:23:28,938 - INFO - 문서 처리 중: [1/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/저공해자동차 표지 등에 관한 규정.json
+2024-12-09 15:23:28,938 - INFO - 문서 처리 중: [2/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/굴뚝 원격감시체계 관제센터의 기능 및 운영 등에 관한 규정.json
+2024-12-09 15:23:28,939 - INFO - 문서 처리 중: [3/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/환경위성 개발에 관한 지침.json
+2024-12-09 15:23:28,939 - INFO - 문서 처리 중: [4/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/냉매회수 기술인력 교육기관 지정.json
+2024-12-09 15:23:28,940 - INFO - 문서 처리 중: [5/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기환경보전법.json
+2024-12-09 15:23:28,953 - INFO - 문서 처리 중: [6/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/공회전제한장치의 성능인증 시험방법 및 절차 등에 관한 규정.json
+2024-12-09 15:23:28,954 - INFO - 문서 처리 중: [7/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/연간 저공해자동차 및 무공해자동차 보급목표.json
+2024-12-09 15:23:28,954 - INFO - 문서 처리 중: [8/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/자동차 배출가스 결함확인검사용 자동차 선정 등에 관한 규정.json
+2024-12-09 15:23:28,955 - INFO - 문서 처리 중: [9/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/배출시설의 대기오염물질 배출계수 고시.json
+2024-12-09 15:23:28,956 - INFO - 문서 처리 중: [10/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/비산배출시설 시설관리기준 정기점검 비용에 관한 규정.json
+2024-12-09 15:23:28,957 - INFO - 문서 처리 중: [11/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/공동주택 도장공사 도장방식에 관한 고시.json
+2024-12-09 15:23:28,957 - INFO - 문서 처리 중: [12/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염 예측·발표의 대상지역 및 기준과 내용 등에 관한 고시.json
+2024-12-09 15:23:28,958 - INFO - 문서 처리 중: [13/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/장치 또는 부품의 잔존가치에 해당하는 금액의 산정방법.json
+2024-12-09 15:23:28,958 - INFO - 문서 처리 중: [14/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/휘발성 유기화합물 배출시설의 종류, 시설의 규모, 배출억제·방지시설의 설치 등에 관한 규정.json
+2024-12-09 15:23:28,959 - INFO - 문서 처리 중: [15/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/주유소 유증기 회수설비 검사기관 지정.json
+2024-12-09 15:23:28,959 - INFO - 문서 처리 중: [16/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염측정망 설치·운영지침(2021).json
+2024-12-09 15:23:28,959 - INFO - 문서 처리 중: [17/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/저공해자동차의 연료공급시설.json
+2024-12-09 15:23:28,960 - INFO - 문서 처리 중: [18/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/전기자동차 보급대상 평가에 관한 규정.json
+2024-12-09 15:23:28,961 - INFO - 문서 처리 중: [19/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/자동차연료·첨가제 또는 촉매제의 전자적 보고 및 자료제출에 관한 고시.json
+2024-12-09 15:23:28,961 - INFO - 문서 처리 중: [20/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염도 검사기관 지정.json
+2024-12-09 15:23:28,961 - INFO - 문서 처리 중: [21/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/운행자동차 배출가스저감장치·저공해엔진 인증방법 및 절차 등에 관한 규정.json
+2024-12-09 15:23:28,963 - INFO - 문서 처리 중: [22/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/배출시설 및 방지시설의 운영과 자가측정에 대한 전산기록·보존에 관한 고시.json
+2024-12-09 15:23:28,963 - INFO - 문서 처리 중: [23/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/(산업통상자원부) 냉매판매량 신고 및 특정물질 제조·수입·판매실적 보고 등에 관한 고시.json
+2024-12-09 15:23:28,964 - INFO - 문서 처리 중: [24/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기환경측정망 설치·운영 지침.json
+2024-12-09 15:23:28,964 - INFO - 문서 처리 중: [25/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/가스열펌프 대기오염물질 저감장치 인증방법 및 절차 등에 관한 규정.json
+2024-12-09 15:23:28,964 - INFO - 문서 처리 중: [26/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/농업기계 원동기 인증 및 검사 방법과 절차 등에 관한 규정.json
+2024-12-09 15:23:28,967 - INFO - 문서 처리 중: [27/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/배출가스저감장치의 성능유지확인 검사기준 및 검사방법 등에 관한 규정.json
+2024-12-09 15:23:28,967 - INFO - 문서 처리 중: [28/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/연료용 유류 등의 황함유기준.json
+2024-12-09 15:23:28,968 - INFO - 문서 처리 중: [29/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/자동차연료·첨가제 또는 촉매제의 검사방법에 관한 규정.json
+2024-12-09 15:23:28,969 - INFO - 문서 처리 중: [30/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/냉매사용기기의 냉매관리기준 규정.json
+2024-12-09 15:23:28,969 - INFO - 문서 처리 중: [31/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/냉매회수 기술인력의 교육 등에 관한 규정.json
+2024-12-09 15:23:28,970 - INFO - 문서 처리 중: [32/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/건설기계 원동기 인증 및 검사 방법과 절차 등에 관한 규정.json
+2024-12-09 15:23:28,972 - INFO - 문서 처리 중: [33/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염측정망 이전·설치계획 고시.json
+2024-12-09 15:23:28,973 - INFO - 문서 처리 중: [34/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/주유소 유증기회수설비의 검사방법 등에 관한 규정.json
+2024-12-09 15:23:28,975 - INFO - 문서 처리 중: [35/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염측정망 설치계획 고시.json
+2024-12-09 15:23:28,975 - INFO - 문서 처리 중: [36/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/저공해자동차 의무구매·임차 실적 산정방법에 관한 고시.json
+2024-12-09 15:23:28,976 - INFO - 문서 처리 중: [37/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염 배출시설 관리현황 제출에 관한 규정.json
+2024-12-09 15:23:28,976 - INFO - 문서 처리 중: [38/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/특정경유자동차 등의 저공해 조치 및 보조금 지급 등에 관한 규정.json
+2024-12-09 15:23:28,977 - INFO - 문서 처리 중: [39/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/휘발성유기화합물 배출규제 추가지역 지정에 필요한 세부기준 등에 관한 고시.json
+2024-12-09 15:23:28,978 - INFO - 문서 처리 중: [40/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/환경오염물질배출시설 등에 관한 통합지도·점검규정.json
+2024-12-09 15:23:28,984 - INFO - 문서 처리 중: [41/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/제작자동차 시험검사 및 절차에 관한 규정.json
+2024-12-09 15:23:29,005 - INFO - 문서 처리 중: [42/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기환경측정소 설치계획 고시.json
+2024-12-09 15:23:29,005 - INFO - 문서 처리 중: [43/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/운행차 배출가스 검사 시행요령 등에 관한 규정.json
+2024-12-09 15:23:29,006 - INFO - 문서 처리 중: [44/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/도료 함유 휘발성유기화합물의 면제물질 지정에 관한 규정.json
+2024-12-09 15:23:29,007 - INFO - 문서 처리 중: [45/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염측정망 설치계획.json
+2024-12-09 15:23:29,007 - INFO - 문서 처리 중: [46/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/도료 중 휘발성유기화합물의 함유량 산정방법, 용기 표시사항 등에 관한 고시.json
+2024-12-09 15:23:29,008 - INFO - 문서 처리 중: [47/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/환경보전협회 교육수수료.json
+2024-12-09 15:23:29,008 - INFO - 문서 처리 중: [48/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기환경보전법 시행령.json
+2024-12-09 15:23:29,017 - INFO - 문서 처리 중: [49/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기환경보전법 시행규칙.json
+2024-12-09 15:23:29,060 - INFO - 문서 처리 중: [50/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/자동차 평균에너지소비효율기준·온실가스 배출허용기준 및 기준의 적용·관리 등에 관한 고시.json
+2024-12-09 15:23:29,062 - INFO - 문서 처리 중: [51/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/운행차 수시점검방법과 확인검사대행자 등록에 관한 규정.json
+2024-12-09 15:23:29,063 - INFO - 문서 처리 중: [52/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/휘발성유기화합물 배출규제 추가지역 지정고시.json
+2024-12-09 15:23:29,064 - INFO - 문서 처리 중: [53/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기환경측정망 설치계획 고시.json
+2024-12-09 15:23:29,064 - INFO - 문서 처리 중: [54/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/환경위성센터 운영 규정.json
+2024-12-09 15:23:29,065 - INFO - 문서 처리 중: [55/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/배출부과금 사무처리규정.json
+2024-12-09 15:23:29,066 - INFO - 문서 처리 중: [56/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/2023년도 가격변동지수 및 2024년도 부과금(과징금)산정지수.json
+2024-12-09 15:23:29,066 - INFO - 문서 처리 중: [57/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염물질 심사·평가위원회 운영, 절차 및 지정 등에 관한 규정.json
+2024-12-09 15:23:29,067 - INFO - 문서 처리 중: [58/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/자동차제작자 도장시설의 탄화수소 배출허용기준 준수여부 확인을 위한 배출량 산정방법 등.json
+2024-12-09 15:23:29,067 - INFO - 문서 처리 중: [59/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/전기자동차 배터리 반납 등에 관한 고시.json
+2024-12-09 15:23:29,068 - INFO - 문서 처리 중: [60/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/휘발성유기화합물 지정 고시.json
+2024-12-09 15:23:29,068 - INFO - 문서 처리 중: [61/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기보전특별대책지역 지정 및 동지역내 대기오염저감을 위한 종합대책 고시.json
+2024-12-09 15:23:29,069 - INFO - 문서 처리 중: [62/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/유효굴뚝높이 산정방법 고시.json
+2024-12-09 15:23:29,069 - INFO - 문서 처리 중: [63/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/제작자동차 인증 및 검사 방법과 절차 등에 관한 규정.json
+2024-12-09 15:23:29,075 - INFO - 문서 처리 중: [64/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염물질 배출시설에서 제외되는 밀폐된 진공기반의 용해시설에 대한 고시.json
+2024-12-09 15:23:29,075 - INFO - 문서 처리 중: [65/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/냉매회수기기 구조 및 성능기준에 관한 규정.json
+2024-12-09 15:23:29,075 - INFO - 문서 처리 중: [66/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/사물인터넷 측정기기 관제센터 운영 규정.json
+2024-12-09 15:23:29,076 - INFO - 문서 처리 중: [67/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염측정망 이전 설치계획.json
+2024-12-09 15:23:29,076 - INFO - 문서 처리 중: [68/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/산업용 열병합 발전시설 발전폐열의 지역냉난방 공급 승인에 관한 규정.json
+2024-12-09 15:23:29,077 - INFO - 문서 처리 중: [69/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/(환경부) 냉매판매량 신고 및 특정물질 제조·수입·판매실적 보고 등에 관한 고시.json
+2024-12-09 15:23:29,077 - INFO - 문서 처리 중: [70/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/대기오염 방지시설(연소보조장치)의 성능기준 및 검사방법.json
+2024-12-09 15:23:29,078 - INFO - 문서 처리 중: [71/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/비산먼지 저감대책 추진업무처리규정.json
+2024-12-09 15:23:29,078 - INFO - 문서 처리 중: [72/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/2024년 자동차 배출가스 결함확인검사 대상 차종.json
+2024-12-09 15:23:29,079 - INFO - 문서 처리 중: [73/1357] /home/ubuntu-lynn/law_contents/대기환경보전법/국가대기오염측정망 설치(이전) 계획 고시.json
+2024-12-09 15:23:29,079 - INFO - 문서 처리 중: [74/1357] /home/ubuntu-lynn/law_contents/기계설비법/기계설비 유지관리기준.json
+2024-12-09 15:23:29,081 - INFO - 문서 처리 중: [75/1357] /home/ubuntu-lynn/law_contents/기계설비법/기계설비법 시행규칙.json
+2024-12-09 15:23:29,086 - INFO - 문서 처리 중: [76/1357] /home/ubuntu-lynn/law_contents/기계설비법/기계설비법 시행령.json
+2024-12-09 15:23:29,088 - INFO - 문서 처리 중: [77/1357] /home/ubuntu-lynn/law_contents/기계설비법/기계설비 유지관리교육에 관한 업무 위탁기관 지정.json
+2024-12-09 15:23:29,088 - INFO - 문서 처리 중: [78/1357] /home/ubuntu-lynn/law_contents/기계설비법/기계설비법.json
+2024-12-09 15:23:29,091 - INFO - 문서 처리 중: [79/1357] /home/ubuntu-lynn/law_contents/기계설비법/시공능력평가공시 등의 위탁기관 지정.json
+2024-12-09 15:23:29,091 - INFO - 문서 처리 중: [80/1357] /home/ubuntu-lynn/law_contents/기계설비법/기계설비 기술기준.json
+2024-12-09 15:23:29,094 - INFO - 문서 처리 중: [81/1357] /home/ubuntu-lynn/law_contents/기계설비법/기계설비유지관리자등의 경력신고 및 등급인정 등에 관한 기준.json
+2024-12-09 15:23:29,095 - INFO - 문서 처리 중: [82/1357] /home/ubuntu-lynn/law_contents/기계설비법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:29,095 - INFO - 문서 처리 중: [83/1357] /home/ubuntu-lynn/law_contents/전기안전관리법/전기안전관리자의 직무에 관한 고시.json
+2024-12-09 15:23:29,096 - INFO - 문서 처리 중: [84/1357] /home/ubuntu-lynn/law_contents/전기안전관리법/전기안전관리법 시행령.json
+2024-12-09 15:23:29,099 - INFO - 문서 처리 중: [85/1357] /home/ubuntu-lynn/law_contents/전기안전관리법/전기안전관리자 선임·해임 신고 및 위탁업무 수행기관 지정.json
+2024-12-09 15:23:29,099 - INFO - 문서 처리 중: [86/1357] /home/ubuntu-lynn/law_contents/전기안전관리법/전기설비 검사 및 점검의 방법·절차 등에 관한 고시.json
+2024-12-09 15:23:29,104 - INFO - 문서 처리 중: [87/1357] /home/ubuntu-lynn/law_contents/전기안전관리법/전기안전관리법 시행규칙.json
+2024-12-09 15:23:29,111 - INFO - 문서 처리 중: [88/1357] /home/ubuntu-lynn/law_contents/전기안전관리법/전기설비 원격감시 및 제어 기능에 관한 고시.json
+2024-12-09 15:23:29,112 - INFO - 문서 처리 중: [89/1357] /home/ubuntu-lynn/law_contents/전기안전관리법/한국표준산업분류.json
+2024-12-09 15:23:29,113 - INFO - 문서 처리 중: [90/1357] /home/ubuntu-lynn/law_contents/전기안전관리법/전기안전관리법.json
+2024-12-09 15:23:29,116 - INFO - 문서 처리 중: [91/1357] /home/ubuntu-lynn/law_contents/잔류성유기오염물질관리법/잔류성오염물질 배출량 산정방법 및 절차.json
+2024-12-09 15:23:29,117 - INFO - 문서 처리 중: [92/1357] /home/ubuntu-lynn/law_contents/잔류성유기오염물질관리법/잔류성오염물질 측정망 설치·운영계획.json
+2024-12-09 15:23:29,118 - INFO - 문서 처리 중: [93/1357] /home/ubuntu-lynn/law_contents/잔류성유기오염물질관리법/잔류성오염물질 관리법 시행규칙.json
+2024-12-09 15:23:29,122 - INFO - 문서 처리 중: [94/1357] /home/ubuntu-lynn/law_contents/잔류성유기오염물질관리법/잔류성오염물질 관리법 시행령.json
+2024-12-09 15:23:29,125 - INFO - 문서 처리 중: [95/1357] /home/ubuntu-lynn/law_contents/잔류성유기오염물질관리법/잔류성오염물질의 종류 및 특정면제에 관한 규정.json
+2024-12-09 15:23:29,130 - INFO - 문서 처리 중: [96/1357] /home/ubuntu-lynn/law_contents/잔류성유기오염물질관리법/잔류성오염물질 관리법.json
+2024-12-09 15:23:29,133 - INFO - 문서 처리 중: [97/1357] /home/ubuntu-lynn/law_contents/잔류성유기오염물질관리법/잔류성오염물질 관리에 관한 보고규정.json
+2024-12-09 15:23:29,134 - INFO - 문서 처리 중: [98/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/이동식부탄연소기용 안전밸브 부착 접합용기의 제조·검사 및 충전에 관한 특례기준.json
+2024-12-09 15:23:29,135 - INFO - 문서 처리 중: [99/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스안전관리기준통합고시.json
+2024-12-09 15:23:29,135 - INFO - 문서 처리 중: [100/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스의 품질기준과 품질검사방법 등에 관한 고시.json
+2024-12-09 15:23:29,136 - INFO - 문서 처리 중: [101/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스제조사업의 양도·양수 및 지위 승계 관련 기준 적용에 관한 특례고시.json
+2024-12-09 15:23:29,137 - INFO - 문서 처리 중: [102/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/국립농업과학원 고압가스안전관리규정.json
+2024-12-09 15:23:29,138 - INFO - 문서 처리 중: [103/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스 안전관리법.json
+2024-12-09 15:23:29,144 - INFO - 문서 처리 중: [104/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/수소자동차 충전소시설기준 및 기술기준 등에 관한 특례기준.json
+2024-12-09 15:23:29,144 - INFO - 문서 처리 중: [105/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/융·복합, 패키지형 및 이동식 자동차충전소 시설기준 등에 관한 특례기준.json
+2024-12-09 15:23:29,145 - INFO - 문서 처리 중: [106/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/굴착공사정보지원센터 운영비용 부과기준.json
+2024-12-09 15:23:29,145 - INFO - 문서 처리 중: [107/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/수소자동차 충전소의 안전성능 및 계량성능 평가장치 운용에 관한 특례기준.json
+2024-12-09 15:23:29,146 - INFO - 문서 처리 중: [108/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/액화천연가스용 및 액화질소용 저장탱크의 사용재료에 관한 기준.json
+2024-12-09 15:23:29,146 - INFO - 문서 처리 중: [109/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/「고압가스안전관리법」 제22조의2, 「액화석유가스의 안전관리 및 사업법」제45조, 「도시가스사업법」 제17조의5조에 따른 가스기술기준(상세기준).json
+2024-12-09 15:23:29,146 - INFO - 문서 처리 중: [110/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/무인동력비행장치 및 지게차의 연료용 용기의 제조 및 검사기준에 관한 기준.json
+2024-12-09 15:23:29,147 - INFO - 문서 처리 중: [111/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/HCNG자동차 연구개발용 HCNG자동차충전소의 시설·기술·검사에 관한 특례기준.json
+2024-12-09 15:23:29,147 - INFO - 문서 처리 중: [112/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스 안전관리법 시행규칙.json
+2024-12-09 15:23:29,164 - INFO - 문서 처리 중: [113/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/안전관리부담금의 부과·징수 등에 관한 고시.json
+2024-12-09 15:23:29,165 - INFO - 문서 처리 중: [114/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스 안전관리법, 액화석유가스의 안전관리 및 사업법 및 도시가스사업법의 운영에 관한 규정.json
+2024-12-09 15:23:29,165 - INFO - 문서 처리 중: [115/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스시설 등의 검사수수료 및 교육비 기준.json
+2024-12-09 15:23:29,166 - INFO - 문서 처리 중: [116/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/수소의 안정적 보급·유통을 위한 고압가스 판매시설의 안전관리기준 등에 관한 특례기준.json
+2024-12-09 15:23:29,167 - INFO - 문서 처리 중: [117/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/액화석유가스용 차단기능형등 용기밸브의 안정적 보급.유통 및 사용을 위한 특례기준.json
+2024-12-09 15:23:29,167 - INFO - 문서 처리 중: [118/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스 및 액화석유가스 ISO 탱크 컨테이너의 제조, 충전·운반, 저장·사용에 관한 기준.json
+2024-12-09 15:23:29,168 - INFO - 문서 처리 중: [119/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/공기 호흡기용 용기 안전충전함 충전시설의 시설·기술·검사기준 등에 관한 고시.json
+2024-12-09 15:23:29,168 - INFO - 문서 처리 중: [120/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/액화석유가스용기 색채변경에 관한 특례기준.json
+2024-12-09 15:23:29,169 - INFO - 문서 처리 중: [121/1357] /home/ubuntu-lynn/law_contents/고압가스안전관리법/고압가스 안전관리법 시행령.json
+2024-12-09 15:23:29,174 - INFO - 문서 처리 중: [122/1357] /home/ubuntu-lynn/law_contents/기업활동 규제완화에 관한 특별조치법/환경관리 대행기관의 지정 등에 관한 규칙.json
+2024-12-09 15:23:29,175 - INFO - 문서 처리 중: [123/1357] /home/ubuntu-lynn/law_contents/기업활동 규제완화에 관한 특별조치법/위험물안전관리에 관한 세부기준.json
+2024-12-09 15:23:29,180 - INFO - 문서 처리 중: [124/1357] /home/ubuntu-lynn/law_contents/기업활동 규제완화에 관한 특별조치법/기업활동 규제완화에 관한 특별조치법 시행규칙.json
+2024-12-09 15:23:29,181 - INFO - 문서 처리 중: [125/1357] /home/ubuntu-lynn/law_contents/기업활동 규제완화에 관한 특별조치법/기업활동 규제완화에 관한 특별조치법.json
+2024-12-09 15:23:29,187 - INFO - 문서 처리 중: [126/1357] /home/ubuntu-lynn/law_contents/기업활동 규제완화에 관한 특별조치법/기업활동 규제완화에 관한 특별조치법 시행령.json
+2024-12-09 15:23:29,189 - INFO - 문서 처리 중: [127/1357] /home/ubuntu-lynn/law_contents/기업활동 규제완화에 관한 특별조치법/화학물질의 용기·포장에 대한 표시방법.json
+2024-12-09 15:23:29,190 - INFO - 문서 처리 중: [128/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/예방규정 이행실태 평가 등에 관한 규정.json
+2024-12-09 15:23:29,191 - INFO - 문서 처리 중: [129/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/위험물 운송·운반 시의 위험성 경고표지에 관한 기준.json
+2024-12-09 15:23:29,191 - INFO - 문서 처리 중: [130/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/위험물의 분류 및 표지에 관한 기준.json
+2024-12-09 15:23:29,193 - INFO - 문서 처리 중: [131/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/위험물안전관리법 시행규칙.json
+2024-12-09 15:23:29,207 - INFO - 문서 처리 중: [132/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/위험물 예방행정 처리규정.json
+2024-12-09 15:23:29,209 - INFO - 문서 처리 중: [133/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/위험물안전관리에 관한 세부기준.json
+2024-12-09 15:23:29,213 - INFO - 문서 처리 중: [134/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/위험물안전관리법.json
+2024-12-09 15:23:29,217 - INFO - 문서 처리 중: [135/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/소방청 소관 법률에 따른 행정처분 및 과태료 부과 세부 기준.json
+2024-12-09 15:23:29,217 - INFO - 문서 처리 중: [136/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/위험물안전관리법 시행령.json
+2024-12-09 15:23:29,221 - INFO - 문서 처리 중: [137/1357] /home/ubuntu-lynn/law_contents/위험물안전관리법/위험물 사고조사위원회 운영에 관한 규정.json
+2024-12-09 15:23:29,222 - INFO - 문서 처리 중: [138/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업재해예방시설자금 융자금 지원사업 및 보조금 지급사업 운영규정.json
+2024-12-09 15:23:29,223 - INFO - 문서 처리 중: [139/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/고압가스안전관리기준통합고시.json
+2024-12-09 15:23:29,224 - INFO - 문서 처리 중: [140/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/업무위탁기관의 지정 등에 관한 고시.json
+2024-12-09 15:23:29,224 - INFO - 문서 처리 중: [141/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/콘크리트공사표준안전작업지침.json
+2024-12-09 15:23:29,225 - INFO - 문서 처리 중: [142/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/건축물 해체계획서의 작성 및 감리업무 등에 관한 기준.json
+2024-12-09 15:23:29,226 - INFO - 문서 처리 중: [143/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/유해ㆍ위험작업의 취업 제한에 관한 규칙.json
+2024-12-09 15:23:29,228 - INFO - 문서 처리 중: [144/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/근로자 건강진단 관리규정.json
+2024-12-09 15:23:29,229 - INFO - 문서 처리 중: [145/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/신규화학물질의 유해성·위험성 조사 등에 관한 고시.json
+2024-12-09 15:23:29,230 - INFO - 문서 처리 중: [146/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/건설업 유해·위험방지계획서 중 지도사가 평가·확인 할 수 있는 대상 건설공사의 범위 및 지도사의 요건.json
+2024-12-09 15:23:29,230 - INFO - 문서 처리 중: [147/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업보건의 관리규정.json
+2024-12-09 15:23:29,231 - INFO - 문서 처리 중: [148/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/위험기계·기구 안전인증 고시.json
+2024-12-09 15:23:29,237 - INFO - 문서 처리 중: [149/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/항공위험물운송기술기준.json
+2024-12-09 15:23:29,240 - INFO - 문서 처리 중: [150/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/보호구 안전인증 고시.json
+2024-12-09 15:23:29,247 - INFO - 문서 처리 중: [151/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/특수건강진단기관의 정도관리에 관한 고시.json
+2024-12-09 15:23:29,248 - INFO - 문서 처리 중: [152/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/보호구 자율안전확인 고시.json
+2024-12-09 15:23:29,249 - INFO - 문서 처리 중: [153/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/석면함유제품의 제조·수입·양도·제공 또는 사용 금지에 관한 고시.json
+2024-12-09 15:23:29,249 - INFO - 문서 처리 중: [154/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/공공기관의 안전활동 수준평가에 관한 고시.json
+2024-12-09 15:23:29,250 - INFO - 문서 처리 중: [155/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/안전·보건관리전문기관 및 재해예방 전문지도기관 관리규정.json
+2024-12-09 15:23:29,251 - INFO - 문서 처리 중: [156/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/철골공사표준안전작업지침.json
+2024-12-09 15:23:29,251 - INFO - 문서 처리 중: [157/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/공정안전보고서의 제출·심사·확인 및 이행상태평가 등에 관한 규정.json
+2024-12-09 15:23:29,253 - INFO - 문서 처리 중: [158/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전보건업무 수수료.json
+2024-12-09 15:23:29,254 - INFO - 문서 처리 중: [159/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전보건법.json
+2024-12-09 15:23:29,265 - INFO - 문서 처리 중: [160/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/안전검사 절차에 관한 고시.json
+2024-12-09 15:23:29,268 - INFO - 문서 처리 중: [161/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/방호장치 자율안전기준 고시.json
+2024-12-09 15:23:29,269 - INFO - 문서 처리 중: [162/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/화학물질 및 물리적 인자의 노출기준.json
+2024-12-09 15:23:29,272 - INFO - 문서 처리 중: [163/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/명예산업안전감독관 운영규정.json
+2024-12-09 15:23:29,272 - INFO - 문서 처리 중: [164/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/벌목 표준안전 작업지침.json
+2024-12-09 15:23:29,273 - INFO - 문서 처리 중: [165/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/추락재해방지표준안전작업지침.json
+2024-12-09 15:23:29,273 - INFO - 문서 처리 중: [166/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/철강업에 있어서 수증기 폭발 및 고열물 접촉위험 방지를 위한 기술상의 지침.json
+2024-12-09 15:23:29,274 - INFO - 문서 처리 중: [167/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/주로 하나의 사업자로부터 업무를 의뢰받아 퀵서비스 또는 대리운전업무를 하는 사람의 기준(퀵서비스기사 및 대리운전기사의 전속성 기준).json
+2024-12-09 15:23:29,274 - INFO - 문서 처리 중: [168/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/화학물질의 유해성·위험성 평가에 관한 규정.json
+2024-12-09 15:23:29,275 - INFO - 문서 처리 중: [169/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/석면조사 및 안전성 평가 등에 관한 고시.json
+2024-12-09 15:23:29,275 - INFO - 문서 처리 중: [170/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/위험기계·기구 방호조치 기준.json
+2024-12-09 15:23:29,276 - INFO - 문서 처리 중: [171/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/고기압 작업에 관한 기준.json
+2024-12-09 15:23:29,278 - INFO - 문서 처리 중: [172/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/위험물 선박운송 기준.json
+2024-12-09 15:23:29,287 - INFO - 문서 처리 중: [173/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/근로자 건강진단 실시기준.json
+2024-12-09 15:23:29,288 - INFO - 문서 처리 중: [174/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전지도사 및 산업보건지도사 지도 실적으로 인정할 수 있는 기관·단체에 관한 고시.json
+2024-12-09 15:23:29,289 - INFO - 문서 처리 중: [175/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/발파 표준안전 작업지침.json
+2024-12-09 15:23:29,289 - INFO - 문서 처리 중: [176/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/가설공사 표준안전 작업지침.json
+2024-12-09 15:23:29,290 - INFO - 문서 처리 중: [177/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/근골격계부담작업의 범위 및 유해요인조사 방법에 관한 고시.json
+2024-12-09 15:23:29,291 - INFO - 문서 처리 중: [178/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/가스누출감지경보기 설치에 관한 기술상의 지침.json
+2024-12-09 15:23:29,291 - INFO - 문서 처리 중: [179/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/사무실 공기관리 지침.json
+2024-12-09 15:23:29,291 - INFO - 문서 처리 중: [180/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/공작기계 안전기준 일반에 관한 기술상의 지침.json
+2024-12-09 15:23:29,292 - INFO - 문서 처리 중: [181/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/건설공사 안전보건대장의 작성 등에 관한 고시.json
+2024-12-09 15:23:29,293 - INFO - 문서 처리 중: [182/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전보건기준에 관한 규칙.json
+2024-12-09 15:23:29,329 - INFO - 문서 처리 중: [183/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/한국표준산업분류.json
+2024-12-09 15:23:29,330 - INFO - 문서 처리 중: [184/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/안전검사 고시.json
+2024-12-09 15:23:29,333 - INFO - 문서 처리 중: [185/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/제1차 금속산업 안전작업지침.json
+2024-12-09 15:23:29,334 - INFO - 문서 처리 중: [186/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전보건 강조기간 설정에 관한 규정.json
+2024-12-09 15:23:29,334 - INFO - 문서 처리 중: [187/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/방호장치 안전인증 고시.json
+2024-12-09 15:23:29,348 - INFO - 문서 처리 중: [188/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/외국어로 작성하는 안전보건표지에 관한 규정.json
+2024-12-09 15:23:29,349 - INFO - 문서 처리 중: [189/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/건설업체의 산업재해예방활동 실적 평가기준.json
+2024-12-09 15:23:29,349 - INFO - 문서 처리 중: [190/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/굴착공사 표준안전 작업지침.json
+2024-12-09 15:23:29,350 - INFO - 문서 처리 중: [191/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/정전기재해 예방을 위한 기술상의 지침.json
+2024-12-09 15:23:29,351 - INFO - 문서 처리 중: [192/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/안전인증대상기계 등이 아닌 유해·위험기계등의 안전인증 규정.json
+2024-12-09 15:23:29,351 - INFO - 문서 처리 중: [193/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/건설업 산업안전보건관리비 계상 및 사용기준.json
+2024-12-09 15:23:29,352 - INFO - 문서 처리 중: [194/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/영상표시단말기(VDT) 취급근로자 작업관리지침.json
+2024-12-09 15:23:29,353 - INFO - 문서 처리 중: [195/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/터널공사 표준안전 작업지침-NATM공법.json
+2024-12-09 15:23:29,354 - INFO - 문서 처리 중: [196/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/유해·위험방지계획서 자체심사 및 확인업체 지정대상 건설업체 고시.json
+2024-12-09 15:23:29,354 - INFO - 문서 처리 중: [197/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/저압산업용기계기구의 부속전기설비의 전기재해 예방을 위한 기술상의 지침.json
+2024-12-09 15:23:29,355 - INFO - 문서 처리 중: [198/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업재해통계업무처리규정.json
+2024-12-09 15:23:29,355 - INFO - 문서 처리 중: [199/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/해체공사표준안전작업지침.json
+2024-12-09 15:23:29,356 - INFO - 문서 처리 중: [200/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전·보건표준제정위원회 규정.json
+2024-12-09 15:23:29,356 - INFO - 문서 처리 중: [201/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/화학물질의 분류·표시 및 물질안전보건자료에 관한 기준.json
+2024-12-09 15:23:29,358 - INFO - 문서 처리 중: [202/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/사업장 위험성평가에 관한 지침.json
+2024-12-09 15:23:29,359 - INFO - 문서 처리 중: [203/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/작업환경측정 및 정도관리 등에 관한 고시.json
+2024-12-09 15:23:29,360 - INFO - 문서 처리 중: [204/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/감전재해 예방을 위한 기술상의 지침.json
+2024-12-09 15:23:29,361 - INFO - 문서 처리 중: [205/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전보건법 시행령.json
+2024-12-09 15:23:29,374 - INFO - 문서 처리 중: [206/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전보건법 시행규칙.json
+2024-12-09 15:23:29,403 - INFO - 문서 처리 중: [207/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/안전보건교육규정.json
+2024-12-09 15:23:29,403 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-12-09 15:23:29,405 - INFO - 문서 처리 중: [208/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/산업안전지도사 및 산업보건지도사 시험위원회 구성·운영 등에 관한 규정.json
+2024-12-09 15:23:29,406 - INFO - 문서 처리 중: [209/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/운반하역 표준안전 작업지침.json
+2024-12-09 15:23:29,407 - INFO - 문서 처리 중: [210/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/위험기계·기구 자율안전확인 고시.json
+2024-12-09 15:23:29,412 - INFO - 문서 처리 중: [211/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/제조업 등 유해·위험방지계획서 제출·심사·확인에 관한 고시.json
+2024-12-09 15:23:29,413 - INFO - 문서 처리 중: [212/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/공공행정 등에서 현업업무에 종사하는 사람의 기준.json
+2024-12-09 15:23:29,414 - INFO - 문서 처리 중: [213/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/한국표준직업분류.json
+2024-12-09 15:23:29,414 - INFO - 문서 처리 중: [214/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/안전인증·자율안전확인신고의 절차에 관한 고시.json
+2024-12-09 15:23:29,415 - INFO - 문서 처리 중: [215/1357] /home/ubuntu-lynn/law_contents/산업안전보건법/근로감독관 집무규정(산업안전보건).json
+2024-12-09 15:23:29,418 - INFO - 문서 처리 중: [216/1357] /home/ubuntu-lynn/law_contents/근로기준법/재량근로의 대상 업무.json
+2024-12-09 15:23:29,418 - INFO - 문서 처리 중: [217/1357] /home/ubuntu-lynn/law_contents/근로기준법/근로기준법 시행령.json
+2024-12-09 15:23:29,423 - INFO - 문서 처리 중: [218/1357] /home/ubuntu-lynn/law_contents/근로기준법/근로기준법.json
+2024-12-09 15:23:29,430 - INFO - 문서 처리 중: [219/1357] /home/ubuntu-lynn/law_contents/근로기준법/평균임금산정 특례 고시.json
+2024-12-09 15:23:29,431 - INFO - 문서 처리 중: [220/1357] /home/ubuntu-lynn/law_contents/근로기준법/퇴직의 효력발생시기.json
+2024-12-09 15:23:29,431 - INFO - 문서 처리 중: [221/1357] /home/ubuntu-lynn/law_contents/근로기준법/근로감독관규정.json
+2024-12-09 15:23:29,432 - INFO - 문서 처리 중: [222/1357] /home/ubuntu-lynn/law_contents/근로기준법/통상임금 산정지침.json
+2024-12-09 15:23:29,432 - INFO - 문서 처리 중: [223/1357] /home/ubuntu-lynn/law_contents/근로기준법/한국표준산업분류.json
+2024-12-09 15:23:29,433 - INFO - 문서 처리 중: [224/1357] /home/ubuntu-lynn/law_contents/근로기준법/임금체불사업주 명단 공개 및 체불자료 제공 관련 업무 처리 규정.json
+2024-12-09 15:23:29,433 - INFO - 문서 처리 중: [225/1357] /home/ubuntu-lynn/law_contents/근로기준법/근로기준법 시행규칙.json
+2024-12-09 15:23:29,436 - INFO - 문서 처리 중: [226/1357] /home/ubuntu-lynn/law_contents/근로기준법/특별연장근로 건강보호조치.json
+2024-12-09 15:23:29,437 - INFO - 문서 처리 중: [227/1357] /home/ubuntu-lynn/law_contents/근로기준법/근로감독관증 규칙.json
+2024-12-09 15:23:29,438 - INFO - 문서 처리 중: [228/1357] /home/ubuntu-lynn/law_contents/근로기준법/근로감독관집무규정.json
+2024-12-09 15:23:29,442 - INFO - 문서 처리 중: [229/1357] /home/ubuntu-lynn/law_contents/근로기준법/근로기준법 및 공인노무사법에 따른 과태료의 가중처분에 관한 세부 지침.json
+2024-12-09 15:23:29,443 - INFO - 문서 처리 중: [230/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면안전관리법.json
+2024-12-09 15:23:29,447 - INFO - 문서 처리 중: [231/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면안전관리법 시행규칙.json
+2024-12-09 15:23:29,453 - INFO - 문서 처리 중: [232/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면을 함유할 가능성이 있는 물질.json
+2024-12-09 15:23:29,453 - INFO - 문서 처리 중: [233/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면안전관리교육 위탁기관 및 위탁업무.json
+2024-12-09 15:23:29,454 - INFO - 문서 처리 중: [234/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면함유가능물질 조사·분석을 위한 시료채취 및 분석방법.json
+2024-12-09 15:23:29,454 - INFO - 문서 처리 중: [235/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면해체작업감리인 평가 등에 관한 고시.json
+2024-12-09 15:23:29,455 - INFO - 문서 처리 중: [236/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/(고용노동부) 석면해체작업감리인 기준.json
+2024-12-09 15:23:29,456 - INFO - 문서 처리 중: [237/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면건축물안전관리인 교육비용.json
+2024-12-09 15:23:29,456 - INFO - 문서 처리 중: [238/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/(환경부) 석면해체작업감리인 기준.json
+2024-12-09 15:23:29,457 - INFO - 문서 처리 중: [239/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/폐슬레이트 매립시설의 석면 비산정도 조사방법.json
+2024-12-09 15:23:29,458 - INFO - 문서 처리 중: [240/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/자연발생석면 지질도 작성 방법.json
+2024-12-09 15:23:29,458 - INFO - 문서 처리 중: [241/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/(고용노동부) 가공·변형된 석면함유가능물질의 석면허용기준.json
+2024-12-09 15:23:29,458 - INFO - 문서 처리 중: [242/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면안전관리법 시행령.json
+2024-12-09 15:23:29,463 - INFO - 문서 처리 중: [243/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면건축물의 위해성 평가 및 조치 방법.json
+2024-12-09 15:23:29,463 - INFO - 문서 처리 중: [244/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면 해체·제거 작업 사업장 주변 석면 비산관리를 위한 조사방법.json
+2024-12-09 15:23:29,464 - INFO - 문서 처리 중: [245/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/(국토교통부) 석면해체작업감리인 기준.json
+2024-12-09 15:23:29,465 - INFO - 문서 처리 중: [246/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면해체·제거업자 종사인력의 교육에 관한 규정.json
+2024-12-09 15:23:29,465 - INFO - 문서 처리 중: [247/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/폐슬레이트 포장재 기준 및 포장방법.json
+2024-12-09 15:23:29,466 - INFO - 문서 처리 중: [248/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/석면건축물 실내공기 중 석면 측정방법.json
+2024-12-09 15:23:29,466 - INFO - 문서 처리 중: [249/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/(환경부) 가공·변형된 석면함유가능물질의 석면허용기준.json
+2024-12-09 15:23:29,466 - INFO - 문서 처리 중: [250/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/학교석면안전관리인 교육 위탁기관 및 위탁업무.json
+2024-12-09 15:23:29,467 - INFO - 문서 처리 중: [251/1357] /home/ubuntu-lynn/law_contents/석면안전관리법/자연발생석면 영향조사 방법.json
+2024-12-09 15:23:29,468 - INFO - 문서 처리 중: [252/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양관련전문기관 지정·관리 업무처리지침.json
+2024-12-09 15:23:29,469 - INFO - 문서 처리 중: [253/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양관련전문기관 등의 기술인력 교육에 관한 고시.json
+2024-12-09 15:23:29,470 - INFO - 문서 처리 중: [254/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/오염토양 반입정화시설의 세부설치기준.json
+2024-12-09 15:23:29,470 - INFO - 문서 처리 중: [255/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양정화 검증방법에 관한 고시.json
+2024-12-09 15:23:29,471 - INFO - 문서 처리 중: [256/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양환경보전법 시행령.json
+2024-12-09 15:23:29,475 - INFO - 문서 처리 중: [257/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양환경보전법 시행규칙.json
+2024-12-09 15:23:29,482 - INFO - 문서 처리 중: [258/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양정화비용지원 업무처리 지침.json
+2024-12-09 15:23:29,483 - INFO - 문서 처리 중: [259/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양정밀조사의 세부방법에 관한 규정.json
+2024-12-09 15:23:29,483 - INFO - 문서 처리 중: [260/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/한강수계 수변구역 변경.json
+2024-12-09 15:23:29,484 - INFO - 문서 처리 중: [261/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/금강수계 수변구역 변경.json
+2024-12-09 15:23:29,484 - INFO - 문서 처리 중: [262/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양환경보전법 중 한국환경공단에 위탁하는 업무.json
+2024-12-09 15:23:29,485 - INFO - 문서 처리 중: [263/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/낙동강수계 수변구역 변경.json
+2024-12-09 15:23:29,485 - INFO - 문서 처리 중: [264/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/오염토양 정화계획.json
+2024-12-09 15:23:29,485 - INFO - 문서 처리 중: [265/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/오염토양의 반출정화대상.json
+2024-12-09 15:23:29,486 - INFO - 문서 처리 중: [266/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양오염실태조사지침.json
+2024-12-09 15:23:29,487 - INFO - 문서 처리 중: [267/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/영산강·섬진강수계 수변구역 변경.json
+2024-12-09 15:23:29,487 - INFO - 문서 처리 중: [268/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/특정토양오염관리대상시설 관리지침.json
+2024-12-09 15:23:29,488 - INFO - 문서 처리 중: [269/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/특정토양오염관리대상시설의 토양오염방지시설 및 오염토양의 정화방법 등에 관한 고시.json
+2024-12-09 15:23:29,489 - INFO - 문서 처리 중: [270/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/표토의 침식 현황 조사에 관한 고시.json
+2024-12-09 15:23:29,490 - INFO - 문서 처리 중: [271/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/반출오염토양 전산관리시스템의 운영 및 사용 등에 관한 규정.json
+2024-12-09 15:23:29,491 - INFO - 문서 처리 중: [272/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양정화업 등록·관리 업무처리지침.json
+2024-12-09 15:23:29,492 - INFO - 문서 처리 중: [273/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양지하수정보시스템 구축 및 운영에 관한 규정.json
+2024-12-09 15:23:29,493 - INFO - 문서 처리 중: [274/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양환경평가지침.json
+2024-12-09 15:23:29,493 - INFO - 문서 처리 중: [275/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양환경보전법.json
+2024-12-09 15:23:29,499 - INFO - 문서 처리 중: [276/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양오염관리대상시설 등 조사에 관한 고시.json
+2024-12-09 15:23:29,500 - INFO - 문서 처리 중: [277/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양측정망 설치 및 운영계획.json
+2024-12-09 15:23:29,501 - INFO - 문서 처리 중: [278/1357] /home/ubuntu-lynn/law_contents/토양환경보전법/토양오염물질 위해성평가 지침.json
+2024-12-09 15:23:29,502 - INFO - 문서 처리 중: [279/1357] /home/ubuntu-lynn/law_contents/전기공사업법/전기공사업법.json
+2024-12-09 15:23:29,506 - INFO - 문서 처리 중: [280/1357] /home/ubuntu-lynn/law_contents/전기공사업법/전기공사 표준시장단가 관리규정.json
+2024-12-09 15:23:29,507 - INFO - 문서 처리 중: [281/1357] /home/ubuntu-lynn/law_contents/전기공사업법/전기공사업법 시행령.json
+2024-12-09 15:23:29,510 - INFO - 문서 처리 중: [282/1357] /home/ubuntu-lynn/law_contents/전기공사업법/전기공사업법 시행규칙.json
+2024-12-09 15:23:29,516 - INFO - 문서 처리 중: [283/1357] /home/ubuntu-lynn/law_contents/전기공사업법/(산업통상자원부) 사회보험의 보험료 적용기준.json
+2024-12-09 15:23:29,517 - INFO - 문서 처리 중: [284/1357] /home/ubuntu-lynn/law_contents/전기공사업법/전기공사업운영요령.json
+2024-12-09 15:23:29,518 - INFO - 문서 처리 중: [285/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하안전관리 업무지침.json
+2024-12-09 15:23:29,521 - INFO - 문서 처리 중: [286/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하정보통합체계 협의체 운영규정.json
+2024-12-09 15:23:29,522 - INFO - 문서 처리 중: [287/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하안전관리에 관한 특별법 시행규칙.json
+2024-12-09 15:23:29,525 - INFO - 문서 처리 중: [288/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하안전관리에 관한 특별법 시행령.json
+2024-12-09 15:23:29,531 - INFO - 문서 처리 중: [289/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하정보통합체계 위탁기관 지정 고시.json
+2024-12-09 15:23:29,531 - INFO - 문서 처리 중: [290/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하정보활용지원센터 지정 고시.json
+2024-12-09 15:23:29,532 - INFO - 문서 처리 중: [291/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하안전정보체계 운영규정.json
+2024-12-09 15:23:29,532 - INFO - 문서 처리 중: [292/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하안전관리에 관한 특별법.json
+2024-12-09 15:23:29,536 - INFO - 문서 처리 중: [293/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하공간통합지도 제작 작업규정.json
+2024-12-09 15:23:29,539 - INFO - 문서 처리 중: [294/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/지하안전관리 업무위탁기관 등 지정에 관한 고시.json
+2024-12-09 15:23:29,540 - INFO - 문서 처리 중: [295/1357] /home/ubuntu-lynn/law_contents/지하안전관리에 관한 특별법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:29,540 - INFO - 문서 처리 중: [296/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/하중저항계수설계법에 의한 강구조설계기준.json
+2024-12-09 15:23:29,541 - INFO - 문서 처리 중: [297/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/농업생산기반시설 설계기준(농업용 댐편).json
+2024-12-09 15:23:29,541 - INFO - 문서 처리 중: [298/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국방부 건설기술용역사업자 사업수행능력 세부평가기준.json
+2024-12-09 15:23:29,544 - INFO - 문서 처리 중: [299/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/축사표준설계기술자문위원회 운영지침.json
+2024-12-09 15:23:29,544 - INFO - 문서 처리 중: [300/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/KCS 14 20 00(콘크리트공사 표준시방서).json
+2024-12-09 15:23:29,544 - INFO - 문서 처리 중: [301/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/농업생산기반시설 설계기준(농지배수편).json
+2024-12-09 15:23:29,545 - INFO - 문서 처리 중: [302/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설기술진흥법령에 따른 위탁업무 수행기관 등 지정.json
+2024-12-09 15:23:29,545 - INFO - 문서 처리 중: [303/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/기초과학연구원 건립 기본계획.json
+2024-12-09 15:23:29,546 - INFO - 문서 처리 중: [304/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국가를 당사자로 하는 계약에 관한 법률 등의 기획재정부장관이 정하는 고시금액.json
+2024-12-09 15:23:29,546 - INFO - 문서 처리 중: [305/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/산업·환경설비공사 표준시방서.json
+2024-12-09 15:23:29,546 - INFO - 문서 처리 중: [306/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/지식협력단지 및 문화창조아카데미 조성사업 건설공사 기본계획 고시.json
+2024-12-09 15:23:29,547 - INFO - 문서 처리 중: [307/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설기술 진흥법.json
+2024-12-09 15:23:29,555 - INFO - 문서 처리 중: [308/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설사고조사위원회 운영규정.json
+2024-12-09 15:23:29,556 - INFO - 문서 처리 중: [309/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/「당인리 문화공간 조성」건설공사 기본계획 고시.json
+2024-12-09 15:23:29,556 - INFO - 문서 처리 중: [310/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/조경 설계기준(KDS 34 00 00) 및 조경공사 표준시방서(KCS 34 00 00).json
+2024-12-09 15:23:29,556 - INFO - 문서 처리 중: [311/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설측량 설계기준(KDS 12 00 00).json
+2024-12-09 15:23:29,557 - INFO - 문서 처리 중: [312/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/가설 설계기준.json
+2024-12-09 15:23:29,557 - INFO - 문서 처리 중: [313/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/행정중심복합도시건설청 기술자문위원회 운영규정.json
+2024-12-09 15:23:29,560 - INFO - 문서 처리 중: [314/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/설비(기계) 설계기준(안 KDS 31 25 00∼KDS 31 50 00) 및 설비(기계) 표준시방서(안 KCS 31 10 00∼KCS 31 55 00).json
+2024-12-09 15:23:29,561 - INFO - 문서 처리 중: [315/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/농업역사문화전시체험관 건립사업 건설공사 기본계획 고시.json
+2024-12-09 15:23:29,561 - INFO - 문서 처리 중: [316/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건축기계설비공사 표준시방서.json
+2024-12-09 15:23:29,561 - INFO - 문서 처리 중: [317/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설기술 진흥법 시행령.json
+2024-12-09 15:23:29,578 - INFO - 문서 처리 중: [318/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/농업생산기반시설 설계기준(농지관개편).json
+2024-12-09 15:23:29,578 - INFO - 문서 처리 중: [319/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 시공상세도 작성 지침.json
+2024-12-09 15:23:29,579 - INFO - 문서 처리 중: [320/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/조달청 공공주택 건설사업관리용역사업자 사업수행능력 세부평가기준.json
+2024-12-09 15:23:29,580 - INFO - 문서 처리 중: [321/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/조달청 기술자문위원회 설치 및 운영규정.json
+2024-12-09 15:23:29,582 - INFO - 문서 처리 중: [322/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/KCS 10 00 00(공통공사 표준시방서).json
+2024-12-09 15:23:29,582 - INFO - 문서 처리 중: [323/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 타당성 조사 지침.json
+2024-12-09 15:23:29,583 - INFO - 문서 처리 중: [324/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/상수도공사 표준시방서.json
+2024-12-09 15:23:29,583 - INFO - 문서 처리 중: [325/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국립대한민국임시정부기념관건립 기본계획.json
+2024-12-09 15:23:29,584 - INFO - 문서 처리 중: [326/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 사후평가 시행지침.json
+2024-12-09 15:23:29,585 - INFO - 문서 처리 중: [327/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/특별건설기술심의위원회 운영 및 시공 등 평가훈령.json
+2024-12-09 15:23:29,591 - INFO - 문서 처리 중: [328/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/조달청 건설엔지니어링사업자 사업수행능력 세부평가기준.json
+2024-12-09 15:23:29,592 - INFO - 문서 처리 중: [329/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건축공사 표준시방서.json
+2024-12-09 15:23:29,592 - INFO - 문서 처리 중: [330/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 사업관리방식 검토기준 및 업무수행지침.json
+2024-12-09 15:23:29,596 - INFO - 문서 처리 중: [331/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국립청소년진로직업체험수련원 건립공사 기본계획.json
+2024-12-09 15:23:29,597 - INFO - 문서 처리 중: [332/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/구조물기초설계기준.json
+2024-12-09 15:23:29,597 - INFO - 문서 처리 중: [333/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설기술인 등급 인정 및 교육·훈련 등에 관한 기준.json
+2024-12-09 15:23:29,601 - INFO - 문서 처리 중: [334/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/가설공사 표준시방서.json
+2024-12-09 15:23:29,601 - INFO - 문서 처리 중: [335/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국립호남권청소년디딤센터 건설공사 기본계획 고시.json
+2024-12-09 15:23:29,602 - INFO - 문서 처리 중: [336/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설기술진흥업무 운영규정.json
+2024-12-09 15:23:29,606 - INFO - 문서 처리 중: [337/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/신기술사용협약 등에 관한 규정.json
+2024-12-09 15:23:29,607 - INFO - 문서 처리 중: [338/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/(낙동강유역환경청) 기술자문위원회 운영규정.json
+2024-12-09 15:23:29,609 - INFO - 문서 처리 중: [339/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 시행·관리규정.json
+2024-12-09 15:23:29,610 - INFO - 문서 처리 중: [340/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 안전관리 업무수행 지침.json
+2024-12-09 15:23:29,612 - INFO - 문서 처리 중: [341/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/해양수산부 기술자문위원회 운영규정.json
+2024-12-09 15:23:29,617 - INFO - 문서 처리 중: [342/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/대형공사 등의 입찰방법 심의기준.json
+2024-12-09 15:23:29,618 - INFO - 문서 처리 중: [343/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/KDS 14 30 00(강구조 설계기준(허용응력설계법)).json
+2024-12-09 15:23:29,619 - INFO - 문서 처리 중: [344/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/하수도설계기준.json
+2024-12-09 15:23:29,619 - INFO - 문서 처리 중: [345/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설엔지니어링 대가 등에 관한 기준.json
+2024-12-09 15:23:29,627 - INFO - 문서 처리 중: [346/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국립청소년산림생태체험센터 건설공사기본계획 고시.json
+2024-12-09 15:23:29,628 - INFO - 문서 처리 중: [347/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/가시설 설계기준(KDS 21 00 00) 및 가설공사 표준시방서(KCS 21 00 00).json
+2024-12-09 15:23:29,628 - INFO - 문서 처리 중: [348/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/해양조사·정보업 용역 낙찰자 결정을 위한 세부평가업무 처리규정.json
+2024-12-09 15:23:29,629 - INFO - 문서 처리 중: [349/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설기술용역 하도급 관리지침.json
+2024-12-09 15:23:29,630 - INFO - 문서 처리 중: [350/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/상수도설계기준.json
+2024-12-09 15:23:29,630 - INFO - 문서 처리 중: [351/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/강구조공사 표준시방서(KCS 14 31 00).json
+2024-12-09 15:23:29,631 - INFO - 문서 처리 중: [352/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/(국토교통부) 환경친화적인 도로건설 지침.json
+2024-12-09 15:23:29,632 - INFO - 문서 처리 중: [353/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/하수관로공사 표준시방서.json
+2024-12-09 15:23:29,632 - INFO - 문서 처리 중: [354/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/우정사업조달센터 기술자문위원회 운영지침.json
+2024-12-09 15:23:29,634 - INFO - 문서 처리 중: [355/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/콘크리트 구조기준.json
+2024-12-09 15:23:29,635 - INFO - 문서 처리 중: [356/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/농업생산기반시설 설계기준, 농업생산기반시설공사 표준시방서, 한국농어촌공사 전문시방서 개편 및 코드화.json
+2024-12-09 15:23:29,635 - INFO - 문서 처리 중: [357/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/스마트건설기술 활성화 지침.json
+2024-12-09 15:23:29,637 - INFO - 문서 처리 중: [358/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/터널설계기준(KDS 27 00 00) 및 터널공사 표준시방서(KCS 27 00 00).json
+2024-12-09 15:23:29,637 - INFO - 문서 처리 중: [359/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설엔지니어링 및 시공 평가지침.json
+2024-12-09 15:23:29,640 - INFO - 문서 처리 중: [360/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사비탈면설계기준.json
+2024-12-09 15:23:29,640 - INFO - 문서 처리 중: [361/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국가식품클러스터 기업지원시설 건설공사 기본계획 변경.json
+2024-12-09 15:23:29,641 - INFO - 문서 처리 중: [362/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/농업생산기반정비사업 계획설계기준 기초처리편(그라우팅).json
+2024-12-09 15:23:29,641 - INFO - 문서 처리 중: [363/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국립여성사박물관 건립 건설공사 기본계획 고시.json
+2024-12-09 15:23:29,642 - INFO - 문서 처리 중: [364/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설사업관리 공제 및 보증사업 감독 기준.json
+2024-12-09 15:23:29,643 - INFO - 문서 처리 중: [365/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/콘크리트표준시방서.json
+2024-12-09 15:23:29,643 - INFO - 문서 처리 중: [366/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/토석정보공유시스템 이용요령.json
+2024-12-09 15:23:29,644 - INFO - 문서 처리 중: [367/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/기본계획·기본설계·실시설계 용역사업자의 사업수행능력 세부평가기준.json
+2024-12-09 15:23:29,645 - INFO - 문서 처리 중: [368/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/신기술의 평가기준 및 평가절차 등에 관한 규정.json
+2024-12-09 15:23:29,647 - INFO - 문서 처리 중: [369/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설사업관리 용역사업자의 사업수행능력 세부평가기준.json
+2024-12-09 15:23:29,648 - INFO - 문서 처리 중: [370/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/하천설계기준.json
+2024-12-09 15:23:29,648 - INFO - 문서 처리 중: [371/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설엔지니어링사업자 사업수행능력 세부평가기준.json
+2024-12-09 15:23:29,650 - INFO - 문서 처리 중: [372/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/공동구 표준시방서(KCS 29 00 00).json
+2024-12-09 15:23:29,650 - INFO - 문서 처리 중: [373/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설엔지니어링 손해배상보험 또는 공제 업무요령.json
+2024-12-09 15:23:29,651 - INFO - 문서 처리 중: [374/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국립광주청소년디딤센터 건설공사기본계획 고시.json
+2024-12-09 15:23:29,651 - INFO - 문서 처리 중: [375/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설사업정보 운용지침.json
+2024-12-09 15:23:29,653 - INFO - 문서 처리 중: [376/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/교량 내진설계기준(한계상태설계법)(KDS 24 17 11).json
+2024-12-09 15:23:29,654 - INFO - 문서 처리 중: [377/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/부산항건설사무소 기술자문위원회 운영규정.json
+2024-12-09 15:23:29,654 - INFO - 문서 처리 중: [378/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/환경관리비의 산출기준 및 관리에 관한 지침.json
+2024-12-09 15:23:29,655 - INFO - 문서 처리 중: [379/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/(원주지방환경청) 기술자문위원회 운영규정.json
+2024-12-09 15:23:29,655 - INFO - 문서 처리 중: [380/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/(국토교통부) 환경친화적 철도건설 지침.json
+2024-12-09 15:23:29,656 - INFO - 문서 처리 중: [381/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/인천지방해양수산청 기술자문위원회 운영규정.json
+2024-12-09 15:23:29,658 - INFO - 문서 처리 중: [382/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/행정중심복합도시 건설 안전관리 규정.json
+2024-12-09 15:23:29,658 - INFO - 문서 처리 중: [383/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/(새만금개발청) 기술자문위원회 운영규정.json
+2024-12-09 15:23:29,661 - INFO - 문서 처리 중: [384/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설기술 진흥법 시행규칙.json
+2024-12-09 15:23:29,673 - INFO - 문서 처리 중: [385/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국립청소년생태안전체험센터 건설공사기본계획 고시.json
+2024-12-09 15:23:29,674 - INFO - 문서 처리 중: [386/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/교량 내진설계기준(케이블교량)(KDS 24 17 12).json
+2024-12-09 15:23:29,674 - INFO - 문서 처리 중: [387/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건축전기설비 설계기준.json
+2024-12-09 15:23:29,674 - INFO - 문서 처리 중: [388/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/예비전원설비 설계기준(KDS 31 60 20).json
+2024-12-09 15:23:29,675 - INFO - 문서 처리 중: [389/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국립세계문자박물관 건립공사 기본계획.json
+2024-12-09 15:23:29,675 - INFO - 문서 처리 중: [390/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:29,676 - INFO - 문서 처리 중: [391/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 품질관리규정.json
+2024-12-09 15:23:29,677 - INFO - 문서 처리 중: [392/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/벌점심의위원회 운영규정.json
+2024-12-09 15:23:29,678 - INFO - 문서 처리 중: [393/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/공공 건설공사의 공사기간 산정기준.json
+2024-12-09 15:23:29,679 - INFO - 문서 처리 중: [394/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설기준 코드(설계코드 KDS, 시방코드 KCS).json
+2024-12-09 15:23:29,679 - INFO - 문서 처리 중: [395/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/파주 무대공연 종합아트센터 건립 기본계획 고시.json
+2024-12-09 15:23:29,679 - INFO - 문서 처리 중: [396/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/지반 설계기준(KDS 11 00 00) 및 지반공사 표준시방서(KCS 11 00 00).json
+2024-12-09 15:23:29,680 - INFO - 문서 처리 중: [397/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/설계공모, 기본설계 등의 시행 및 설계의 경제성 등 검토에 관한 지침.json
+2024-12-09 15:23:29,681 - INFO - 문서 처리 중: [398/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 용역관리지침.json
+2024-12-09 15:23:29,682 - INFO - 문서 처리 중: [399/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/도로설계기준(KDS 44 00 00) 및 도로공사 표준시방서(KCS 44 00 00).json
+2024-12-09 15:23:29,682 - INFO - 문서 처리 중: [400/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/정밀안전점검·정밀안전진단 용역사업자의 사업수행능력 세부평가기준.json
+2024-12-09 15:23:29,683 - INFO - 문서 처리 중: [401/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/설비(산업환경) 설계기준(KDS 31 90 00) 및 설비(산업환경) 표준시방서(KCS 31 90 00).json
+2024-12-09 15:23:29,683 - INFO - 문서 처리 중: [402/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/공동구 설계기준(KDS 29 00 00).json
+2024-12-09 15:23:29,684 - INFO - 문서 처리 중: [403/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/물산업 클러스터 조성사업 기본계획 고시.json
+2024-12-09 15:23:29,684 - INFO - 문서 처리 중: [404/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/건설공사 품질관리 업무지침.json
+2024-12-09 15:23:29,694 - INFO - 문서 처리 중: [405/1357] /home/ubuntu-lynn/law_contents/건설기술진흥법/지반 설계기준.json
+2024-12-09 15:23:29,694 - INFO - 문서 처리 중: [406/1357] /home/ubuntu-lynn/law_contents/건축물관리법/건축물관리계획 작성기준.json
+2024-12-09 15:23:29,695 - INFO - 문서 처리 중: [407/1357] /home/ubuntu-lynn/law_contents/건축물관리법/건축물 해체계획서의 작성 및 감리업무 등에 관한 기준.json
+2024-12-09 15:23:29,696 - INFO - 문서 처리 중: [408/1357] /home/ubuntu-lynn/law_contents/건축물관리법/건축물의 화재안전성능보강 방법 등에 관한 기준.json
+2024-12-09 15:23:29,696 - INFO - 문서 처리 중: [409/1357] /home/ubuntu-lynn/law_contents/건축물관리법/건축물관리법 시행규칙.json
+2024-12-09 15:23:29,700 - INFO - 문서 처리 중: [410/1357] /home/ubuntu-lynn/law_contents/건축물관리법/건축물관리법.json
+2024-12-09 15:23:29,705 - INFO - 문서 처리 중: [411/1357] /home/ubuntu-lynn/law_contents/건축물관리법/건축물관리점검지침.json
+2024-12-09 15:23:29,707 - INFO - 문서 처리 중: [412/1357] /home/ubuntu-lynn/law_contents/건축물관리법/건축물관리점검 결과에 대한 평가 운영규정.json
+2024-12-09 15:23:29,709 - INFO - 문서 처리 중: [413/1357] /home/ubuntu-lynn/law_contents/건축물관리법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:29,709 - INFO - 문서 처리 중: [414/1357] /home/ubuntu-lynn/law_contents/건축물관리법/건축물관리법 시행령.json
+2024-12-09 15:23:29,714 - INFO - 문서 처리 중: [415/1357] /home/ubuntu-lynn/law_contents/건축물관리법/중앙건축물사고조사위원회 운영규정.json
+2024-12-09 15:23:29,715 - INFO - 문서 처리 중: [416/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/방염처리업의 방염처리능력 평가 수수료에 관한 고시.json
+2024-12-09 15:23:29,715 - INFO - 문서 처리 중: [417/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설공사업법.json
+2024-12-09 15:23:29,720 - INFO - 문서 처리 중: [418/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설공사업 자본금 확인서 발행 금융기관.json
+2024-12-09 15:23:29,720 - INFO - 문서 처리 중: [419/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/방염물품의 종류 및 처리방법에 따른 실적인정 비율 고시.json
+2024-12-09 15:23:29,721 - INFO - 문서 처리 중: [420/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설의 사업수행능력 평가적용 기준금액.json
+2024-12-09 15:23:29,721 - INFO - 문서 처리 중: [421/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설공사업법 시행령.json
+2024-12-09 15:23:29,725 - INFO - 문서 처리 중: [422/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/자격수첩 및 경력수첩의 발급절차 등에 관한 기준.json
+2024-12-09 15:23:29,727 - INFO - 문서 처리 중: [423/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설공사업법 관련 업무위탁 및 수탁기관 지정.json
+2024-12-09 15:23:29,728 - INFO - 문서 처리 중: [424/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설 자체점검사항 등에 관한 고시.json
+2024-12-09 15:23:29,736 - INFO - 문서 처리 중: [425/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설공사업의 시공능력 평가 수수료에 관한 고시.json
+2024-12-09 15:23:29,736 - INFO - 문서 처리 중: [426/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설공사등의 도급 및 하도급에 관한 고시.json
+2024-12-09 15:23:29,738 - INFO - 문서 처리 중: [427/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/예방소방업무처리규정.json
+2024-12-09 15:23:29,739 - INFO - 문서 처리 중: [428/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설공사업 기업진단 요령.json
+2024-12-09 15:23:29,740 - INFO - 문서 처리 중: [429/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방기술자 실무교육 기준 고시.json
+2024-12-09 15:23:29,740 - INFO - 문서 처리 중: [430/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설공사업법 시행규칙.json
+2024-12-09 15:23:29,750 - INFO - 문서 처리 중: [431/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/엔지니어링사업대가의 기준.json
+2024-12-09 15:23:29,751 - INFO - 문서 처리 중: [432/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방기술자 양성·인정 교육훈련 수수료에 관한 고시.json
+2024-12-09 15:23:29,751 - INFO - 문서 처리 중: [433/1357] /home/ubuntu-lynn/law_contents/소방시설공사업법/소방시설 설계·감리업자의 사업수행능력 세부평가기준.json
+2024-12-09 15:23:29,753 - INFO - 문서 처리 중: [434/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/순환골재 품질기준.json
+2024-12-09 15:23:29,753 - INFO - 문서 처리 중: [435/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/방치폐기물 처리이행보증보험금 산출 등을 위한 폐기물의 종류별 처리단가.json
+2024-12-09 15:23:29,754 - INFO - 문서 처리 중: [436/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/건설폐기물 수집·운반차량 덮개 재질에 관한 고시.json
+2024-12-09 15:23:29,754 - INFO - 문서 처리 중: [437/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/폐기물 전자정보처리 프로그램 운영 및 사용 등에 관한 고시.json
+2024-12-09 15:23:29,755 - INFO - 문서 처리 중: [438/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/순환골재 품질인증업무 처리요령.json
+2024-12-09 15:23:29,756 - INFO - 문서 처리 중: [439/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/공사구간 및 포장면적 계산의 구체적인 방법.json
+2024-12-09 15:23:29,756 - INFO - 문서 처리 중: [440/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/(환경부) 순환골재 등 의무사용건설공사의 순환골재·순환골재 재활용제품 사용용도 및 의무사용량에 관한 고시.json
+2024-12-09 15:23:29,757 - INFO - 문서 처리 중: [441/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/건설폐기물의 재활용촉진에 관한 법률 시행규칙.json
+2024-12-09 15:23:29,764 - INFO - 문서 처리 중: [442/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/환경오염물질배출시설 등에 관한 통합지도·점검규정.json
+2024-12-09 15:23:29,770 - INFO - 문서 처리 중: [443/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/건설폐기물의 재활용촉진에 관한 법률.json
+2024-12-09 15:23:29,775 - INFO - 문서 처리 중: [444/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/건설폐기물처리용역 적격업체 평가기준.json
+2024-12-09 15:23:29,777 - INFO - 문서 처리 중: [445/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/(국토교통부) 순환골재 등 의무사용건설공사의 순환골재·순환골재 재활용제품 사용용도 및 의무사용량에 관한 고시.json
+2024-12-09 15:23:29,777 - INFO - 문서 처리 중: [446/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/건설폐기물 처리업자의 용역이행능력평가 업무처리지침.json
+2024-12-09 15:23:29,778 - INFO - 문서 처리 중: [447/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/건설폐기물의 처리 등에 관한 업무처리지침.json
+2024-12-09 15:23:29,779 - INFO - 문서 처리 중: [448/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/건설폐기물의 재활용촉진에 관한 법률 시행령.json
+2024-12-09 15:23:29,782 - INFO - 문서 처리 중: [449/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/방치폐기물 처리이행보증 업무처리지침.json
+2024-12-09 15:23:29,783 - INFO - 문서 처리 중: [450/1357] /home/ubuntu-lynn/law_contents/건설폐기물의 재활용촉진에 관한 법률/순환골재 품질인증 및 관리에 관한 규칙.json
+2024-12-09 15:23:29,785 - INFO - 문서 처리 중: [451/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(증평일반산업단지).json
+2024-12-09 15:23:29,785 - INFO - 문서 처리 중: [452/1357] /home/ubuntu-lynn/law_contents/하수도법/방류수수질기준 적용을 위한 지역구분.json
+2024-12-09 15:23:29,786 - INFO - 문서 처리 중: [453/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도 배출허용기준 지정·고시.json
+2024-12-09 15:23:29,786 - INFO - 문서 처리 중: [454/1357] /home/ubuntu-lynn/law_contents/하수도법/하수도법 시행규칙.json
+2024-12-09 15:23:29,798 - INFO - 문서 처리 중: [455/1357] /home/ubuntu-lynn/law_contents/하수도법/임진강 단위유역 공공하수처리시설 방류수 수질기준 강화지역 및 대상시설.json
+2024-12-09 15:23:29,799 - INFO - 문서 처리 중: [456/1357] /home/ubuntu-lynn/law_contents/하수도법/금강하류 단위유역 방류수수질기준 강화지역(시설) 고시.json
+2024-12-09 15:23:29,799 - INFO - 문서 처리 중: [457/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(공주 정안제1·제2농공단지).json
+2024-12-09 15:23:29,800 - INFO - 문서 처리 중: [458/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(구례자연드림파크2단지).json
+2024-12-09 15:23:29,800 - INFO - 문서 처리 중: [459/1357] /home/ubuntu-lynn/law_contents/하수도법/영산강상류 단위유역 공공하수처리시설 방류수수질기준 강화지역(시설).json
+2024-12-09 15:23:29,801 - INFO - 문서 처리 중: [460/1357] /home/ubuntu-lynn/law_contents/하수도법/동부경남 단위유역 공공하수처리시설 방류수수질기준 강화지역(시설) 고시.json
+2024-12-09 15:23:29,801 - INFO - 문서 처리 중: [461/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(명학일반산업단지).json
+2024-12-09 15:23:29,801 - INFO - 문서 처리 중: [462/1357] /home/ubuntu-lynn/law_contents/하수도법/하수도법.json
+2024-12-09 15:23:29,809 - INFO - 문서 처리 중: [463/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(광혜원제2농공단지).json
+2024-12-09 15:23:29,809 - INFO - 문서 처리 중: [464/1357] /home/ubuntu-lynn/law_contents/하수도법/(낙동강유역환경청) 수질오염물질의 배출허용기준 중 별도배출허용기준.json
+2024-12-09 15:23:29,809 - INFO - 문서 처리 중: [465/1357] /home/ubuntu-lynn/law_contents/하수도법/(원주지방환경청) 수질오염물질의 배출허용기준 중 별도 배출허용기준 개정·고시.json
+2024-12-09 15:23:29,810 - INFO - 문서 처리 중: [466/1357] /home/ubuntu-lynn/law_contents/하수도법/개인하수처리시설의 재질검사기관 및 성능·재질검사의 수수료에 관한 규정.json
+2024-12-09 15:23:29,810 - INFO - 문서 처리 중: [467/1357] /home/ubuntu-lynn/law_contents/하수도법/하수도 설치를 위한 지하부분 토지사용 보상기준.json
+2024-12-09 15:23:29,811 - INFO - 문서 처리 중: [468/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(당진 합덕일반산업단지).json
+2024-12-09 15:23:29,811 - INFO - 문서 처리 중: [469/1357] /home/ubuntu-lynn/law_contents/하수도법/미호천 단위유역 방류수수질기준 강화지역(시설) 고시.json
+2024-12-09 15:23:29,812 - INFO - 문서 처리 중: [470/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(영암 특화).json
+2024-12-09 15:23:29,812 - INFO - 문서 처리 중: [471/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정(사천산단,사남농공).json
+2024-12-09 15:23:29,813 - INFO - 문서 처리 중: [472/1357] /home/ubuntu-lynn/law_contents/하수도법/금호강 단위유역 공공하수처리시설 방류수 수질기준 강화지역(시설).json
+2024-12-09 15:23:29,813 - INFO - 문서 처리 중: [473/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준(나주시 혁신산업단지).json
+2024-12-09 15:23:29,813 - INFO - 문서 처리 중: [474/1357] /home/ubuntu-lynn/law_contents/하수도법/대청댐 단위유역 방류수수질기준 강화지역(시설) 고시.json
+2024-12-09 15:23:29,814 - INFO - 문서 처리 중: [475/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(세종 첨단일반산업단지).json
+2024-12-09 15:23:29,814 - INFO - 문서 처리 중: [476/1357] /home/ubuntu-lynn/law_contents/하수도법/염에 의한 생태독성 증명에 관한 규정.json
+2024-12-09 15:23:29,815 - INFO - 문서 처리 중: [477/1357] /home/ubuntu-lynn/law_contents/하수도법/공공하수도 관리대행업자 선정 및 대행성과 평가.json
+2024-12-09 15:23:29,816 - INFO - 문서 처리 중: [478/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(예산관작농공단지).json
+2024-12-09 15:23:29,816 - INFO - 문서 처리 중: [479/1357] /home/ubuntu-lynn/law_contents/하수도법/하수관로 유지관리 기준.json
+2024-12-09 15:23:29,817 - INFO - 문서 처리 중: [480/1357] /home/ubuntu-lynn/law_contents/하수도법/(영산강유역환경청) 수질오염물질 배출허용기준 중 별도배출허용기준 지정 통합고시.json
+2024-12-09 15:23:29,817 - INFO - 문서 처리 중: [481/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(진천문백산업단지).json
+2024-12-09 15:23:29,817 - INFO - 문서 처리 중: [482/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정(마산진북산업단지).json
+2024-12-09 15:23:29,818 - INFO - 문서 처리 중: [483/1357] /home/ubuntu-lynn/law_contents/하수도법/하수도용으로 사용 가능한 자재에 관한 고시.json
+2024-12-09 15:23:29,818 - INFO - 문서 처리 중: [484/1357] /home/ubuntu-lynn/law_contents/하수도법/공공하수도의 기술진단비용.json
+2024-12-09 15:23:29,819 - INFO - 문서 처리 중: [485/1357] /home/ubuntu-lynn/law_contents/하수도법/공공하수도 기술진단 업무처리규정.json
+2024-12-09 15:23:29,820 - INFO - 문서 처리 중: [486/1357] /home/ubuntu-lynn/law_contents/하수도법/한강본류 단위유역 방류수수질기준 강화지역(시설) 고시.json
+2024-12-09 15:23:29,820 - INFO - 문서 처리 중: [487/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 통합 지정 고시(경산 및 청주 진주 익산 여수 달성산업단지 공공폐수처리시설 폐수처리구역).json
+2024-12-09 15:23:29,820 - INFO - 문서 처리 중: [488/1357] /home/ubuntu-lynn/law_contents/하수도법/공공환경시설의 기술진단비용.json
+2024-12-09 15:23:29,821 - INFO - 문서 처리 중: [489/1357] /home/ubuntu-lynn/law_contents/하수도법/삽교천 단위유역 방류수수질기준 강화지역(시설) 고시.json
+2024-12-09 15:23:29,821 - INFO - 문서 처리 중: [490/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(서산테크노밸리산단).json
+2024-12-09 15:23:29,822 - INFO - 문서 처리 중: [491/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(장흥 농공단지).json
+2024-12-09 15:23:29,822 - INFO - 문서 처리 중: [492/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(논산 강경농공단지).json
+2024-12-09 15:23:29,822 - INFO - 문서 처리 중: [493/1357] /home/ubuntu-lynn/law_contents/하수도법/일반수도사업 및 공공하수도 운영·관리 실태점검 기준.json
+2024-12-09 15:23:29,823 - INFO - 문서 처리 중: [494/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(구례 용방).json
+2024-12-09 15:23:29,823 - INFO - 문서 처리 중: [495/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(공주보물농공단지).json
+2024-12-09 15:23:29,823 - INFO - 문서 처리 중: [496/1357] /home/ubuntu-lynn/law_contents/하수도법/환경오염물질배출시설 등에 관한 통합지도·점검규정.json
+2024-12-09 15:23:29,830 - INFO - 문서 처리 중: [497/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(논산 동산일반산업단지).json
+2024-12-09 15:23:29,830 - INFO - 문서 처리 중: [498/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(공주 월미1,2농공단지).json
+2024-12-09 15:23:29,831 - INFO - 문서 처리 중: [499/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(테크노폴리스일반산업단지).json
+2024-12-09 15:23:29,831 - INFO - 문서 처리 중: [500/1357] /home/ubuntu-lynn/law_contents/하수도법/동해남부 단위유역 경주시 공공하수처리시설 방류수수질기준 강화 고시.json
+2024-12-09 15:23:29,831 - INFO - 문서 처리 중: [501/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(대전광역시 환경에너지종합타운).json
+2024-12-09 15:23:29,832 - INFO - 문서 처리 중: [502/1357] /home/ubuntu-lynn/law_contents/하수도법/(한강유역환경청) 수질오염물질의 배출허용기준 중 별도배출허용기준.json
+2024-12-09 15:23:29,832 - INFO - 문서 처리 중: [503/1357] /home/ubuntu-lynn/law_contents/하수도법/건축물의 용도별 오수발생량 및 정화조 처리대상인원 산정방법.json
+2024-12-09 15:23:29,833 - INFO - 문서 처리 중: [504/1357] /home/ubuntu-lynn/law_contents/하수도법/새만금 단위유역 공공하수처리시설 방류수 수질기준 강화지역.json
+2024-12-09 15:23:29,833 - INFO - 문서 처리 중: [505/1357] /home/ubuntu-lynn/law_contents/하수도법/남한강하류 단위유역 공공하수처리시설 방류수 수질기준 강화지역 및 대상시설.json
+2024-12-09 15:23:29,834 - INFO - 문서 처리 중: [506/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(당진 석문국가산업단지).json
+2024-12-09 15:23:29,834 - INFO - 문서 처리 중: [507/1357] /home/ubuntu-lynn/law_contents/하수도법/하수도법 시행령.json
+2024-12-09 15:23:29,840 - INFO - 문서 처리 중: [508/1357] /home/ubuntu-lynn/law_contents/하수도법/(대구지방환경청) 수질오염물질의 배출허용기준 중 별도배출허용기준 통합고시.json
+2024-12-09 15:23:29,840 - INFO - 문서 처리 중: [509/1357] /home/ubuntu-lynn/law_contents/하수도법/팔당댐상류 단위유역 방류수수질기준 강화지역(시설).json
+2024-12-09 15:23:29,841 - INFO - 문서 처리 중: [510/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(홍성 일반산업단지).json
+2024-12-09 15:23:29,841 - INFO - 문서 처리 중: [511/1357] /home/ubuntu-lynn/law_contents/하수도법/유역하수도정비계획 세부 단위유역.json
+2024-12-09 15:23:29,841 - INFO - 문서 처리 중: [512/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(장흥 바이오식품산업단지).json
+2024-12-09 15:23:29,842 - INFO - 문서 처리 중: [513/1357] /home/ubuntu-lynn/law_contents/하수도법/동해남부 단위유역(울산광역시) 공공하수처리시설 방류수수질기준 강화지역(시설) 고시.json
+2024-12-09 15:23:29,842 - INFO - 문서 처리 중: [514/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(광혜원산업단지).json
+2024-12-09 15:23:29,842 - INFO - 문서 처리 중: [515/1357] /home/ubuntu-lynn/law_contents/하수도법/(전북지방환경청) 수질오염물질의 배출허용기준 중 별도배출허용기준 개정 통합고시.json
+2024-12-09 15:23:29,843 - INFO - 문서 처리 중: [516/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(공주 탄천일반산업단지).json
+2024-12-09 15:23:29,843 - INFO - 문서 처리 중: [517/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(영광 대마산업단지).json
+2024-12-09 15:23:29,844 - INFO - 문서 처리 중: [518/1357] /home/ubuntu-lynn/law_contents/하수도법/북한강하류 단위유역 공공하수처리시설 방류수 수질기준 강화지역 및 대상시설.json
+2024-12-09 15:23:29,844 - INFO - 문서 처리 중: [519/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(예당일반산업단지).json
+2024-12-09 15:23:29,844 - INFO - 문서 처리 중: [520/1357] /home/ubuntu-lynn/law_contents/하수도법/주방용오물분쇄기의 판매·사용금지.json
+2024-12-09 15:23:29,845 - INFO - 문서 처리 중: [521/1357] /home/ubuntu-lynn/law_contents/하수도법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(예산일반산업단지).json
+2024-12-09 15:23:29,846 - INFO - 문서 처리 중: [522/1357] /home/ubuntu-lynn/law_contents/하수도법/서부경남 단위유역 공공하수처리시설 방류수수질기준 강화지역(시설) 고시.json
+2024-12-09 15:23:29,846 - INFO - 문서 처리 중: [523/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/건강보험요양급여비용의 내역.json
+2024-12-09 15:23:29,846 - INFO - 문서 처리 중: [524/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/진단수당.json
+2024-12-09 15:23:29,847 - INFO - 문서 처리 중: [525/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/전체 근로자의 임금 평균액의 증감률 및 소비자물가변동률.json
+2024-12-09 15:23:29,847 - INFO - 문서 처리 중: [526/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/산업재해보상보험법.json
+2024-12-09 15:23:29,857 - INFO - 문서 처리 중: [527/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/직업재활급여 상한금액.json
+2024-12-09 15:23:29,857 - INFO - 문서 처리 중: [528/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/현장실습생에 대한 산업재해보상보험 적용범위.json
+2024-12-09 15:23:29,858 - INFO - 문서 처리 중: [529/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/자활급여 수급자가 종사하는 사업.json
+2024-12-09 15:23:29,858 - INFO - 문서 처리 중: [530/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/소득확인이 어려운 직종의 노무제공자에 대한 산재보험료 및 보험급여 산정의 기초가 되는 월 보수액 및 평균보수 등.json
+2024-12-09 15:23:29,859 - INFO - 문서 처리 중: [531/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/무급가족종사자에 대한 산재보험료 및 보험급여 산정의 기초가 되는 보수액 및 평균임금.json
+2024-12-09 15:23:29,859 - INFO - 문서 처리 중: [532/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/주로 하나의 사업자로부터 업무를 의뢰받아 퀵서비스 또는 대리운전업무를 하는 사람의 기준(퀵서비스기사 및 대리운전기사의 전속성 기준).json
+2024-12-09 15:23:29,860 - INFO - 문서 처리 중: [533/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/뇌혈관 질병 또는 심장 질병 및 근골격계 질병의 업무상 질병 인정 여부 결정에 필요한 사항.json
+2024-12-09 15:23:29,860 - INFO - 문서 처리 중: [534/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/통상근로계수.json
+2024-12-09 15:23:29,861 - INFO - 문서 처리 중: [535/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/진폐고시임금.json
+2024-12-09 15:23:29,861 - INFO - 문서 처리 중: [536/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/한국표준산업분류.json
+2024-12-09 15:23:29,861 - INFO - 문서 처리 중: [537/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/산업재해보상보험 요양급여 산정기준.json
+2024-12-09 15:23:29,863 - INFO - 문서 처리 중: [538/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/노무제공자의 보수액에서 제외하는 필요경비.json
+2024-12-09 15:23:29,864 - INFO - 문서 처리 중: [539/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/최고·최저 보상기준 금액.json
+2024-12-09 15:23:29,864 - INFO - 문서 처리 중: [540/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/학생연구자에 대한 산재보험료 및 보험급여 산정의 기초가 되는 보수액 및 평균임금.json
+2024-12-09 15:23:29,865 - INFO - 문서 처리 중: [541/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/중·소기업 사업주에 대한 산재보험료 및 보험급여 산정의 기초가 되는 보수액 및 평균임금.json
+2024-12-09 15:23:29,865 - INFO - 문서 처리 중: [542/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/산업재해보상보험법에 따른 간병급여 지급기준.json
+2024-12-09 15:23:29,865 - INFO - 문서 처리 중: [543/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/산업재해보상보험법 시행규칙.json
+2024-12-09 15:23:29,874 - INFO - 문서 처리 중: [544/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/산업재해보상보험법 시행령.json
+2024-12-09 15:23:29,886 - INFO - 문서 처리 중: [545/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/요양비의 보험급여 기준 및 방법.json
+2024-12-09 15:23:29,889 - INFO - 문서 처리 중: [546/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/산업재해보상 및 진폐예방 관계 법령에 따른 행정처분 및 과태료의 가중처분에 관한 세부 지침.json
+2024-12-09 15:23:29,890 - INFO - 문서 처리 중: [547/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/노무제공자 최저 휴업급여 보장액.json
+2024-12-09 15:23:29,890 - INFO - 문서 처리 중: [548/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/산업재해보상보험법에 따른 간병료 지급기준.json
+2024-12-09 15:23:29,891 - INFO - 문서 처리 중: [549/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/한국표준직업분류.json
+2024-12-09 15:23:29,891 - INFO - 문서 처리 중: [550/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/장례비 최고·최저 금액.json
+2024-12-09 15:23:29,891 - INFO - 문서 처리 중: [551/1357] /home/ubuntu-lynn/law_contents/산업재해보상보험법/근로감독관 집무규정(산업안전보건).json
+2024-12-09 15:23:29,893 - INFO - 문서 처리 중: [552/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난안전의무보험의 관리·운용 등에 관한 업무기준.json
+2024-12-09 15:23:29,894 - INFO - 문서 처리 중: [553/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/고용노동부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,894 - INFO - 문서 처리 중: [554/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/행정안전부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,895 - INFO - 문서 처리 중: [555/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/중앙방역대책본부 설치 및 운영에 관한 규정.json
+2024-12-09 15:23:29,896 - INFO - 문서 처리 중: [556/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/위기관리 매뉴얼협의회 운영규정.json
+2024-12-09 15:23:29,896 - INFO - 문서 처리 중: [557/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(행정안전부) 자연재난 복구비용 산정기준.json
+2024-12-09 15:23:29,897 - INFO - 문서 처리 중: [558/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난 및 안전관리 기본법 시행령.json
+2024-12-09 15:23:29,914 - INFO - 문서 처리 중: [559/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/탐색구조본부의 구성 및 운영 규칙.json
+2024-12-09 15:23:29,915 - INFO - 문서 처리 중: [560/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/국가유산청 안전상황실 및 중앙사고수습본부 구성·운영 등에 관한 규정.json
+2024-12-09 15:23:29,915 - INFO - 문서 처리 중: [561/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/법무부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,916 - INFO - 문서 처리 중: [562/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/대책지원본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,916 - INFO - 문서 처리 중: [563/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/중앙안전관리민관협력위원회 운영규정.json
+2024-12-09 15:23:29,917 - INFO - 문서 처리 중: [564/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/의사 집단행동 중앙사고수습본부 설치 및 운영에 관한 규정.json
+2024-12-09 15:23:29,917 - INFO - 문서 처리 중: [565/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/자연재난 구호 및 복구 비용 부담기준 등에 관한 규칙.json
+2024-12-09 15:23:29,918 - INFO - 문서 처리 중: [566/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난 및 안전관리 기본법 시행규칙.json
+2024-12-09 15:23:29,923 - INFO - 문서 처리 중: [567/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/안전관리전문기관 지정 고시.json
+2024-12-09 15:23:29,923 - INFO - 문서 처리 중: [568/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/해양 유·도선 재난에 대한 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,924 - INFO - 문서 처리 중: [569/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/긴급구조대응활동 및 현장지휘에 관한 규칙.json
+2024-12-09 15:23:29,928 - INFO - 문서 처리 중: [570/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/중소벤처기업부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,929 - INFO - 문서 처리 중: [571/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/항공기 사고에 따른 수색·구조 운영규정.json
+2024-12-09 15:23:29,931 - INFO - 문서 처리 중: [572/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(해양수산부) 자연재난 복구비용 산정기준(단가).json
+2024-12-09 15:23:29,931 - INFO - 문서 처리 중: [573/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(산림청) 자연재난 복구비용 산정기준.json
+2024-12-09 15:23:29,932 - INFO - 문서 처리 중: [574/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난안전정보 공동이용 협의회 운영에 관한 규정.json
+2024-12-09 15:23:29,932 - INFO - 문서 처리 중: [575/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/다중이용시설 등의 위기상황 매뉴얼 작성방법 및 기준.json
+2024-12-09 15:23:29,933 - INFO - 문서 처리 중: [576/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/산림청 중앙사고수습본부의 구성 및 운영에 관한 규정.json
+2024-12-09 15:23:29,933 - INFO - 문서 처리 중: [577/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(행정안전부) 사회재난 생활안정지원 항목별 단가.json
+2024-12-09 15:23:29,933 - INFO - 문서 처리 중: [578/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/안전지수 운영 및 활용 지침.json
+2024-12-09 15:23:29,934 - INFO - 문서 처리 중: [579/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/기지국 접속정보의 요청·제공 및 이용 등에 관한 고시.json
+2024-12-09 15:23:29,935 - INFO - 문서 처리 중: [580/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/국방 재난관리 훈령.json
+2024-12-09 15:23:29,936 - INFO - 문서 처리 중: [581/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/국가기반시설 지정(신규, 변경).json
+2024-12-09 15:23:29,937 - INFO - 문서 처리 중: [582/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/헌법재판소 기능연속성계획 수립 및 시행에 관한 규칙.json
+2024-12-09 15:23:29,937 - INFO - 문서 처리 중: [583/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/해양수산부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,938 - INFO - 문서 처리 중: [584/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/국가재난원인조사협의회 운영규정.json
+2024-12-09 15:23:29,938 - INFO - 문서 처리 중: [585/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/국고의 추가지원 가감률 반영기준 등에 관한 규정.json
+2024-12-09 15:23:29,939 - INFO - 문서 처리 중: [586/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난 및 안전관리 기본법.json
+2024-12-09 15:23:29,949 - INFO - 문서 처리 중: [587/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난대비훈련지침.json
+2024-12-09 15:23:29,951 - INFO - 문서 처리 중: [588/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/사회재난 구호 및 복구 비용 부담기준 등에 관한 규정.json
+2024-12-09 15:23:29,952 - INFO - 문서 처리 중: [589/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난관리기준.json
+2024-12-09 15:23:29,953 - INFO - 문서 처리 중: [590/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/긴급구조대응활동 평가에 관한 규정.json
+2024-12-09 15:23:29,954 - INFO - 문서 처리 중: [591/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/자연재난조사 및 복구계획수립 요령.json
+2024-12-09 15:23:29,956 - INFO - 문서 처리 중: [592/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/중앙재난안전대책본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,956 - INFO - 문서 처리 중: [593/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/안전기준심의회 운영규정.json
+2024-12-09 15:23:29,957 - INFO - 문서 처리 중: [594/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/안전기준 등록.json
+2024-12-09 15:23:29,957 - INFO - 문서 처리 중: [595/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/선거관리위원회 기능연속성계획 수립 및 시행에 관한 규칙.json
+2024-12-09 15:23:29,958 - INFO - 문서 처리 중: [596/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/산업통상자원부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,959 - INFO - 문서 처리 중: [597/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/비상위성통신차량 운영규정.json
+2024-12-09 15:23:29,959 - INFO - 문서 처리 중: [598/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/원자력안전위원회 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,960 - INFO - 문서 처리 중: [599/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/항만물류정보 재해복구센터 운영 및 관리 규정.json
+2024-12-09 15:23:29,961 - INFO - 문서 처리 중: [600/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/환경부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,961 - INFO - 문서 처리 중: [601/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/안전신고 포상금 지급에 관한 고시.json
+2024-12-09 15:23:29,962 - INFO - 문서 처리 중: [602/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(행정안전부) 재난지원금 선지급 비율·절차 등에 관한 기준.json
+2024-12-09 15:23:29,962 - INFO - 문서 처리 중: [603/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/수산생물의 표준사육기준.json
+2024-12-09 15:23:29,962 - INFO - 문서 처리 중: [604/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/중앙안전관리위원회 운영규정.json
+2024-12-09 15:23:29,963 - INFO - 문서 처리 중: [605/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난안전분야 전문교육 대행기관 지정·관리 등에 관한 고시.json
+2024-12-09 15:23:29,963 - INFO - 문서 처리 중: [606/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(해양경찰청) 긴급대응협력관 지정 및 운영에 관한 규정.json
+2024-12-09 15:23:29,964 - INFO - 문서 처리 중: [607/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/안전관리기준.json
+2024-12-09 15:23:29,964 - INFO - 문서 처리 중: [608/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/긴급대응협력관 지정 및 운영에 관한 규정.json
+2024-12-09 15:23:29,965 - INFO - 문서 처리 중: [609/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/긴급구조지원기관 능력평가에 관한 규정.json
+2024-12-09 15:23:29,965 - INFO - 문서 처리 중: [610/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/소방청 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,966 - INFO - 문서 처리 중: [611/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/보건복지부 중앙사고수습본부 설치 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,967 - INFO - 문서 처리 중: [612/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/기상청 재난 및 안전관리 업무에 관한 규정.json
+2024-12-09 15:23:29,968 - INFO - 문서 처리 중: [613/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/자연재난 구호 및 복구 비용 부담기준 등에 관한 규정.json
+2024-12-09 15:23:29,971 - INFO - 문서 처리 중: [614/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/안전문화운동 추진 중앙협의회 운영규정.json
+2024-12-09 15:23:29,971 - INFO - 문서 처리 중: [615/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/긴급통신수단 관리지침.json
+2024-12-09 15:23:29,972 - INFO - 문서 처리 중: [616/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/사회재난 생활안정지원 선지급 비율 및 절차 등에 관한 지침.json
+2024-12-09 15:23:29,972 - INFO - 문서 처리 중: [617/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(국토교통부) 자연재난 복구비용 산정기준 및 사회재난 생활안정지원 항목별 단가.json
+2024-12-09 15:23:29,972 - INFO - 문서 처리 중: [618/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난안전의무보험 종합정보시스템 구축·운영 업무위탁 고시.json
+2024-12-09 15:23:29,973 - INFO - 문서 처리 중: [619/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(농림축산식품부) 자연재난 복구비용 산정기준.json
+2024-12-09 15:23:29,973 - INFO - 문서 처리 중: [620/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난관리 의무 위반 처분에 관한 규칙.json
+2024-12-09 15:23:29,974 - INFO - 문서 처리 중: [621/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/지진 재난문자방송 운영규정.json
+2024-12-09 15:23:29,975 - INFO - 문서 처리 중: [622/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/수습지원단 구성 및 운영 규정.json
+2024-12-09 15:23:29,975 - INFO - 문서 처리 중: [623/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/국토교통부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,976 - INFO - 문서 처리 중: [624/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/과학기술정보통신부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,977 - INFO - 문서 처리 중: [625/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/금융위원회 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,977 - INFO - 문서 처리 중: [626/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난현장 표준작전절차 수립운영에 관한 규정.json
+2024-12-09 15:23:29,978 - INFO - 문서 처리 중: [627/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/교육부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,978 - INFO - 문서 처리 중: [628/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/법원기능연속성계획 수립 및 시행에 관한 규칙.json
+2024-12-09 15:23:29,979 - INFO - 문서 처리 중: [629/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난원인조사 실시 및 운영에 관한 규정.json
+2024-12-09 15:23:29,980 - INFO - 문서 처리 중: [630/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/안전정책조정위원회 운영규정.json
+2024-12-09 15:23:29,980 - INFO - 문서 처리 중: [631/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난 및 안전관리 사업 평가자문위원회 구성 및 운영에 관한 고시.json
+2024-12-09 15:23:29,981 - INFO - 문서 처리 중: [632/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난대비훈련 중앙평가단 운영규정.json
+2024-12-09 15:23:29,981 - INFO - 문서 처리 중: [633/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/중앙재난안전상황실 운영 규정.json
+2024-12-09 15:23:29,982 - INFO - 문서 처리 중: [634/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/행정안전부 소관 재난안전분야 연구개발사업 처리규정.json
+2024-12-09 15:23:29,984 - INFO - 문서 처리 중: [635/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난문자방송 기준 및 운영규정.json
+2024-12-09 15:23:29,985 - INFO - 문서 처리 중: [636/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/농림축산식품부 중앙사고수습본부 구성 및 운영 등에 관한 규정.json
+2024-12-09 15:23:29,986 - INFO - 문서 처리 중: [637/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난피해자등의 개인 및 위치정보 요청·제공·이용지침.json
+2024-12-09 15:23:29,986 - INFO - 문서 처리 중: [638/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/경찰 재난관리 규칙.json
+2024-12-09 15:23:29,987 - INFO - 문서 처리 중: [639/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난상황의 보고 대상 지정 고시.json
+2024-12-09 15:23:29,988 - INFO - 문서 처리 중: [640/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난긴급대응단 운영규정.json
+2024-12-09 15:23:29,988 - INFO - 문서 처리 중: [641/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/사회재난 구호 및 복구비용 부담기준 운영지침.json
+2024-12-09 15:23:29,989 - INFO - 문서 처리 중: [642/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/위기·재난·안전관리 종합상황실 운영규정.json
+2024-12-09 15:23:29,990 - INFO - 문서 처리 중: [643/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/중앙재난안전대책본부 중앙재난피해합동조사단 운영규정.json
+2024-12-09 15:23:29,992 - INFO - 문서 처리 중: [644/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/(해양경찰청) 긴급구조지원기관 능력평가에 관한 규정.json
+2024-12-09 15:23:29,992 - INFO - 문서 처리 중: [645/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/해상 응급환자 구급 및 이송 지침.json
+2024-12-09 15:23:29,993 - INFO - 문서 처리 중: [646/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/재난관리정보통신체계 구축·운영사업 사전협의 지침.json
+2024-12-09 15:23:29,994 - INFO - 문서 처리 중: [647/1357] /home/ubuntu-lynn/law_contents/재난 및 안전관리 기본법/국가기반시설 지정.json
+2024-12-09 15:23:29,994 - INFO - 문서 처리 중: [648/1357] /home/ubuntu-lynn/law_contents/주택법/군 주택공급 입주자 선정 훈령.json
+2024-12-09 15:23:29,994 - INFO - 문서 처리 중: [649/1357] /home/ubuntu-lynn/law_contents/주택법/다자녀가구 및 노부모부양 주택 특별공급 운용지침.json
+2024-12-09 15:23:29,995 - INFO - 문서 처리 중: [650/1357] /home/ubuntu-lynn/law_contents/주택법/정비사업 등 필수 발생 비용 산정기준.json
+2024-12-09 15:23:29,996 - INFO - 문서 처리 중: [651/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택 디자인 가이드라인.json
+2024-12-09 15:23:29,996 - INFO - 문서 처리 중: [652/1357] /home/ubuntu-lynn/law_contents/주택법/지능형 홈네트워크 설비 설치 및 기술기준.json
+2024-12-09 15:23:29,997 - INFO - 문서 처리 중: [653/1357] /home/ubuntu-lynn/law_contents/주택법/주택건설기준 등에 관한 규정.json
+2024-12-09 15:23:30,005 - INFO - 문서 처리 중: [654/1357] /home/ubuntu-lynn/law_contents/주택법/수직증축형 리모델링 전문기관 안전성 검토기준.json
+2024-12-09 15:23:30,005 - INFO - 문서 처리 중: [655/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택 층간소음의 범위와 기준에 관한 규칙.json
+2024-12-09 15:23:30,006 - INFO - 문서 처리 중: [656/1357] /home/ubuntu-lynn/law_contents/주택법/외항선원 주택특별공급 운영기준.json
+2024-12-09 15:23:30,006 - INFO - 문서 처리 중: [657/1357] /home/ubuntu-lynn/law_contents/주택법/주택건설기준 등에 관한 규칙.json
+2024-12-09 15:23:30,010 - INFO - 문서 처리 중: [658/1357] /home/ubuntu-lynn/law_contents/주택법/주택조합 등에 대한 주택규모별 공급비율에 관한 지침.json
+2024-12-09 15:23:30,011 - INFO - 문서 처리 중: [659/1357] /home/ubuntu-lynn/law_contents/주택법/조정대상지역 지정 해제.json
+2024-12-09 15:23:30,011 - INFO - 문서 처리 중: [660/1357] /home/ubuntu-lynn/law_contents/주택법/증축형 리모델링 안전진단기준.json
+2024-12-09 15:23:30,012 - INFO - 문서 처리 중: [661/1357] /home/ubuntu-lynn/law_contents/주택법/신혼부부 주택 특별공급 운용지침.json
+2024-12-09 15:23:30,013 - INFO - 문서 처리 중: [662/1357] /home/ubuntu-lynn/law_contents/주택법/주택법 시행규칙.json
+2024-12-09 15:23:30,024 - INFO - 문서 처리 중: [663/1357] /home/ubuntu-lynn/law_contents/주택법/예정지역 공급주택의 해당 주택건설지역 우선공급비율.json
+2024-12-09 15:23:30,024 - INFO - 문서 처리 중: [664/1357] /home/ubuntu-lynn/law_contents/주택법/경제자유구역 내 공동주택 분양가상한제 적용배제 및 체육시설 연계 단독주택 공급특례 적용기준.json
+2024-12-09 15:23:30,025 - INFO - 문서 처리 중: [665/1357] /home/ubuntu-lynn/law_contents/주택법/주택단지 분할 건설·공급 절차 및 방법에 관한 기준.json
+2024-12-09 15:23:30,025 - INFO - 문서 처리 중: [666/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택 하자의 조사, 보수비용 산정 및 하자판정기준.json
+2024-12-09 15:23:30,027 - INFO - 문서 처리 중: [667/1357] /home/ubuntu-lynn/law_contents/주택법/리모델링 시공자 선정기준.json
+2024-12-09 15:23:30,028 - INFO - 문서 처리 중: [668/1357] /home/ubuntu-lynn/law_contents/주택법/산업단지 입주기업 종사자 등에 관한 주택특별공급 운영기준.json
+2024-12-09 15:23:30,028 - INFO - 문서 처리 중: [669/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택 바닥충격음 차단구조 인정 및 검사기준.json
+2024-12-09 15:23:30,030 - INFO - 문서 처리 중: [670/1357] /home/ubuntu-lynn/law_contents/주택법/분양가상한제 적용지역 지정 해제.json
+2024-12-09 15:23:30,030 - INFO - 문서 처리 중: [671/1357] /home/ubuntu-lynn/law_contents/주택법/주택법.json
+2024-12-09 15:23:30,040 - INFO - 문서 처리 중: [672/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택의 소음측정기준.json
+2024-12-09 15:23:30,041 - INFO - 문서 처리 중: [673/1357] /home/ubuntu-lynn/law_contents/주택법/에너지절약형 친환경주택의 건설기준.json
+2024-12-09 15:23:30,042 - INFO - 문서 처리 중: [674/1357] /home/ubuntu-lynn/law_contents/주택법/주택건설공사 감리업무 세부기준.json
+2024-12-09 15:23:30,044 - INFO - 문서 처리 중: [675/1357] /home/ubuntu-lynn/law_contents/주택법/수도권 분양가상한제 적용주택 등에 적용되는 인근지역 주택매매가격의 결정지침.json
+2024-12-09 15:23:30,045 - INFO - 문서 처리 중: [676/1357] /home/ubuntu-lynn/law_contents/주택법/표준지공시지가 조사·평가를 위한 감정평가법인등 선정에 관한 기준.json
+2024-12-09 15:23:30,045 - INFO - 문서 처리 중: [677/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택 분양가격의 산정 등에 관한 시행지침.json
+2024-12-09 15:23:30,046 - INFO - 문서 처리 중: [678/1357] /home/ubuntu-lynn/law_contents/주택법/사이버견본주택 운용기준.json
+2024-12-09 15:23:30,046 - INFO - 문서 처리 중: [679/1357] /home/ubuntu-lynn/law_contents/주택법/2024년도 한부모가족 지원대상자의 범위.json
+2024-12-09 15:23:30,047 - INFO - 문서 처리 중: [680/1357] /home/ubuntu-lynn/law_contents/주택법/공공주택 입주예약자 업무처리지침.json
+2024-12-09 15:23:30,047 - INFO - 문서 처리 중: [681/1357] /home/ubuntu-lynn/law_contents/주택법/수직증축형 리모델링 구조기준.json
+2024-12-09 15:23:30,048 - INFO - 문서 처리 중: [682/1357] /home/ubuntu-lynn/law_contents/주택법/주택공급에 관한 규칙.json
+2024-12-09 15:23:30,058 - INFO - 문서 처리 중: [683/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택 결로 방지를 위한 설계기준.json
+2024-12-09 15:23:30,059 - INFO - 문서 처리 중: [684/1357] /home/ubuntu-lynn/law_contents/주택법/친환경주택 에너지절약계획 전문기관 변경 지정 고시.json
+2024-12-09 15:23:30,059 - INFO - 문서 처리 중: [685/1357] /home/ubuntu-lynn/law_contents/주택법/건강친화형 주택 건설기준.json
+2024-12-09 15:23:30,060 - INFO - 문서 처리 중: [686/1357] /home/ubuntu-lynn/law_contents/주택법/주택품질 향상에 따른 가산비용 기준.json
+2024-12-09 15:23:30,061 - INFO - 문서 처리 중: [687/1357] /home/ubuntu-lynn/law_contents/주택법/주택청약종합저축의 이자율 및 운영에 관한 고시.json
+2024-12-09 15:23:30,062 - INFO - 문서 처리 중: [688/1357] /home/ubuntu-lynn/law_contents/주택법/분양대행자 교육에 관한 규정.json
+2024-12-09 15:23:30,063 - INFO - 문서 처리 중: [689/1357] /home/ubuntu-lynn/law_contents/주택법/지방이전 공공기관 종사자 등에 관한 주택특별공급 운영기준.json
+2024-12-09 15:23:30,063 - INFO - 문서 처리 중: [690/1357] /home/ubuntu-lynn/law_contents/주택법/투기과열지구 지정 해제.json
+2024-12-09 15:23:30,063 - INFO - 문서 처리 중: [691/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택 분양가격의 산정 등에 관한 규칙.json
+2024-12-09 15:23:30,066 - INFO - 문서 처리 중: [692/1357] /home/ubuntu-lynn/law_contents/주택법/주택법 시행령.json
+2024-12-09 15:23:30,077 - INFO - 문서 처리 중: [693/1357] /home/ubuntu-lynn/law_contents/주택법/시·군·구별 기본형건축비 산정을 위한 주요자재별 기준단가.json
+2024-12-09 15:23:30,078 - INFO - 문서 처리 중: [694/1357] /home/ubuntu-lynn/law_contents/주택법/공동주택 등을 띄어 건설하여야 하는 공장업종.json
+2024-12-09 15:23:30,079 - INFO - 문서 처리 중: [695/1357] /home/ubuntu-lynn/law_contents/주택법/벽체의 차음구조 인정 및 관리기준.json
+2024-12-09 15:23:30,080 - INFO - 문서 처리 중: [696/1357] /home/ubuntu-lynn/law_contents/주택법/주택건설사업 기반시설 기부채납 운영기준.json
+2024-12-09 15:23:30,080 - INFO - 문서 처리 중: [697/1357] /home/ubuntu-lynn/law_contents/주택법/분양가상한제 적용주택의 기본형건축비 및 가산비용.json
+2024-12-09 15:23:30,081 - INFO - 문서 처리 중: [698/1357] /home/ubuntu-lynn/law_contents/주택법/국가유공자 등에 대한 주택의 우선 공급에 관한 기준.json
+2024-12-09 15:23:30,082 - INFO - 문서 처리 중: [699/1357] /home/ubuntu-lynn/law_contents/주택법/장수명 주택 건설·인증기준.json
+2024-12-09 15:23:30,083 - INFO - 문서 처리 중: [700/1357] /home/ubuntu-lynn/law_contents/주택법/기술의 진보나 주거생활 변화 등에 따른 추가선택품목.json
+2024-12-09 15:23:30,083 - INFO - 문서 처리 중: [701/1357] /home/ubuntu-lynn/law_contents/주택법/리모델링기본계획 수립지침.json
+2024-12-09 15:23:30,083 - INFO - 문서 처리 중: [702/1357] /home/ubuntu-lynn/law_contents/주택법/부동산거래 전자계약시스템 운영관리 위탁기관 지정.json
+2024-12-09 15:23:30,084 - INFO - 문서 처리 중: [703/1357] /home/ubuntu-lynn/law_contents/주택법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:30,084 - INFO - 문서 처리 중: [704/1357] /home/ubuntu-lynn/law_contents/주택법/중앙집중 난방방식의 공동주택에 대한 난방계량기 등의 설치 기준.json
+2024-12-09 15:23:30,085 - INFO - 문서 처리 중: [705/1357] /home/ubuntu-lynn/law_contents/주택법/생애최초 주택 특별공급 운용지침.json
+2024-12-09 15:23:30,086 - INFO - 문서 처리 중: [706/1357] /home/ubuntu-lynn/law_contents/주택법/주택건설공사 감리자지정기준.json
+2024-12-09 15:23:30,087 - INFO - 문서 처리 중: [707/1357] /home/ubuntu-lynn/law_contents/주택법/근로자 주택공급 및 관리규정.json
+2024-12-09 15:23:30,088 - INFO - 문서 처리 중: [708/1357] /home/ubuntu-lynn/law_contents/주택법/주택의 설계도서 작성기준.json
+2024-12-09 15:23:30,089 - INFO - 문서 처리 중: [709/1357] /home/ubuntu-lynn/law_contents/물환경보전법/물환경보전법.json
+2024-12-09 15:23:30,101 - INFO - 문서 처리 중: [710/1357] /home/ubuntu-lynn/law_contents/물환경보전법/오염부하량할당대상자가 설치하여야 하는 측정기기의 종류 및 부착방법 등에 관한 규정.json
+2024-12-09 15:23:30,101 - INFO - 문서 처리 중: [711/1357] /home/ubuntu-lynn/law_contents/물환경보전법/금산지방산업단지 공공폐수처리시설 방류수수질기준[노말헥산추출물질함유량(광유류)].json
+2024-12-09 15:23:30,102 - INFO - 문서 처리 중: [712/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(증평일반산업단지).json
+2024-12-09 15:23:30,102 - INFO - 문서 처리 중: [713/1357] /home/ubuntu-lynn/law_contents/물환경보전법/방류수수질기준 적용을 위한 지역구분.json
+2024-12-09 15:23:30,103 - INFO - 문서 처리 중: [714/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(한강유역환경청) 공공폐수처리시설 기본계획 통합 고시.json
+2024-12-09 15:23:30,103 - INFO - 문서 처리 중: [715/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도 배출허용기준 지정·고시.json
+2024-12-09 15:23:30,104 - INFO - 문서 처리 중: [716/1357] /home/ubuntu-lynn/law_contents/물환경보전법/상수원호소 지정.json
+2024-12-09 15:23:30,104 - INFO - 문서 처리 중: [717/1357] /home/ubuntu-lynn/law_contents/물환경보전법/비점오염원관리대책 시행계획 승인 및 이행사항 평가 등에 관한 규정.json
+2024-12-09 15:23:30,105 - INFO - 문서 처리 중: [718/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수생태계 현황 조사계획.json
+2024-12-09 15:23:30,117 - INFO - 문서 처리 중: [719/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(낙동강유역환경청) 공공폐수처리시설 기본계획 통합 고시.json
+2024-12-09 15:23:30,117 - INFO - 문서 처리 중: [720/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수생태계 현황 조사 방법 정도관리 지침.json
+2024-12-09 15:23:30,118 - INFO - 문서 처리 중: [721/1357] /home/ubuntu-lynn/law_contents/물환경보전법/호소환경조사 대상호소.json
+2024-12-09 15:23:30,118 - INFO - 문서 처리 중: [722/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수생태계 현황 조사 및 건강성 평가 방법 등에 관한 지침(하천편).json
+2024-12-09 15:23:30,119 - INFO - 문서 처리 중: [723/1357] /home/ubuntu-lynn/law_contents/물환경보전법/공공폐수처리시설 기본계획 통합 고시(남원 일반산업단지).json
+2024-12-09 15:23:30,119 - INFO - 문서 처리 중: [724/1357] /home/ubuntu-lynn/law_contents/물환경보전법/삽교호 수계구간별 오염총량 목표수질.json
+2024-12-09 15:23:30,120 - INFO - 문서 처리 중: [725/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(공주 정안제1·제2농공단지).json
+2024-12-09 15:23:30,120 - INFO - 문서 처리 중: [726/1357] /home/ubuntu-lynn/law_contents/물환경보전법/여수 공공폐수처리시설 기본계획 변경 승인.json
+2024-12-09 15:23:30,120 - INFO - 문서 처리 중: [727/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(구례자연드림파크2단지).json
+2024-12-09 15:23:30,121 - INFO - 문서 처리 중: [728/1357] /home/ubuntu-lynn/law_contents/물환경보전법/물환경측정망 설치·운영 계획.json
+2024-12-09 15:23:30,121 - INFO - 문서 처리 중: [729/1357] /home/ubuntu-lynn/law_contents/물환경보전법/측정기기 운영·관리 위반행위 신고포상금 지급 기준.json
+2024-12-09 15:23:30,122 - INFO - 문서 처리 중: [730/1357] /home/ubuntu-lynn/law_contents/물환경보전법/통합·집중형 오염하천 개선지침.json
+2024-12-09 15:23:30,123 - INFO - 문서 처리 중: [731/1357] /home/ubuntu-lynn/law_contents/물환경보전법/영산강·섬진강수계 시·도 경계지점 목표수질(BOD, T-P).json
+2024-12-09 15:23:30,123 - INFO - 문서 처리 중: [732/1357] /home/ubuntu-lynn/law_contents/물환경보전법/사천사남농공단지 공공폐수처리시설의 노말헥산추출물질 방류수수질기준.json
+2024-12-09 15:23:30,124 - INFO - 문서 처리 중: [733/1357] /home/ubuntu-lynn/law_contents/물환경보전법/측정기기 관리대행능력 평가 및 공시 세부기준.json
+2024-12-09 15:23:30,124 - INFO - 문서 처리 중: [734/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 지정 등에 관한 지침.json
+2024-12-09 15:23:30,125 - INFO - 문서 처리 중: [735/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(명학일반산업단지).json
+2024-12-09 15:23:30,126 - INFO - 문서 처리 중: [736/1357] /home/ubuntu-lynn/law_contents/물환경보전법/금강수계 시·도 경계지점 목표수질(BOD, T-P).json
+2024-12-09 15:23:30,126 - INFO - 문서 처리 중: [737/1357] /home/ubuntu-lynn/law_contents/물환경보전법/완충저류시설 설치 및 운영관리 지침.json
+2024-12-09 15:23:30,128 - INFO - 문서 처리 중: [738/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(광혜원제2농공단지).json
+2024-12-09 15:23:30,129 - INFO - 문서 처리 중: [739/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(낙동강유역환경청) 수질오염물질의 배출허용기준 중 별도배출허용기준.json
+2024-12-09 15:23:30,129 - INFO - 문서 처리 중: [740/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(원주지방환경청) 수질오염물질의 배출허용기준 중 별도 배출허용기준 개정·고시.json
+2024-12-09 15:23:30,129 - INFO - 문서 처리 중: [741/1357] /home/ubuntu-lynn/law_contents/물환경보전법/한강수계 수변구역 변경.json
+2024-12-09 15:23:30,130 - INFO - 문서 처리 중: [742/1357] /home/ubuntu-lynn/law_contents/물환경보전법/오염총량관리시행계획 이행평가기준.json
+2024-12-09 15:23:30,131 - INFO - 문서 처리 중: [743/1357] /home/ubuntu-lynn/law_contents/물환경보전법/대청호 상수원 수질보전 특별대책지역 특별배출허용 기준 고시.json
+2024-12-09 15:23:30,131 - INFO - 문서 처리 중: [744/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(당진 합덕일반산업단지).json
+2024-12-09 15:23:30,131 - INFO - 문서 처리 중: [745/1357] /home/ubuntu-lynn/law_contents/물환경보전법/금강수계 수변구역 변경.json
+2024-12-09 15:23:30,132 - INFO - 문서 처리 중: [746/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(영암 특화).json
+2024-12-09 15:23:30,132 - INFO - 문서 처리 중: [747/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정(사천산단,사남농공).json
+2024-12-09 15:23:30,132 - INFO - 문서 처리 중: [748/1357] /home/ubuntu-lynn/law_contents/물환경보전법/물환경보전법 시행령.json
+2024-12-09 15:23:30,143 - INFO - 문서 처리 중: [749/1357] /home/ubuntu-lynn/law_contents/물환경보전법/낙동강수계 수변구역 변경.json
+2024-12-09 15:23:30,143 - INFO - 문서 처리 중: [750/1357] /home/ubuntu-lynn/law_contents/물환경보전법/정읍 신용농공단지 공공폐수처리시설 방류수수질기준[노말헥산추출물질함유량(동식물유지류)].json
+2024-12-09 15:23:30,144 - INFO - 문서 처리 중: [751/1357] /home/ubuntu-lynn/law_contents/물환경보전법/조류경보제 대상 호소·하천 지정 고시.json
+2024-12-09 15:23:30,144 - INFO - 문서 처리 중: [752/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준(나주시 혁신산업단지).json
+2024-12-09 15:23:30,144 - INFO - 문서 처리 중: [753/1357] /home/ubuntu-lynn/law_contents/물환경보전법/2019년도 기타수계(진위천·삽교호수계) 오염총량초과과징금 가격변동지수.json
+2024-12-09 15:23:30,145 - INFO - 문서 처리 중: [754/1357] /home/ubuntu-lynn/law_contents/물환경보전법/한강유역 폐수배출시설 설치제한을 위한 대상 지역 및 시설 지정.json
+2024-12-09 15:23:30,145 - INFO - 문서 처리 중: [755/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(세종 첨단일반산업단지).json
+2024-12-09 15:23:30,146 - INFO - 문서 처리 중: [756/1357] /home/ubuntu-lynn/law_contents/물환경보전법/염에 의한 생태독성 증명에 관한 규정.json
+2024-12-09 15:23:30,146 - INFO - 문서 처리 중: [757/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(예산관작농공단지).json
+2024-12-09 15:23:30,147 - INFO - 문서 처리 중: [758/1357] /home/ubuntu-lynn/law_contents/물환경보전법/팔당호 상수원 수질보전 특별대책지역 특별배출허용 기준.json
+2024-12-09 15:23:30,147 - INFO - 문서 처리 중: [759/1357] /home/ubuntu-lynn/law_contents/물환경보전법/측정기기 관리대행업의 기술인력 교육훈련 수수료.json
+2024-12-09 15:23:30,147 - INFO - 문서 처리 중: [760/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(영산강유역환경청) 수질오염물질 배출허용기준 중 별도배출허용기준 지정 통합고시.json
+2024-12-09 15:23:30,148 - INFO - 문서 처리 중: [761/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질원격감시체계 관제센터 운영 등에 관한 규정.json
+2024-12-09 15:23:30,149 - INFO - 문서 처리 중: [762/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(진천문백산업단지).json
+2024-12-09 15:23:30,149 - INFO - 문서 처리 중: [763/1357] /home/ubuntu-lynn/law_contents/물환경보전법/공공수역 유출금지 대상 토사량 등의 산정 방법.json
+2024-12-09 15:23:30,150 - INFO - 문서 처리 중: [764/1357] /home/ubuntu-lynn/law_contents/물환경보전법/환경생태유량 산정 지침.json
+2024-12-09 15:23:30,150 - INFO - 문서 처리 중: [765/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정(마산진북산업단지).json
+2024-12-09 15:23:30,151 - INFO - 문서 처리 중: [766/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수생태계 연속성 조사 및 평가 방법 등에 관한 지침.json
+2024-12-09 15:23:30,151 - INFO - 문서 처리 중: [767/1357] /home/ubuntu-lynn/law_contents/물환경보전법/낙동강 하류유역 폐수배출시설 설치제한을 위한 대상 지역 및 시설 지정.json
+2024-12-09 15:23:30,152 - INFO - 문서 처리 중: [768/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 총량관리지역 지정(진위천수계).json
+2024-12-09 15:23:30,152 - INFO - 문서 처리 중: [769/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 통합 지정 고시(경산 및 청주 진주 익산 여수 달성산업단지 공공폐수처리시설 폐수처리구역).json
+2024-12-09 15:23:30,152 - INFO - 문서 처리 중: [770/1357] /home/ubuntu-lynn/law_contents/물환경보전법/물놀이지역 수질조사를 위한 조사지점, 측정주기, 분석방법 등의 세부기준.json
+2024-12-09 15:23:30,153 - INFO - 문서 처리 중: [771/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수계영향권별 환경관리지역 지정 고시.json
+2024-12-09 15:23:30,153 - INFO - 문서 처리 중: [772/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(영산강유역환경청) 공공폐수처리시설 기본계획 통합 고시.json
+2024-12-09 15:23:30,154 - INFO - 문서 처리 중: [773/1357] /home/ubuntu-lynn/law_contents/물환경보전법/공공환경시설의 기술진단비용.json
+2024-12-09 15:23:30,154 - INFO - 문서 처리 중: [774/1357] /home/ubuntu-lynn/law_contents/물환경보전법/양산일반산단 및 양산어곡산단 공공폐수처리시설 방류수수질기준 추가 항목(노말헥산추출물질함유량).json
+2024-12-09 15:23:30,154 - INFO - 문서 처리 중: [775/1357] /home/ubuntu-lynn/law_contents/물환경보전법/아산 탕정산단 공공폐수처리시설 방류수수질기준 추가설정 항목.json
+2024-12-09 15:23:30,155 - INFO - 문서 처리 중: [776/1357] /home/ubuntu-lynn/law_contents/물환경보전법/비점오염원관리지역 지정 고시.json
+2024-12-09 15:23:30,155 - INFO - 문서 처리 중: [777/1357] /home/ubuntu-lynn/law_contents/물환경보전법/영산강·섬진강수계 수변구역 변경.json
+2024-12-09 15:23:30,156 - INFO - 문서 처리 중: [778/1357] /home/ubuntu-lynn/law_contents/물환경보전법/2024년도 오염총량초과과징금 가격변동지수.json
+2024-12-09 15:23:30,156 - INFO - 문서 처리 중: [779/1357] /home/ubuntu-lynn/law_contents/물환경보전법/특정수질유해물질 배출량조사 검토·검증 업무에 관한 규정.json
+2024-12-09 15:23:30,157 - INFO - 문서 처리 중: [780/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질배출부과금 신용카드 납부대행기관 및 납부대행수수료.json
+2024-12-09 15:23:30,157 - INFO - 문서 처리 중: [781/1357] /home/ubuntu-lynn/law_contents/물환경보전법/한강수계 특·광역시·도 경계지점의 목표수질(BOD, T-P).json
+2024-12-09 15:23:30,157 - INFO - 문서 처리 중: [782/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수생태계 현황 조사 및 건강성 평가방법 등에 관한 지침(하구편).json
+2024-12-09 15:23:30,158 - INFO - 문서 처리 중: [783/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(서산테크노밸리산단).json
+2024-12-09 15:23:30,158 - INFO - 문서 처리 중: [784/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(장흥 농공단지).json
+2024-12-09 15:23:30,158 - INFO - 문서 처리 중: [785/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(논산 강경농공단지).json
+2024-12-09 15:23:30,159 - INFO - 문서 처리 중: [786/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(구례 용방).json
+2024-12-09 15:23:30,159 - INFO - 문서 처리 중: [787/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(공주보물농공단지).json
+2024-12-09 15:23:30,159 - INFO - 문서 처리 중: [788/1357] /home/ubuntu-lynn/law_contents/물환경보전법/중권역별 물환경 목표기준.json
+2024-12-09 15:23:30,160 - INFO - 문서 처리 중: [789/1357] /home/ubuntu-lynn/law_contents/물환경보전법/배출허용기준(폐수) 적용을 위한 지역지정 규정.json
+2024-12-09 15:23:30,160 - INFO - 문서 처리 중: [790/1357] /home/ubuntu-lynn/law_contents/물환경보전법/조류예측 및 수질관리협의회에 관한 규정.json
+2024-12-09 15:23:30,161 - INFO - 문서 처리 중: [791/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(논산 동산일반산업단지).json
+2024-12-09 15:23:30,161 - INFO - 문서 처리 중: [792/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(공주 월미1,2농공단지).json
+2024-12-09 15:23:30,161 - INFO - 문서 처리 중: [793/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(테크노폴리스일반산업단지).json
+2024-12-09 15:23:30,162 - INFO - 문서 처리 중: [794/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(대전광역시 환경에너지종합타운).json
+2024-12-09 15:23:30,162 - INFO - 문서 처리 중: [795/1357] /home/ubuntu-lynn/law_contents/물환경보전법/공공폐수처리시설 기본계획(변경) 승인(진천 광혜원산업단지).json
+2024-12-09 15:23:30,163 - INFO - 문서 처리 중: [796/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(한강유역환경청) 수질오염물질의 배출허용기준 중 별도배출허용기준.json
+2024-12-09 15:23:30,163 - INFO - 문서 처리 중: [797/1357] /home/ubuntu-lynn/law_contents/물환경보전법/오염총량관리 기본방침.json
+2024-12-09 15:23:30,164 - INFO - 문서 처리 중: [798/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염감시경보를 위한 측정소별 측정항목과 항목별 경보기준.json
+2024-12-09 15:23:30,165 - INFO - 문서 처리 중: [799/1357] /home/ubuntu-lynn/law_contents/물환경보전법/상수원영향권 도로의 비점오염저감시설 설치구간.json
+2024-12-09 15:23:30,166 - INFO - 문서 처리 중: [800/1357] /home/ubuntu-lynn/law_contents/물환경보전법/환경보전협회 교육수수료.json
+2024-12-09 15:23:30,166 - INFO - 문서 처리 중: [801/1357] /home/ubuntu-lynn/law_contents/물환경보전법/완충저류시설의 설치·운영 등에 관한 고시.json
+2024-12-09 15:23:30,167 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-12-09 15:23:30,167 - INFO - 문서 처리 중: [802/1357] /home/ubuntu-lynn/law_contents/물환경보전법/비점오염저감계획서의 작성방법.json
+2024-12-09 15:23:30,168 - INFO - 문서 처리 중: [803/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(당진 석문국가산업단지).json
+2024-12-09 15:23:30,168 - INFO - 문서 처리 중: [804/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(대구지방환경청) 수질오염물질의 배출허용기준 중 별도배출허용기준 통합고시.json
+2024-12-09 15:23:30,169 - INFO - 문서 처리 중: [805/1357] /home/ubuntu-lynn/law_contents/물환경보전법/공공폐수처리시설 방류수 수질기준 지정·고시.json
+2024-12-09 15:23:30,169 - INFO - 문서 처리 중: [806/1357] /home/ubuntu-lynn/law_contents/물환경보전법/물환경보전법 시행규칙.json
+2024-12-09 15:23:30,191 - INFO - 문서 처리 중: [807/1357] /home/ubuntu-lynn/law_contents/물환경보전법/금강유역 폐수배출시설 설치제한을 위한 대상 지역 및 시설 지정.json
+2024-12-09 15:23:30,191 - INFO - 문서 처리 중: [808/1357] /home/ubuntu-lynn/law_contents/물환경보전법/경산 공공폐수처리시설 기본계획(변경) 승인.json
+2024-12-09 15:23:30,192 - INFO - 문서 처리 중: [809/1357] /home/ubuntu-lynn/law_contents/물환경보전법/공공폐수처리시설 운영·관리 평가 및 포상금 지급 기준.json
+2024-12-09 15:23:30,192 - INFO - 문서 처리 중: [810/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(홍성 일반산업단지).json
+2024-12-09 15:23:30,192 - INFO - 문서 처리 중: [811/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수탁처리폐수 전자인계·인수관리시스템 구축·운영 및 이용 등에 관한 고시.json
+2024-12-09 15:23:30,193 - INFO - 문서 처리 중: [812/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(장흥 바이오식품산업단지).json
+2024-12-09 15:23:30,193 - INFO - 문서 처리 중: [813/1357] /home/ubuntu-lynn/law_contents/물환경보전법/영산강·섬진강유역 폐수배출시설 설치제한을 위한 대상 지역 및 시설 지정.json
+2024-12-09 15:23:30,194 - INFO - 문서 처리 중: [814/1357] /home/ubuntu-lynn/law_contents/물환경보전법/배출부과금 사무처리규정.json
+2024-12-09 15:23:30,195 - INFO - 문서 처리 중: [815/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 총량관리지역 지정(삽교호수계).json
+2024-12-09 15:23:30,196 - INFO - 문서 처리 중: [816/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(광혜원산업단지).json
+2024-12-09 15:23:30,196 - INFO - 문서 처리 중: [817/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(전북지방환경청) 수질오염물질의 배출허용기준 중 별도배출허용기준 개정 통합고시.json
+2024-12-09 15:23:30,197 - INFO - 문서 처리 중: [818/1357] /home/ubuntu-lynn/law_contents/물환경보전법/폐수종말처리시설 방류수수질기준 추가설정 항목 (상평산업단지 폐수종말처리시설).json
+2024-12-09 15:23:30,197 - INFO - 문서 처리 중: [819/1357] /home/ubuntu-lynn/law_contents/물환경보전법/2023년도 가격변동지수 및 2024년도 부과금(과징금)산정지수.json
+2024-12-09 15:23:30,197 - INFO - 문서 처리 중: [820/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(공주 탄천일반산업단지).json
+2024-12-09 15:23:30,198 - INFO - 문서 처리 중: [821/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(영광 대마산업단지).json
+2024-12-09 15:23:30,198 - INFO - 문서 처리 중: [822/1357] /home/ubuntu-lynn/law_contents/물환경보전법/임진강유역 폐수배출시설 설치제한을 위한 대상 지역 및 시설 지정.json
+2024-12-09 15:23:30,199 - INFO - 문서 처리 중: [823/1357] /home/ubuntu-lynn/law_contents/물환경보전법/낙동강수계 광역시·도 경계지점의 목표수질(BOD, T-P).json
+2024-12-09 15:23:30,199 - INFO - 문서 처리 중: [824/1357] /home/ubuntu-lynn/law_contents/물환경보전법/폐수처리업의 폐수처리시설 정기검사에 관한 규정.json
+2024-12-09 15:23:30,199 - INFO - 문서 처리 중: [825/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(예당일반산업단지).json
+2024-12-09 15:23:30,200 - INFO - 문서 처리 중: [826/1357] /home/ubuntu-lynn/law_contents/물환경보전법/수질오염물질 배출허용기준 중 별도배출허용기준 지정·고시(예산일반산업단지).json
+2024-12-09 15:23:30,200 - INFO - 문서 처리 중: [827/1357] /home/ubuntu-lynn/law_contents/물환경보전법/폐수처리업의 폐수처리시설 정기검사 수수료에 관한 규정.json
+2024-12-09 15:23:30,201 - INFO - 문서 처리 중: [828/1357] /home/ubuntu-lynn/law_contents/물환경보전법/농업용 호소 수질관리지침.json
+2024-12-09 15:23:30,201 - INFO - 문서 처리 중: [829/1357] /home/ubuntu-lynn/law_contents/물환경보전법/진위천수계 하단지점의 오염총량목표수질.json
+2024-12-09 15:23:30,201 - INFO - 문서 처리 중: [830/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(대구지방환경청) 공공폐수처리시설 기본계획 통합 고시.json
+2024-12-09 15:23:30,202 - INFO - 문서 처리 중: [831/1357] /home/ubuntu-lynn/law_contents/물환경보전법/폐수종말처리시설 방류수수질기준 변경지정(아산 탕정TC 일반산업단지).json
+2024-12-09 15:23:30,202 - INFO - 문서 처리 중: [832/1357] /home/ubuntu-lynn/law_contents/물환경보전법/경산 및 청주·진주·익산·여수·달성산업단지 공공폐수처리시설 운영 및 비용부담규정.json
+2024-12-09 15:23:30,202 - INFO - 문서 처리 중: [833/1357] /home/ubuntu-lynn/law_contents/물환경보전법/비점오염저감시설 성능검사 방법 및 절차 등에 관한 규정.json
+2024-12-09 15:23:30,203 - INFO - 문서 처리 중: [834/1357] /home/ubuntu-lynn/law_contents/물환경보전법/낙동강 상·중류유역 폐수배출시설 설치제한을 위한 대상 지역 및 시설 지정.json
+2024-12-09 15:23:30,204 - INFO - 문서 처리 중: [835/1357] /home/ubuntu-lynn/law_contents/물환경보전법/조류제거시설 설치·운영 및 살포용 조류제거물질 사용지침.json
+2024-12-09 15:23:30,205 - INFO - 문서 처리 중: [836/1357] /home/ubuntu-lynn/law_contents/물환경보전법/오염부하량 할당시설 등에 대한 지도·점검규정.json
+2024-12-09 15:23:30,205 - INFO - 문서 처리 중: [837/1357] /home/ubuntu-lynn/law_contents/물환경보전법/공공폐수처리시설 기본계획 승인(보령웅천일반산업단지).json
+2024-12-09 15:23:30,206 - INFO - 문서 처리 중: [838/1357] /home/ubuntu-lynn/law_contents/물환경보전법/물환경 목표기준 평가 규정.json
+2024-12-09 15:23:30,206 - INFO - 문서 처리 중: [839/1357] /home/ubuntu-lynn/law_contents/물환경보전법/중점관리저수지의 지정 및 물환경개선을 위한 업무처리지침.json
+2024-12-09 15:23:30,207 - INFO - 문서 처리 중: [840/1357] /home/ubuntu-lynn/law_contents/물환경보전법/비점오염관리를 위한 물순환관리지표 산정지침.json
+2024-12-09 15:23:30,208 - INFO - 문서 처리 중: [841/1357] /home/ubuntu-lynn/law_contents/물환경보전법/(원주지방환경청) 공공폐수처리시설 기본계획 통합고시.json
+2024-12-09 15:23:30,208 - INFO - 문서 처리 중: [842/1357] /home/ubuntu-lynn/law_contents/물환경보전법/골프장의 농약사용량 조사 및 농약잔류량 검사방법 등에 관한 규정.json
+2024-12-09 15:23:30,210 - INFO - 문서 처리 중: [843/1357] /home/ubuntu-lynn/law_contents/지하수법/지하수오염평가보고서의 작성에 관한 규정.json
+2024-12-09 15:23:30,211 - INFO - 문서 처리 중: [844/1357] /home/ubuntu-lynn/law_contents/지하수법/지하수법 시행령.json
+2024-12-09 15:23:30,217 - INFO - 문서 처리 중: [845/1357] /home/ubuntu-lynn/law_contents/지하수법/지하수법 시행규칙.json
+2024-12-09 15:23:30,226 - INFO - 문서 처리 중: [846/1357] /home/ubuntu-lynn/law_contents/지하수법/지하수법.json
+2024-12-09 15:23:30,232 - INFO - 문서 처리 중: [847/1357] /home/ubuntu-lynn/law_contents/지하수법/오염지하수정화 업무처리지침.json
+2024-12-09 15:23:30,232 - INFO - 문서 처리 중: [848/1357] /home/ubuntu-lynn/law_contents/지하수법/이행보증금의 산정기준.json
+2024-12-09 15:23:30,233 - INFO - 문서 처리 중: [849/1357] /home/ubuntu-lynn/law_contents/지하수법/오염지하수정화계획의 작성에 관한 규정.json
+2024-12-09 15:23:30,233 - INFO - 문서 처리 중: [850/1357] /home/ubuntu-lynn/law_contents/지하수법/지하수개발·이용시공업의 등록기준 중 자산평가액 산정방법에 관한 지침.json
+2024-12-09 15:23:30,234 - INFO - 문서 처리 중: [851/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(국가보훈부) 제3종시설물의 지정 고시.json
+2024-12-09 15:23:30,234 - INFO - 문서 처리 중: [852/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(고용노동부) 제3종시설물 지정 고시.json
+2024-12-09 15:23:30,234 - INFO - 문서 처리 중: [853/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(한국전통문화대학교) 제3종시설물의 지정고시.json
+2024-12-09 15:23:30,235 - INFO - 문서 처리 중: [854/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(환경부) 제3종 시설물 지정 고시.json
+2024-12-09 15:23:30,235 - INFO - 문서 처리 중: [855/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(국가보훈부) 제3종시설물의 해제 고시.json
+2024-12-09 15:23:30,235 - INFO - 문서 처리 중: [856/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/시설물의 안전 및 유지관리에 관한 특별법 시행령.json
+2024-12-09 15:23:30,241 - INFO - 문서 처리 중: [857/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/제5차 시설물의 안전 및 유지관리 기본계획(2023∼2027).json
+2024-12-09 15:23:30,241 - INFO - 문서 처리 중: [858/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(국토교통부) 제3종시설물의 지정(해제) 고시.json
+2024-12-09 15:23:30,242 - INFO - 문서 처리 중: [859/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(특허청) 제3종시설물의 해제 고시.json
+2024-12-09 15:23:30,242 - INFO - 문서 처리 중: [860/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(문화체육관광부) 제3종시설물의 지정 고시.json
+2024-12-09 15:23:30,242 - INFO - 문서 처리 중: [861/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(해양수산부) 제3종시설물의 지정(해제) 고시.json
+2024-12-09 15:23:30,243 - INFO - 문서 처리 중: [862/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/시설물의 안전 및 유지관리에 관한 특별법.json
+2024-12-09 15:23:30,247 - INFO - 문서 처리 중: [863/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(조달청) 제3종시설물의 지정 및 해제 고시.json
+2024-12-09 15:23:30,248 - INFO - 문서 처리 중: [864/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(문화재청) 제3종시설물의 지정 고시.json
+2024-12-09 15:23:30,248 - INFO - 문서 처리 중: [865/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/국토안전관리원 정밀안전진단 전담시설물 고시.json
+2024-12-09 15:23:30,248 - INFO - 문서 처리 중: [866/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(보건복지부) 제3종시설물의 지정·해제 고시.json
+2024-12-09 15:23:30,249 - INFO - 문서 처리 중: [867/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(통계청) 제3종시설물의 해제 고시.json
+2024-12-09 15:23:30,249 - INFO - 문서 처리 중: [868/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/질병관리청 제3종시설물의 지정 고시.json
+2024-12-09 15:23:30,249 - INFO - 문서 처리 중: [869/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(과학기술정보통신부) 제3종시설물의 지정(해제) 고시.json
+2024-12-09 15:23:30,250 - INFO - 문서 처리 중: [870/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(여성가족부) 제3종시설물 지정·고시.json
+2024-12-09 15:23:30,250 - INFO - 문서 처리 중: [871/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/시설물의 안전 및 유지관리 실시 등에 관한 지침.json
+2024-12-09 15:23:30,254 - INFO - 문서 처리 중: [872/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/시설물의 안전 및 유지관리에 관한 특별법 시행규칙.json
+2024-12-09 15:23:30,260 - INFO - 문서 처리 중: [873/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(식품의약품안전처) 제3종시설물의 지정.json
+2024-12-09 15:23:30,260 - INFO - 문서 처리 중: [874/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:30,261 - INFO - 문서 처리 중: [875/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/시설물통합정보관리체계 운영규정.json
+2024-12-09 15:23:30,263 - INFO - 문서 처리 중: [876/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(환경부) 제3종시설물의 고시.json
+2024-12-09 15:23:30,264 - INFO - 문서 처리 중: [877/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/중앙시설물사고조사위원회 운영규정.json
+2024-12-09 15:23:30,264 - INFO - 문서 처리 중: [878/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(환경부) 제3종 시설물의 해제 고시.json
+2024-12-09 15:23:30,265 - INFO - 문서 처리 중: [879/1357] /home/ubuntu-lynn/law_contents/시설물의 안전 및 유지관리에 관한 특별법/(특허청) 제3종시설물의 지정 고시.json
+2024-12-09 15:23:30,265 - INFO - 문서 처리 중: [880/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/국내인력해외건설현장 고용업체에 대한 시공능력평가우대 기준 고시.json
+2024-12-09 15:23:30,265 - INFO - 문서 처리 중: [881/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/공제조합 공제사업감독기준.json
+2024-12-09 15:23:30,266 - INFO - 문서 처리 중: [882/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/하도급할 공사의 주요공종 및 하도급계획 제출대상 하도급금액.json
+2024-12-09 15:23:30,267 - INFO - 문서 처리 중: [883/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설공사 발주 세부기준.json
+2024-12-09 15:23:30,268 - INFO - 문서 처리 중: [884/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설업 시공능력 수시평가·공시에 관한 지침.json
+2024-12-09 15:23:30,268 - INFO - 문서 처리 중: [885/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설산업기본법령에 따른 위탁업무 수행기관 지정.json
+2024-12-09 15:23:30,269 - INFO - 문서 처리 중: [886/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설산업기본법 시행령.json
+2024-12-09 15:23:30,281 - INFO - 문서 처리 중: [887/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/타워크레인 대여계약 적정성 심사기준.json
+2024-12-09 15:23:30,282 - INFO - 문서 처리 중: [888/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설업 등록기준 중 기술능력 중복인정 기준.json
+2024-12-09 15:23:30,283 - INFO - 문서 처리 중: [889/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/시설물유지관리업 업종전환 세부기준.json
+2024-12-09 15:23:30,284 - INFO - 문서 처리 중: [890/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설공사 공동도급운영규정.json
+2024-12-09 15:23:30,284 - INFO - 문서 처리 중: [891/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설산업기본법 제29조제1항에 따른 계획·관리 및 조정에 관한 지침.json
+2024-12-09 15:23:30,285 - INFO - 문서 처리 중: [892/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설산업선진화위원회규정.json
+2024-12-09 15:23:30,285 - INFO - 문서 처리 중: [893/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설관련 공제조합 감독기준.json
+2024-12-09 15:23:30,287 - INFO - 문서 처리 중: [894/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설관련 공제조합의 총보증한도.json
+2024-12-09 15:23:30,287 - INFO - 문서 처리 중: [895/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설산업기본법.json
+2024-12-09 15:23:30,297 - INFO - 문서 처리 중: [896/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/선급금 등 지연지급 시의 지연이율 고시.json
+2024-12-09 15:23:30,297 - INFO - 문서 처리 중: [897/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설공사금액의 하한.json
+2024-12-09 15:23:30,298 - INFO - 문서 처리 중: [898/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설관련 공제조합 운영위원회 구성에 관한 고시.json
+2024-12-09 15:23:30,298 - INFO - 문서 처리 중: [899/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설공사 하도급 심사기준.json
+2024-12-09 15:23:30,299 - INFO - 문서 처리 중: [900/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설업 관리규정.json
+2024-12-09 15:23:30,300 - INFO - 문서 처리 중: [901/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설산업종합정보망 업무위탁기관 지정.json
+2024-12-09 15:23:30,301 - INFO - 문서 처리 중: [902/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설업자간 상호협력에 관한 권장사항 및 평가기준.json
+2024-12-09 15:23:30,303 - INFO - 문서 처리 중: [903/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설근로자 퇴직공제 가입 소요금액 산정기준.json
+2024-12-09 15:23:30,304 - INFO - 문서 처리 중: [904/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/시공능력평가공시 등의 위탁기관 지정.json
+2024-12-09 15:23:30,304 - INFO - 문서 처리 중: [905/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/공동도급 공사에 대한 제재처분시 업무처리요령.json
+2024-12-09 15:23:30,304 - INFO - 문서 처리 중: [906/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설공사의 하자담보책임에 관한 운영 지침.json
+2024-12-09 15:23:30,305 - INFO - 문서 처리 중: [907/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/공정건설지원센터 설치·운영에 관한 지침.json
+2024-12-09 15:23:30,306 - INFO - 문서 처리 중: [908/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/전자조달시스템등을 통한 공사대금의 청구 및 지급 등에 관한 고시.json
+2024-12-09 15:23:30,306 - INFO - 문서 처리 중: [909/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/보증가능금액확인서의 발급 및 해지에 관한 기준.json
+2024-12-09 15:23:30,307 - INFO - 문서 처리 중: [910/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/하도급대금지급보증서 발급금액 적용기준.json
+2024-12-09 15:23:30,307 - INFO - 문서 처리 중: [911/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/해외건설공사 기성실적 확인규정.json
+2024-12-09 15:23:30,307 - INFO - 문서 처리 중: [912/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/민간건설공사 표준도급계약서.json
+2024-12-09 15:23:30,308 - INFO - 문서 처리 중: [913/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/종합·전문업종간 상호시장 진출을 위한 건설공사실적 인정기준.json
+2024-12-09 15:23:30,309 - INFO - 문서 처리 중: [914/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설업 등록 등 업무위탁 및 실태조사 권한 위탁기관 지정.json
+2024-12-09 15:23:30,309 - INFO - 문서 처리 중: [915/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/(국토교통부) 사회보험의 보험료 적용기준.json
+2024-12-09 15:23:30,309 - INFO - 문서 처리 중: [916/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설기계대여대금 지급보증서 발급금액 및 업종별 건설기계 투입비율 산정기준.json
+2024-12-09 15:23:30,310 - INFO - 문서 처리 중: [917/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:30,310 - INFO - 문서 처리 중: [918/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건축물의 시공자제한 업무처리요령.json
+2024-12-09 15:23:30,311 - INFO - 문서 처리 중: [919/1357] /home/ubuntu-lynn/law_contents/건설산업기본법/건설산업기본법 시행규칙.json
+2024-12-09 15:23:30,323 - INFO - 문서 처리 중: [920/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/한강유역환경청 화학안전관리단 과태료 부과 등 심의위원회 운영 규정.json
+2024-12-09 15:23:30,323 - INFO - 문서 처리 중: [921/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학사고 즉시 신고에 관한 규정.json
+2024-12-09 15:23:30,324 - INFO - 문서 처리 중: [922/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질관리법 시행령.json
+2024-12-09 15:23:30,327 - INFO - 문서 처리 중: [923/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/사고대비물질의 지정.json
+2024-12-09 15:23:30,327 - INFO - 문서 처리 중: [924/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/제한물질·금지물질의 지정.json
+2024-12-09 15:23:30,328 - INFO - 문서 처리 중: [925/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질확인 제외기준.json
+2024-12-09 15:23:30,329 - INFO - 문서 처리 중: [926/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 사외배관 이송시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,330 - INFO - 문서 처리 중: [927/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학사고예방관리계획서 작성 등에 관한 규정.json
+2024-12-09 15:23:30,331 - INFO - 문서 처리 중: [928/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질 조사결과 및 정보공개제도 운영에 관한 규정.json
+2024-12-09 15:23:30,332 - INFO - 문서 처리 중: [929/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질 통계조사에 관한 규정.json
+2024-12-09 15:23:30,333 - INFO - 문서 처리 중: [930/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질관리법 시행규칙.json
+2024-12-09 15:23:30,349 - INFO - 문서 처리 중: [931/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질의 교역시 사전통보승인절차에 관한 협약에 따른 화학물질의 수출에 관한 규정.json
+2024-12-09 15:23:30,350 - INFO - 문서 처리 중: [932/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질의 영업허가 등에 관한 규정.json
+2024-12-09 15:23:30,351 - INFO - 문서 처리 중: [933/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 차량 운반시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,351 - INFO - 문서 처리 중: [934/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질 자료 등의 보호에 관한 규정.json
+2024-12-09 15:23:30,353 - INFO - 문서 처리 중: [935/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/안전성 평가의 기준 및 절차 등에 관한 고시.json
+2024-12-09 15:23:30,353 - INFO - 문서 처리 중: [936/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유독물질, 제한물질, 금지물질 및 허가물질의 규정수량에 관한 규정.json
+2024-12-09 15:23:30,357 - INFO - 문서 처리 중: [937/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 지하 저장시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,358 - INFO - 문서 처리 중: [938/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학사고예방관리계획서 이행 등에 관한 규정.json
+2024-12-09 15:23:30,358 - INFO - 문서 처리 중: [939/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 취급시설 검사 및 안전진단 수수료에 관한 규정.json
+2024-12-09 15:23:30,359 - INFO - 문서 처리 중: [940/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학사고예방관리계획서 검토 등에 관한 규정.json
+2024-12-09 15:23:30,360 - INFO - 문서 처리 중: [941/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 실내 보관시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,360 - INFO - 문서 처리 중: [942/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/항만구역 내 유해화학물질 보관시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,361 - INFO - 문서 처리 중: [943/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 시약 등 택배 안전용기 및 포장 등에 관한 규정.json
+2024-12-09 15:23:30,362 - INFO - 문서 처리 중: [944/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질관리위원회 운영규정.json
+2024-12-09 15:23:30,362 - INFO - 문서 처리 중: [945/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질 종합정보시스템 협의체 운영규정.json
+2024-12-09 15:23:30,363 - INFO - 문서 처리 중: [946/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 실내 저장시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,364 - INFO - 문서 처리 중: [947/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질의 영업 및 관리 등에 관한 업무처리 규정.json
+2024-12-09 15:23:30,365 - INFO - 문서 처리 중: [948/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학테러·사고 대응장비 관리규정.json
+2024-12-09 15:23:30,366 - INFO - 문서 처리 중: [949/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 취급자의 개인보호장구 착용에 관한 규정.json
+2024-12-09 15:23:30,367 - INFO - 문서 처리 중: [950/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질관리법.json
+2024-12-09 15:23:30,374 - INFO - 문서 처리 중: [951/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질 배출저감계획서의 작성 등에 관한 규정.json
+2024-12-09 15:23:30,375 - INFO - 문서 처리 중: [952/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/반도체·디스플레이 제조업종 유해화학물질 취급시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,377 - INFO - 문서 처리 중: [953/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 소량 취급시설에 관한 고시.json
+2024-12-09 15:23:30,379 - INFO - 문서 처리 중: [954/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 안전교육과 유사하다고 인정하는 교육에 관한 고시.json
+2024-12-09 15:23:30,379 - INFO - 문서 처리 중: [955/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학사고 조사단 구성·운영 및 영향조사에 관한 지침.json
+2024-12-09 15:23:30,380 - INFO - 문서 처리 중: [956/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 실외 저장시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,381 - INFO - 문서 처리 중: [957/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 안전교육 전문기관의 지정.json
+2024-12-09 15:23:30,382 - INFO - 문서 처리 중: [958/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 안전교육경비.json
+2024-12-09 15:23:30,382 - INFO - 문서 처리 중: [959/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질정보공개심의위원회 구성 및 운영에 관한 규정.json
+2024-12-09 15:23:30,383 - INFO - 문서 처리 중: [960/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 취급시설의 설치·정기·수시검사 및 안전진단의 방법 등에 관한 규정.json
+2024-12-09 15:23:30,389 - INFO - 문서 처리 중: [961/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 차량 운송시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,390 - INFO - 문서 처리 중: [962/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질의 분류 및 표시 등에 관한 규정.json
+2024-12-09 15:23:30,392 - INFO - 문서 처리 중: [963/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질의 배출량조사 및 산정계수에 관한 규정.json
+2024-12-09 15:23:30,395 - INFO - 문서 처리 중: [964/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 실외 보관시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,396 - INFO - 문서 처리 중: [965/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유독물질의 지정고시.json
+2024-12-09 15:23:30,399 - INFO - 문서 처리 중: [966/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/염색업종 유해화학물질 취급시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,402 - INFO - 문서 처리 중: [967/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질별 구체적인 취급기준에 관한 규정.json
+2024-12-09 15:23:30,411 - INFO - 문서 처리 중: [968/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/표면처리업종 유해화학물질 취급시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,414 - INFO - 문서 처리 중: [969/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학물질안전원 온라인 교육 운영 규정.json
+2024-12-09 15:23:30,414 - INFO - 문서 처리 중: [970/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/화학사고 안전관리계획서 작성에 관한 규정.json
+2024-12-09 15:23:30,415 - INFO - 문서 처리 중: [971/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 취급시설 외벽으로부터 보호대상까지의 안전거리 고시.json
+2024-12-09 15:23:30,416 - INFO - 문서 처리 중: [972/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 제조·사용시설 설치 및 관리에 관한 고시.json
+2024-12-09 15:23:30,417 - INFO - 문서 처리 중: [973/1357] /home/ubuntu-lynn/law_contents/화학물질관리법/유해화학물질 안전교육 전문기관 지정 및 운영 등에 관한 규정.json
+2024-12-09 15:23:30,418 - INFO - 문서 처리 중: [974/1357] /home/ubuntu-lynn/law_contents/건축법/오피스텔 건축기준.json
+2024-12-09 15:23:30,419 - INFO - 문서 처리 중: [975/1357] /home/ubuntu-lynn/law_contents/건축법/리모델링이 용이한 공동주택 기준.json
+2024-12-09 15:23:30,419 - INFO - 문서 처리 중: [976/1357] /home/ubuntu-lynn/law_contents/건축법/건축공사 표준계약서.json
+2024-12-09 15:23:30,420 - INFO - 문서 처리 중: [977/1357] /home/ubuntu-lynn/law_contents/건축법/다중생활시설 건축기준.json
+2024-12-09 15:23:30,420 - INFO - 문서 처리 중: [978/1357] /home/ubuntu-lynn/law_contents/건축법/건축 화재안전 모니터링 전문기관 지정.json
+2024-12-09 15:23:30,421 - INFO - 문서 처리 중: [979/1357] /home/ubuntu-lynn/law_contents/건축법/건축물의 구조기준 등에 관한 규칙.json
+2024-12-09 15:23:30,425 - INFO - 문서 처리 중: [980/1357] /home/ubuntu-lynn/law_contents/건축법/건축물대장의 기재 및 관리 등에 관한 규칙.json
+2024-12-09 15:23:30,431 - INFO - 문서 처리 중: [981/1357] /home/ubuntu-lynn/law_contents/건축법/건축자재등 품질인정 및 관리기준.json
+2024-12-09 15:23:30,433 - INFO - 문서 처리 중: [982/1357] /home/ubuntu-lynn/law_contents/건축법/건축행정시스템 운영규정.json
+2024-12-09 15:23:30,433 - INFO - 문서 처리 중: [983/1357] /home/ubuntu-lynn/law_contents/건축법/건축구조기준.json
+2024-12-09 15:23:30,434 - INFO - 문서 처리 중: [984/1357] /home/ubuntu-lynn/law_contents/건축법/건축공사 감리세부기준.json
+2024-12-09 15:23:30,443 - INFO - 문서 처리 중: [985/1357] /home/ubuntu-lynn/law_contents/건축법/건축위원회 심의 기준.json
+2024-12-09 15:23:30,444 - INFO - 문서 처리 중: [986/1357] /home/ubuntu-lynn/law_contents/건축법/건축법 시행령.json
+2024-12-09 15:23:30,463 - INFO - 문서 처리 중: [987/1357] /home/ubuntu-lynn/law_contents/건축법/건축물의 냉방설비에 대한 설치 및 설계기준.json
+2024-12-09 15:23:30,464 - INFO - 문서 처리 중: [988/1357] /home/ubuntu-lynn/law_contents/건축법/지능형건축물의 인증에 관한 규칙.json
+2024-12-09 15:23:30,466 - INFO - 문서 처리 중: [989/1357] /home/ubuntu-lynn/law_contents/건축법/건축구조안전 모니터링 전문기관 지정.json
+2024-12-09 15:23:30,466 - INFO - 문서 처리 중: [990/1357] /home/ubuntu-lynn/law_contents/건축법/방송 공동수신설비의 설치기준에 관한 고시.json
+2024-12-09 15:23:30,467 - INFO - 문서 처리 중: [991/1357] /home/ubuntu-lynn/law_contents/건축법/지하공간 침수 방지를 위한 수방기준.json
+2024-12-09 15:23:30,467 - INFO - 문서 처리 중: [992/1357] /home/ubuntu-lynn/law_contents/건축법/건축물의 공사감리 표준계약서.json
+2024-12-09 15:23:30,469 - INFO - 문서 처리 중: [993/1357] /home/ubuntu-lynn/law_contents/건축법/범죄예방 건축기준 고시.json
+2024-12-09 15:23:30,470 - INFO - 문서 처리 중: [994/1357] /home/ubuntu-lynn/law_contents/건축법/건축자재등 품질인정의 시험·검사 등에 드는 비용.json
+2024-12-09 15:23:30,470 - INFO - 문서 처리 중: [995/1357] /home/ubuntu-lynn/law_contents/건축법/건축물 면적, 높이 등 세부 산정기준.json
+2024-12-09 15:23:30,471 - INFO - 문서 처리 중: [996/1357] /home/ubuntu-lynn/law_contents/건축법/생활숙박시설 건축기준.json
+2024-12-09 15:23:30,471 - INFO - 문서 처리 중: [997/1357] /home/ubuntu-lynn/law_contents/건축법/건축물의 설비기준 등에 관한 규칙.json
+2024-12-09 15:23:30,474 - INFO - 문서 처리 중: [998/1357] /home/ubuntu-lynn/law_contents/건축법/건축물의 설계도서 작성기준.json
+2024-12-09 15:23:30,475 - INFO - 문서 처리 중: [999/1357] /home/ubuntu-lynn/law_contents/건축법/건축물의 에너지절약설계기준.json
+2024-12-09 15:23:30,477 - INFO - 문서 처리 중: [1000/1357] /home/ubuntu-lynn/law_contents/건축법/표준설계도서 등의 운영에 관한 규칙.json
+2024-12-09 15:23:30,479 - INFO - 문서 처리 중: [1001/1357] /home/ubuntu-lynn/law_contents/건축법/건축물 안전영향평가 세부기준.json
+2024-12-09 15:23:30,479 - INFO - 문서 처리 중: [1002/1357] /home/ubuntu-lynn/law_contents/건축법/건축물의 설계표준계약서.json
+2024-12-09 15:23:30,480 - INFO - 문서 처리 중: [1003/1357] /home/ubuntu-lynn/law_contents/건축법/기숙사 건축기준.json
+2024-12-09 15:23:30,481 - INFO - 문서 처리 중: [1004/1357] /home/ubuntu-lynn/law_contents/건축법/물막이설비 설치 기술기준.json
+2024-12-09 15:23:30,481 - INFO - 문서 처리 중: [1005/1357] /home/ubuntu-lynn/law_contents/건축법/특수구조 건축물 대상기준.json
+2024-12-09 15:23:30,482 - INFO - 문서 처리 중: [1006/1357] /home/ubuntu-lynn/law_contents/건축법/소음방지를 위한 층간 바닥충격음 차단 구조기준.json
+2024-12-09 15:23:30,482 - INFO - 문서 처리 중: [1007/1357] /home/ubuntu-lynn/law_contents/건축법/발코니 등의 구조변경절차 및 설치기준.json
+2024-12-09 15:23:30,483 - INFO - 문서 처리 중: [1008/1357] /home/ubuntu-lynn/law_contents/건축법/건축법.json
+2024-12-09 15:23:30,494 - INFO - 문서 처리 중: [1009/1357] /home/ubuntu-lynn/law_contents/건축법/벽체의 차음구조 인정 및 관리기준.json
+2024-12-09 15:23:30,496 - INFO - 문서 처리 중: [1010/1357] /home/ubuntu-lynn/law_contents/건축법/엔지니어링사업대가의 기준.json
+2024-12-09 15:23:30,497 - INFO - 문서 처리 중: [1011/1357] /home/ubuntu-lynn/law_contents/건축법/건축물의 피난ㆍ방화구조 등의 기준에 관한 규칙.json
+2024-12-09 15:23:30,503 - INFO - 문서 처리 중: [1012/1357] /home/ubuntu-lynn/law_contents/건축법/지능형건축물 인증기준.json
+2024-12-09 15:23:30,504 - INFO - 문서 처리 중: [1013/1357] /home/ubuntu-lynn/law_contents/건축법/실내건축의 구조·시공방법 등에 관한 기준.json
+2024-12-09 15:23:30,504 - INFO - 문서 처리 중: [1014/1357] /home/ubuntu-lynn/law_contents/건축법/건축법 시행규칙.json
+2024-12-09 15:23:30,518 - INFO - 문서 처리 중: [1015/1357] /home/ubuntu-lynn/law_contents/건축법/고강도 콘크리트 기둥·보의 내화성능 관리기준.json
+2024-12-09 15:23:30,519 - INFO - 문서 처리 중: [1016/1357] /home/ubuntu-lynn/law_contents/건축법/조경기준.json
+2024-12-09 15:23:30,519 - INFO - 문서 처리 중: [1017/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/화재예방 및 안전관리 실태조사의 방법 및 절차에 관한 규정.json
+2024-12-09 15:23:30,519 - INFO - 문서 처리 중: [1018/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/화재안전취약자에 대한 지원의 방법 및 절차에 관한 규정.json
+2024-12-09 15:23:30,520 - INFO - 문서 처리 중: [1019/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/소방청 소관 법률에 따른 행정처분 및 과태료 부과 세부 기준.json
+2024-12-09 15:23:30,520 - INFO - 문서 처리 중: [1020/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/예방소방업무처리규정.json
+2024-12-09 15:23:30,522 - INFO - 문서 처리 중: [1021/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/소방안전 특별관리시설물의 화재예방안전진단 세부절차 및 평가방법 등에 관한 규정.json
+2024-12-09 15:23:30,529 - INFO - 문서 처리 중: [1022/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/화재의 예방 및 안전관리에 관한 법률.json
+2024-12-09 15:23:30,533 - INFO - 문서 처리 중: [1023/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/화재의 예방 및 안전관리에 관한 법률 시행령.json
+2024-12-09 15:23:30,538 - INFO - 문서 처리 중: [1024/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/엔지니어링사업대가의 기준.json
+2024-12-09 15:23:30,539 - INFO - 문서 처리 중: [1025/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/화재의 예방 및 안전관리에 관한 법률 시행규칙.json
+2024-12-09 15:23:30,546 - INFO - 문서 처리 중: [1026/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/소방안전 관련 교과목·소방안전 관련 학과 및 소방관련 학과 등에 관한 기준.json
+2024-12-09 15:23:30,546 - INFO - 문서 처리 중: [1027/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/화재안전조사에 관한 세부운영규정.json
+2024-12-09 15:23:30,548 - INFO - 문서 처리 중: [1028/1357] /home/ubuntu-lynn/law_contents/화재의 예방 및 안전관리에 관한 법률/화재안전영향평가 운영절차 등에 관한 규정.json
+2024-12-09 15:23:30,548 - INFO - 문서 처리 중: [1029/1357] /home/ubuntu-lynn/law_contents/집합건물의 소유 및 관리에 관한 법률/집합건물의 소유 및 관리에 관한 법률.json
+2024-12-09 15:23:30,553 - INFO - 문서 처리 중: [1030/1357] /home/ubuntu-lynn/law_contents/집합건물의 소유 및 관리에 관한 법률/집합건물의 소유 및 관리에 관한 법률 시행령.json
+2024-12-09 15:23:30,556 - INFO - 문서 처리 중: [1031/1357] /home/ubuntu-lynn/law_contents/집합건물의 소유 및 관리에 관한 법률/집합건물 회계처리기준.json
+2024-12-09 15:23:30,557 - INFO - 문서 처리 중: [1032/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/공기안전매트의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,557 - INFO - 문서 처리 중: [1033/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/중앙소방기술심의위원회 운영에 관한 규정.json
+2024-12-09 15:23:30,558 - INFO - 문서 처리 중: [1034/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화전의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,559 - INFO - 문서 처리 중: [1035/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/특별피난계단의 계단실 및 부속실 제연설비의 화재안전기술기준(NFTC 501A).json
+2024-12-09 15:23:30,559 - INFO - 문서 처리 중: [1036/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/공공기관의 소방안전관리에 관한 규정.json
+2024-12-09 15:23:30,560 - INFO - 문서 처리 중: [1037/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/방수구의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,561 - INFO - 문서 처리 중: [1038/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,562 - INFO - 문서 처리 중: [1039/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상조명등의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,563 - INFO - 문서 처리 중: [1040/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용품의 세부시험시설 기준.json
+2024-12-09 15:23:30,565 - INFO - 문서 처리 중: [1041/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/간이형수신기의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,566 - INFO - 문서 처리 중: [1042/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/화재알림설비의 화재안전성능기준(NFPC 207).json
+2024-12-09 15:23:30,566 - INFO - 문서 처리 중: [1043/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/주거용주방자동소화장치의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,567 - INFO - 문서 처리 중: [1044/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/성능인증의 대상이 되는 소방용품의 품목에 관한 고시.json
+2024-12-09 15:23:30,568 - INFO - 문서 처리 중: [1045/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스·분말자동소화장치의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,568 - INFO - 문서 처리 중: [1046/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/유수제어밸브의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,569 - INFO - 문서 처리 중: [1047/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방호스의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,569 - INFO - 문서 처리 중: [1048/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/과압배출구의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,570 - INFO - 문서 처리 중: [1049/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/고체에어로졸소화설비의 화재안전성능기준(NFPC 110).json
+2024-12-09 15:23:30,570 - INFO - 문서 처리 중: [1050/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방호스의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,571 - INFO - 문서 처리 중: [1051/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화약제의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,572 - INFO - 문서 처리 중: [1052/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용스트레이너의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,573 - INFO - 문서 처리 중: [1053/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/제연설비의 화재안전기술기준(NFTC 501).json
+2024-12-09 15:23:30,573 - INFO - 문서 처리 중: [1054/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/연결살수설비의 화재안전기술기준(NFTC 503).json
+2024-12-09 15:23:30,573 - INFO - 문서 처리 중: [1055/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/유도등의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,574 - INFO - 문서 처리 중: [1056/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방전원공급장치의 성능인증 및 제품검사 기술기준.json
+2024-12-09 15:23:30,574 - INFO - 문서 처리 중: [1057/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/투척용소화용구의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,575 - INFO - 문서 처리 중: [1058/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상조명등의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,575 - INFO - 문서 처리 중: [1059/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/중계기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,576 - INFO - 문서 처리 중: [1060/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/누전경보기의 화재안전기술기준(NFTC 205).json
+2024-12-09 15:23:30,576 - INFO - 문서 처리 중: [1061/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상경보설비 및 단독경보형감지기의 화재안전기술기준(NFTC 201).json
+2024-12-09 15:23:30,576 - INFO - 문서 처리 중: [1062/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/유량측정장치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,577 - INFO - 문서 처리 중: [1063/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/화재조기진압용 스프링클러설비의 화재안전성능기준(NFPC 103B).json
+2024-12-09 15:23:30,577 - INFO - 문서 처리 중: [1064/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/피난기구의 화재안전성능기준(NFPC 301).json
+2024-12-09 15:23:30,578 - INFO - 문서 처리 중: [1065/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상조명등의 화재안전기술기준(NFTC 304).json
+2024-12-09 15:23:30,578 - INFO - 문서 처리 중: [1066/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동화재탐지설비 및 시각경보장치의 화재안전성능기준(NFPC 203).json
+2024-12-09 15:23:30,579 - INFO - 문서 처리 중: [1067/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설등 표준자체점검비 산정기준 및 공표방법 등에 관한 고시.json
+2024-12-09 15:23:30,579 - INFO - 문서 처리 중: [1068/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용품의 제품검사 전문기관 지정 등에 관한 규정.json
+2024-12-09 15:23:30,580 - INFO - 문서 처리 중: [1069/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/호스릴이산화탄소소화장치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,580 - INFO - 문서 처리 중: [1070/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/경종의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,581 - INFO - 문서 처리 중: [1071/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/옥외소화전설비의 화재안전성능기준(NFPC 109).json
+2024-12-09 15:23:30,581 - INFO - 문서 처리 중: [1072/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상방송설비의 화재안전기술기준(NFTC 202).json
+2024-12-09 15:23:30,582 - INFO - 문서 처리 중: [1073/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/제연설비의 화재안전성능기준(NFPC 501).json
+2024-12-09 15:23:30,582 - INFO - 문서 처리 중: [1074/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/피난사다리의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,583 - INFO - 문서 처리 중: [1075/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용품의 형식승인 등에 관한 수수료 산출규정.json
+2024-12-09 15:23:30,585 - INFO - 문서 처리 중: [1076/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/예비전원의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,586 - INFO - 문서 처리 중: [1077/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상방송설비의 화재안전성능기준(NFPC202).json
+2024-12-09 15:23:30,586 - INFO - 문서 처리 중: [1078/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동화재속보설비의 화재안전기술기준(NFTC 204).json
+2024-12-09 15:23:30,587 - INFO - 문서 처리 중: [1079/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/플랩댐퍼의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,587 - INFO - 문서 처리 중: [1080/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/간이소화장치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,588 - INFO - 문서 처리 중: [1081/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상콘센트설비의 화재안전성능기준(NFPC 504).json
+2024-12-09 15:23:30,588 - INFO - 문서 처리 중: [1082/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/지하구의 화재안전기술기준(NFTC 605).json
+2024-12-09 15:23:30,588 - INFO - 문서 처리 중: [1083/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/상수도소화용수설비의 화재안전기술기준(NFTC 401).json
+2024-12-09 15:23:30,589 - INFO - 문서 처리 중: [1084/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/고층건축물의 화재안전기술기준(NFTC 604).json
+2024-12-09 15:23:30,589 - INFO - 문서 처리 중: [1085/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/고체에어로졸소화설비의 화재안전기술기준(NFTC 110).json
+2024-12-09 15:23:30,589 - INFO - 문서 처리 중: [1086/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/주거용주방자동소화장치의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,589 - INFO - 문서 처리 중: [1087/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/피난유도선 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,590 - INFO - 문서 처리 중: [1088/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/옥내소화전설비의 화재안전성능기준(NFPC 102).json
+2024-12-09 15:23:30,590 - INFO - 문서 처리 중: [1089/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용품의 품질관리 등에 관한 규칙.json
+2024-12-09 15:23:30,598 - INFO - 문서 처리 중: [1090/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동화재탐지설비 및 시각경보장치의 화재안전기술기준(NFTC 203).json
+2024-12-09 15:23:30,599 - INFO - 문서 처리 중: [1091/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스계소화설비용 수동식 기동장치의 성능인증 및 제품검사 기술기준.json
+2024-12-09 15:23:30,599 - INFO - 문서 처리 중: [1092/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스·분말자동소화장치의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,600 - INFO - 문서 처리 중: [1093/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/방염제의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,601 - INFO - 문서 처리 중: [1094/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/지시압력계의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,601 - INFO - 문서 처리 중: [1095/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스누설경보기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,602 - INFO - 문서 처리 중: [1096/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화기구 및 자동소화장치의 화재안전성능기준(NFPC 101).json
+2024-12-09 15:23:30,602 - INFO - 문서 처리 중: [1097/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/연결살수설비의 화재안전성능기준(NFPC 503).json
+2024-12-09 15:23:30,603 - INFO - 문서 처리 중: [1098/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/스프링클러설비신축배관의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,603 - INFO - 문서 처리 중: [1099/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/방염제의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,604 - INFO - 문서 처리 중: [1100/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용합성수지배관의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,605 - INFO - 문서 처리 중: [1101/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동차압급기댐퍼의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,605 - INFO - 문서 처리 중: [1102/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/방화포의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,606 - INFO - 문서 처리 중: [1103/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/송수구의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,606 - INFO - 문서 처리 중: [1104/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/상업용주방자동소화장치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,607 - INFO - 문서 처리 중: [1105/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설 자체점검사항 등에 관한 고시.json
+2024-12-09 15:23:30,616 - INFO - 문서 처리 중: [1106/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/감지기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,617 - INFO - 문서 처리 중: [1107/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용 행가의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,617 - INFO - 문서 처리 중: [1108/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/도로터널의 화재안전기술기준(NFTC 603).json
+2024-12-09 15:23:30,618 - INFO - 문서 처리 중: [1109/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/미분무소화설비의 화재안전성능기준(NFPC 104A).json
+2024-12-09 15:23:30,618 - INFO - 문서 처리 중: [1110/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상경보설비 및 단독경보형감지기의 화재안전성능기준(NFPC 201).json
+2024-12-09 15:23:30,619 - INFO - 문서 처리 중: [1111/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/공기호흡기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,619 - INFO - 문서 처리 중: [1112/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/연결송수관설비의 화재안전기술기준(NFTC 502).json
+2024-12-09 15:23:30,619 - INFO - 문서 처리 중: [1113/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/할로겐화합물 및 불활성기체소화설비의 화재안전성능기준(NFPC 107A).json
+2024-12-09 15:23:30,620 - INFO - 문서 처리 중: [1114/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설의 내진설계 기준.json
+2024-12-09 15:23:30,620 - INFO - 문서 처리 중: [1115/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/유도등의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,621 - INFO - 문서 처리 중: [1116/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/완강기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,621 - INFO - 문서 처리 중: [1117/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/시각경보장치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,622 - INFO - 문서 처리 중: [1118/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/전기저장시설의 화재안전성능기준(NFPC 607).json
+2024-12-09 15:23:30,623 - INFO - 문서 처리 중: [1119/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/관창의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,623 - INFO - 문서 처리 중: [1120/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/공동주택의 화재안전기술기준(NFTC 608).json
+2024-12-09 15:23:30,624 - INFO - 문서 처리 중: [1121/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방실무경력 인정범위에 관한 기준 고시.json
+2024-12-09 15:23:30,624 - INFO - 문서 처리 중: [1122/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/분말소화설비의 화재안전기술기준(NFTC 108).json
+2024-12-09 15:23:30,624 - INFO - 문서 처리 중: [1123/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상콘센트설비의 화재안전기술기준(NFTC 504).json
+2024-12-09 15:23:30,625 - INFO - 문서 처리 중: [1124/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화설비용헤드의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,625 - INFO - 문서 처리 중: [1125/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/할론소화설비의 화재안전기술기준(NFTC 107).json
+2024-12-09 15:23:30,626 - INFO - 문서 처리 중: [1126/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/공기호흡기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,626 - INFO - 문서 처리 중: [1127/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/캐비닛형자동소화장치의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,627 - INFO - 문서 처리 중: [1128/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/누전경보기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,627 - INFO - 문서 처리 중: [1129/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/인명구조기구의 화재안전기술기준(NFTC 302).json
+2024-12-09 15:23:30,628 - INFO - 문서 처리 중: [1130/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/창고시설의 화재안전기술기준(NFTC 609).json
+2024-12-09 15:23:30,628 - INFO - 문서 처리 중: [1131/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/공동주택의 화재안전성능기준(NFPC 608).json
+2024-12-09 15:23:30,628 - INFO - 문서 처리 중: [1132/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/도로터널의 화재안전성능기준(NFPC 603).json
+2024-12-09 15:23:30,629 - INFO - 문서 처리 중: [1133/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/포소화설비의 화재안전기술기준(NFTC 105).json
+2024-12-09 15:23:30,629 - INFO - 문서 처리 중: [1134/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/방열복의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,630 - INFO - 문서 처리 중: [1135/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스관선택밸브의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,630 - INFO - 문서 처리 중: [1136/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용 압력스위치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,631 - INFO - 문서 처리 중: [1137/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/축광표지의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,631 - INFO - 문서 처리 중: [1138/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/간이스프링클러설비의 화재안전기술기준(NFTC 103A).json
+2024-12-09 15:23:30,631 - INFO - 문서 처리 중: [1139/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/방염성능기준.json
+2024-12-09 15:23:30,632 - INFO - 문서 처리 중: [1140/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/이산화탄소소화설비의 화재안전성능기준(NFPC 106).json
+2024-12-09 15:23:30,633 - INFO - 문서 처리 중: [1141/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/다수인피난장비의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,633 - INFO - 문서 처리 중: [1142/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상조명등의 화재안전성능기준(NFPC 304).json
+2024-12-09 15:23:30,633 - INFO - 문서 처리 중: [1143/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/건설현장의 화재안전성능기준(NFPC 606).json
+2024-12-09 15:23:30,634 - INFO - 문서 처리 중: [1144/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/피난기구의 화재안전기술기준(NFTC 301).json
+2024-12-09 15:23:30,634 - INFO - 문서 처리 중: [1145/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동확산소화기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,635 - INFO - 문서 처리 중: [1146/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동화재속보설비의 화재안전성능기준(NFPC 204).json
+2024-12-09 15:23:30,635 - INFO - 문서 처리 중: [1147/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설 설치 및 관리에 관한 법률 시행령.json
+2024-12-09 15:23:30,640 - INFO - 문서 처리 중: [1148/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용밸브의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,641 - INFO - 문서 처리 중: [1149/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방청 소관 법률에 따른 행정처분 및 과태료 부과 세부 기준.json
+2024-12-09 15:23:30,642 - INFO - 문서 처리 중: [1150/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/스프링클러헤드의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,642 - INFO - 문서 처리 중: [1151/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용품의 품질제품검사 운영에 관한 규정.json
+2024-12-09 15:23:30,643 - INFO - 문서 처리 중: [1152/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설관리업 점검능력 평가 등 업무위탁 및 수탁기관 지정 고시.json
+2024-12-09 15:23:30,644 - INFO - 문서 처리 중: [1153/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/옥내소화전설비의 화재안전기술기준(NFTC 102).json
+2024-12-09 15:23:30,644 - INFO - 문서 처리 중: [1154/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/표시등의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,644 - INFO - 문서 처리 중: [1155/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/에어로졸식소화용구의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,645 - INFO - 문서 처리 중: [1156/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/완강기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,645 - INFO - 문서 처리 중: [1157/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용 흡수관의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,646 - INFO - 문서 처리 중: [1158/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/휴대용비상조명등의 성능인증 및 제품검사 기술기준.json
+2024-12-09 15:23:30,646 - INFO - 문서 처리 중: [1159/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/창고시설의 화재안전성능기준(NFPC 609).json
+2024-12-09 15:23:30,647 - INFO - 문서 처리 중: [1160/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/누전경보기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,647 - INFO - 문서 처리 중: [1161/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/수신기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,648 - INFO - 문서 처리 중: [1162/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/건설현장의 화재안전기술기준(NFTC 606).json
+2024-12-09 15:23:30,648 - INFO - 문서 처리 중: [1163/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,648 - INFO - 문서 처리 중: [1164/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/예방소방업무처리규정.json
+2024-12-09 15:23:30,650 - INFO - 문서 처리 중: [1165/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/수신기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,651 - INFO - 문서 처리 중: [1166/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/포소화약제혼합장치등의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,651 - INFO - 문서 처리 중: [1167/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설용 비상전원수전설비의 화재안전기술기준(NFTC 602).json
+2024-12-09 15:23:30,651 - INFO - 문서 처리 중: [1168/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/관창의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,653 - INFO - 문서 처리 중: [1169/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동폐쇄장치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,654 - INFO - 문서 처리 중: [1170/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/송수구의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,654 - INFO - 문서 처리 중: [1171/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/할로겐화합물 및 불활성기체소화설비의 화재안전기술기준(NFTC 107A).json
+2024-12-09 15:23:30,655 - INFO - 문서 처리 중: [1172/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/투척용소화용구의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,655 - INFO - 문서 처리 중: [1173/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용품의 우수품질인증에 관한 업무처리규정.json
+2024-12-09 15:23:30,656 - INFO - 문서 처리 중: [1174/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/지하구의 화재안전성능기준(NFPC 605).json
+2024-12-09 15:23:30,656 - INFO - 문서 처리 중: [1175/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/전기저장시설의 화재안전기술기준(NFTC 607).json
+2024-12-09 15:23:30,657 - INFO - 문서 처리 중: [1176/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/유도등 및 유도표지의 화재안전성능기준(NFPC 303).json
+2024-12-09 15:23:30,657 - INFO - 문서 처리 중: [1177/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/발신기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,658 - INFO - 문서 처리 중: [1178/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/국립소방연구원 화재안전기술기준 운영규정.json
+2024-12-09 15:23:30,659 - INFO - 문서 처리 중: [1179/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/구조대의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,659 - INFO - 문서 처리 중: [1180/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화기가압용가스용기의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,660 - INFO - 문서 처리 중: [1181/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설 폐쇄·차단 시 행동요령 등에 관한 고시.json
+2024-12-09 15:23:30,660 - INFO - 문서 처리 중: [1182/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/상수도소화용수설비의 화재안전성능기준(NFPC 401).json
+2024-12-09 15:23:30,661 - INFO - 문서 처리 중: [1183/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/할론소화설비의 화재안전성능기준(NFPC 107).json
+2024-12-09 15:23:30,661 - INFO - 문서 처리 중: [1184/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/인명구조기구의 화재안전성능기준(NFPC 302).json
+2024-12-09 15:23:30,661 - INFO - 문서 처리 중: [1185/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/졸음쉼터 설치 및 관리지침.json
+2024-12-09 15:23:30,662 - INFO - 문서 처리 중: [1186/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화전함의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,663 - INFO - 문서 처리 중: [1187/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스누설경보기의 화재안전기술기준(NFTC 206).json
+2024-12-09 15:23:30,663 - INFO - 문서 처리 중: [1188/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/누전경보기의 화재안전성능기준(NFPC 205).json
+2024-12-09 15:23:30,663 - INFO - 문서 처리 중: [1189/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/분말소화설비의 화재안전성능기준(NFPC 108).json
+2024-12-09 15:23:30,664 - INFO - 문서 처리 중: [1190/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/구조대의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,664 - INFO - 문서 처리 중: [1191/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/미분무소화설비의 화재안전기술기준(NFTC 104A).json
+2024-12-09 15:23:30,664 - INFO - 문서 처리 중: [1192/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/감지기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,665 - INFO - 문서 처리 중: [1193/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/우수소방대상물 선정 및 포상 등에 관한 운영 규정.json
+2024-12-09 15:23:30,665 - INFO - 문서 처리 중: [1194/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/탐지부의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,666 - INFO - 문서 처리 중: [1195/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화전의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,667 - INFO - 문서 처리 중: [1196/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/이산화탄소소화설비의 화재안전기술기준(NFTC 106).json
+2024-12-09 15:23:30,667 - INFO - 문서 처리 중: [1197/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/분기배관의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,668 - INFO - 문서 처리 중: [1198/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동화재속보설비의 속보기의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,669 - INFO - 문서 처리 중: [1199/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상콘센트설비의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,669 - INFO - 문서 처리 중: [1200/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용품의 견품수량 및 수출용합격표시 등에 관한 규정.json
+2024-12-09 15:23:30,670 - INFO - 문서 처리 중: [1201/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설 설치 및 관리에 관한 법률.json
+2024-12-09 15:23:30,675 - INFO - 문서 처리 중: [1202/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/유도등 및 유도표지의 화재안전기술기준(NFTC 303).json
+2024-12-09 15:23:30,675 - INFO - 문서 처리 중: [1203/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화수조 및 저수조의 화재안전성능기준(NFPC 402).json
+2024-12-09 15:23:30,676 - INFO - 문서 처리 중: [1204/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/화재조기진압용 스프링클러설비의 화재안전기술기준(NFTC 103B).json
+2024-12-09 15:23:30,676 - INFO - 문서 처리 중: [1205/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/스프링클러헤드의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,677 - INFO - 문서 처리 중: [1206/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/캐비닛형자동소화장치의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,678 - INFO - 문서 처리 중: [1207/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설 설치 및 관리에 관한 법률 시행규칙.json
+2024-12-09 15:23:30,684 - INFO - 문서 처리 중: [1208/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/에어로졸식 소화용구의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,685 - INFO - 문서 처리 중: [1209/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/캐비닛형 간이스프링클러설비의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,686 - INFO - 문서 처리 중: [1210/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방용전선의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,686 - INFO - 문서 처리 중: [1211/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방시설용 비상전원수전설비의 화재안전성능기준(NFPC 602).json
+2024-12-09 15:23:30,687 - INFO - 문서 처리 중: [1212/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/경종의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,687 - INFO - 문서 처리 중: [1213/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/기동용수압개폐장치의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,688 - INFO - 문서 처리 중: [1214/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/옥외소화전설비의 화재안전기술기준(NFTC 109).json
+2024-12-09 15:23:30,688 - INFO - 문서 처리 중: [1215/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상경보설비의 축전지의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,689 - INFO - 문서 처리 중: [1216/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/흔들림 방지 버팀대의 성능인증 및 제품검사 기술기준.json
+2024-12-09 15:23:30,689 - INFO - 문서 처리 중: [1217/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/승강식피난기의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,690 - INFO - 문서 처리 중: [1218/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/물분무소화설비의 화재안전기술기준(NFTC 104).json
+2024-12-09 15:23:30,690 - INFO - 문서 처리 중: [1219/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/간이스프링클러설비의 화재안전성능기준(NFPC 103A).json
+2024-12-09 15:23:30,690 - INFO - 문서 처리 중: [1220/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화기구 및 자동소화장치의 화재안전기술기준(NFTC 101).json
+2024-12-09 15:23:30,691 - INFO - 문서 처리 중: [1221/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/자동확산소화기의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,691 - INFO - 문서 처리 중: [1222/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/고층건축물의 화재안전성능기준 (NFPC 604).json
+2024-12-09 15:23:30,691 - INFO - 문서 처리 중: [1223/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소공간용 소화용구의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,692 - INFO - 문서 처리 중: [1224/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/중계기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,693 - INFO - 문서 처리 중: [1225/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스계소화설비 설계프로그램의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,693 - INFO - 문서 처리 중: [1226/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/엔지니어링사업대가의 기준.json
+2024-12-09 15:23:30,694 - INFO - 문서 처리 중: [1227/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소방안전 관련 교과목·소방안전 관련 학과 및 소방관련 학과 등에 관한 기준.json
+2024-12-09 15:23:30,695 - INFO - 문서 처리 중: [1228/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스누설경보기의 화재안전성능기준(NFPC 206).json
+2024-12-09 15:23:30,695 - INFO - 문서 처리 중: [1229/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/스프링클러설비의 화재안전성능기준(NFPC 103).json
+2024-12-09 15:23:30,696 - INFO - 문서 처리 중: [1230/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/연결송수관설비의 화재안전성능기준(NFPC 502).json
+2024-12-09 15:23:30,696 - INFO - 문서 처리 중: [1231/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/기동용수압개폐장치의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,697 - INFO - 문서 처리 중: [1232/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/포소화설비의 화재안전성능기준(NFPC 105).json
+2024-12-09 15:23:30,697 - INFO - 문서 처리 중: [1233/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/물분무소화설비의 화재안전성능기준(NFPC 104).json
+2024-12-09 15:23:30,698 - INFO - 문서 처리 중: [1234/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/특별피난계단의 계단실 및 부속실 제연설비의 화재안전성능기준(NFPC 501A).json
+2024-12-09 15:23:30,698 - INFO - 문서 처리 중: [1235/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화약제의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,699 - INFO - 문서 처리 중: [1236/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/비상문자동개폐장치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,699 - INFO - 문서 처리 중: [1237/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/고체에어로졸자동소화장치의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,700 - INFO - 문서 처리 중: [1238/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/무선통신보조설비의 화재안전기술기준(NFTC 505).json
+2024-12-09 15:23:30,700 - INFO - 문서 처리 중: [1239/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/피난사다리의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,701 - INFO - 문서 처리 중: [1240/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/화재알림설비의 화재안전기술기준(NFTC 207).json
+2024-12-09 15:23:30,701 - INFO - 문서 처리 중: [1241/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/유수제어밸브의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,702 - INFO - 문서 처리 중: [1242/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/소화수조 및 저수조의 화재안전기술기준(NFTC 402).json
+2024-12-09 15:23:30,702 - INFO - 문서 처리 중: [1243/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/무선통신보조설비의 화재안전성능기준(NFPC 505).json
+2024-12-09 15:23:30,702 - INFO - 문서 처리 중: [1244/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가압수조식가압송수장치의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,703 - INFO - 문서 처리 중: [1245/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/발신기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,704 - INFO - 문서 처리 중: [1246/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스관선택밸브의 우수품질인증 기술기준.json
+2024-12-09 15:23:30,704 - INFO - 문서 처리 중: [1247/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/고체에어로졸자동소화장치의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,705 - INFO - 문서 처리 중: [1248/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/스프링클러설비의 화재안전기술기준(NFTC 103).json
+2024-12-09 15:23:30,705 - INFO - 문서 처리 중: [1249/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/가스누설경보기의 형식승인 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,706 - INFO - 문서 처리 중: [1250/1357] /home/ubuntu-lynn/law_contents/소방시설 설치 및 관리에 관한 법률/방염제품의 성능인증 및 제품검사의 기술기준.json
+2024-12-09 15:23:30,707 - INFO - 문서 처리 중: [1251/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/주택관리업자 및 사업자 선정지침.json
+2024-12-09 15:23:30,708 - INFO - 문서 처리 중: [1252/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/공동주택관리법 시행규칙.json
+2024-12-09 15:23:30,717 - INFO - 문서 처리 중: [1253/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/공동주택 모범관리단지 및 우수관리단지 선정지침.json
+2024-12-09 15:23:30,718 - INFO - 문서 처리 중: [1254/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/하자심사·분쟁조정위원회 의사·운영에 관한 규칙.json
+2024-12-09 15:23:30,721 - INFO - 문서 처리 중: [1255/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/공동주택 하자의 조사, 보수비용 산정 및 하자판정기준.json
+2024-12-09 15:23:30,722 - INFO - 문서 처리 중: [1256/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/공동주택 회계처리기준.json
+2024-12-09 15:23:30,723 - INFO - 문서 처리 중: [1257/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/하자심사·분쟁조정위원회 조정등의 신청 수수료.json
+2024-12-09 15:23:30,724 - INFO - 문서 처리 중: [1258/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/공동주택관리정보시스템 운영 관리규정.json
+2024-12-09 15:23:30,724 - INFO - 문서 처리 중: [1259/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/공동주택관리법.json
+2024-12-09 15:23:30,733 - INFO - 문서 처리 중: [1260/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/하자관리정보시스템 운영 관리규정.json
+2024-12-09 15:23:30,734 - INFO - 문서 처리 중: [1261/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:30,734 - INFO - 문서 처리 중: [1262/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/중앙 공동주택관리 분쟁 조정신청 수수료 고시.json
+2024-12-09 15:23:30,734 - INFO - 문서 처리 중: [1263/1357] /home/ubuntu-lynn/law_contents/공동주택관리법/공동주택관리법 시행령.json
+2024-12-09 15:23:30,810 - INFO - 문서 처리 중: [1264/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계관리법 시행규칙.json
+2024-12-09 15:23:30,830 - INFO - 문서 처리 중: [1265/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계조종사의 경력관리 방법 및 절차 등에 관한 규정.json
+2024-12-09 15:23:30,831 - INFO - 문서 처리 중: [1266/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계관리업무처리규정.json
+2024-12-09 15:23:30,832 - INFO - 문서 처리 중: [1267/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계 수급조절 시행.json
+2024-12-09 15:23:30,832 - INFO - 문서 처리 중: [1268/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계관리법.json
+2024-12-09 15:23:30,838 - INFO - 문서 처리 중: [1269/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/소형 타워크레인 조종 실기시험에 관한 규정.json
+2024-12-09 15:23:30,839 - INFO - 문서 처리 중: [1270/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계 안전기준 시행세칙.json
+2024-12-09 15:23:30,842 - INFO - 문서 처리 중: [1271/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계관리법 시행령.json
+2024-12-09 15:23:30,847 - INFO - 문서 처리 중: [1272/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/특수건설기계의 지정.json
+2024-12-09 15:23:30,847 - INFO - 문서 처리 중: [1273/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/타워크레인의 구조·규격 및 성능에 관한 기준.json
+2024-12-09 15:23:30,848 - INFO - 문서 처리 중: [1274/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계 부품의 인증에 관한 규정.json
+2024-12-09 15:23:30,848 - INFO - 문서 처리 중: [1275/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/국토교통부 소관 법령의 행정처분 및 과태료의 가중처분에 관한 세부지침.json
+2024-12-09 15:23:30,848 - INFO - 문서 처리 중: [1276/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계 안전기준에 관한 규칙.json
+2024-12-09 15:23:30,863 - INFO - 문서 처리 중: [1277/1357] /home/ubuntu-lynn/law_contents/건설기계관리법/건설기계 제작결함조사요령 등에 관한 규정.json
+2024-12-09 15:23:30,864 - INFO - 문서 처리 중: [1278/1357] /home/ubuntu-lynn/law_contents/하천법/하천기본계획 수립 지침.json
+2024-12-09 15:23:30,865 - INFO - 문서 처리 중: [1279/1357] /home/ubuntu-lynn/law_contents/하천법/보 관리규정.json
+2024-12-09 15:23:30,865 - INFO - 문서 처리 중: [1280/1357] /home/ubuntu-lynn/law_contents/하천법/하천유지유량 산정지침.json
+2024-12-09 15:23:30,866 - INFO - 문서 처리 중: [1281/1357] /home/ubuntu-lynn/law_contents/하천법/환경부장관이 유지·보수하는 국가하천의 시설 및 구간 고시.json
+2024-12-09 15:23:30,866 - INFO - 문서 처리 중: [1282/1357] /home/ubuntu-lynn/law_contents/하천법/하천법 시행규칙.json
+2024-12-09 15:23:30,873 - INFO - 문서 처리 중: [1283/1357] /home/ubuntu-lynn/law_contents/하천법/다기능보 및 아라천·굴포천 운영·유지관리 수탁기관 및 수탁업무 지정.json
+2024-12-09 15:23:30,874 - INFO - 문서 처리 중: [1284/1357] /home/ubuntu-lynn/law_contents/하천법/하천수 사용허가 세부기준.json
+2024-12-09 15:23:30,874 - INFO - 문서 처리 중: [1285/1357] /home/ubuntu-lynn/law_contents/하천법/홍수조절지 및 저류지 관리규정.json
+2024-12-09 15:23:30,875 - INFO - 문서 처리 중: [1286/1357] /home/ubuntu-lynn/law_contents/하천법/하천법.json
+2024-12-09 15:23:30,881 - INFO - 문서 처리 중: [1287/1357] /home/ubuntu-lynn/law_contents/하천법/하천의 구조ㆍ시설 기준에 관한 규칙.json
+2024-12-09 15:23:30,883 - INFO - 문서 처리 중: [1288/1357] /home/ubuntu-lynn/law_contents/하천법/하천점용허가 세부기준.json
+2024-12-09 15:23:30,884 - INFO - 문서 처리 중: [1289/1357] /home/ubuntu-lynn/law_contents/하천법/하천수의 사용 및 관리 등에 관한 규칙.json
+2024-12-09 15:23:30,885 - INFO - 문서 처리 중: [1290/1357] /home/ubuntu-lynn/law_contents/하천법/댐과 보 등의 연계운영규정.json
+2024-12-09 15:23:30,886 - INFO - 문서 처리 중: [1291/1357] /home/ubuntu-lynn/law_contents/하천법/하천법 시행령.json
+2024-12-09 15:23:30,894 - INFO - 문서 처리 중: [1292/1357] /home/ubuntu-lynn/law_contents/하천법/하천의 유지ㆍ보수 및 안전점검에 관한 규칙.json
+2024-12-09 15:23:30,895 - INFO - 문서 처리 중: [1293/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐수처리오니 및 공정오니 발생시설.json
+2024-12-09 15:23:30,896 - INFO - 문서 처리 중: [1294/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물의 재활용 용도 및 방법에 관한 규정.json
+2024-12-09 15:23:30,896 - INFO - 문서 처리 중: [1295/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리시설 검사기관 지정 및 사후관리에 관한 운영 규정.json
+2024-12-09 15:23:30,899 - INFO - 문서 처리 중: [1296/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/에너지 회수효율 측정·산정 방법 및 절차 등에 관한 고시.json
+2024-12-09 15:23:30,901 - INFO - 문서 처리 중: [1297/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리시설의 검사방법에 관한 규정.json
+2024-12-09 15:23:30,904 - INFO - 문서 처리 중: [1298/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/생활폐기물 수집·운반 대행계약을 위한 원가계산 산정방법에 관한 규정.json
+2024-12-09 15:23:30,906 - INFO - 문서 처리 중: [1299/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물 시험·분석 수수료.json
+2024-12-09 15:23:30,907 - INFO - 문서 처리 중: [1300/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물 수집·운반차량 밀폐형 덮개 기준에 관한 고시.json
+2024-12-09 15:23:30,907 - INFO - 문서 처리 중: [1301/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/개성공업지구 폐기물 남한반입 처리 절차 등에 관한 업무처리지침.json
+2024-12-09 15:23:30,908 - INFO - 문서 처리 중: [1302/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/방치폐기물 처리이행보증보험금 산출 등을 위한 폐기물의 종류별 처리단가.json
+2024-12-09 15:23:30,909 - INFO - 문서 처리 중: [1303/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물매립시설 내진설계 기준 등에 관한 고시.json
+2024-12-09 15:23:30,909 - INFO - 문서 처리 중: [1304/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/의료폐기물 전용용기 검사수수료 고시.json
+2024-12-09 15:23:30,910 - INFO - 문서 처리 중: [1305/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/생활계 유해폐기물의 종류.json
+2024-12-09 15:23:30,910 - INFO - 문서 처리 중: [1306/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리시설의 검사수수료.json
+2024-12-09 15:23:30,910 - INFO - 문서 처리 중: [1307/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/전자정보처리프로그램을 이용한 음식물류 폐기물 수수료 산정 등에 관한 고시.json
+2024-12-09 15:23:30,911 - INFO - 문서 처리 중: [1308/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물 전자정보처리 프로그램 운영 및 사용 등에 관한 고시.json
+2024-12-09 15:23:30,912 - INFO - 문서 처리 중: [1309/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/의료기관 일회용기저귀 전용봉투의 구조·규격·품질·표시에 관한 고시.json
+2024-12-09 15:23:30,913 - INFO - 문서 처리 중: [1310/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/사업장폐기물 배출자신고 및 처리계획 확인 업무처리지침.json
+2024-12-09 15:23:30,914 - INFO - 문서 처리 중: [1311/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/재활용환경성평가기관 지정·관리에 관한 업무처리지침.json
+2024-12-09 15:23:30,915 - INFO - 문서 처리 중: [1312/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/재활용환경성평가서 작성 기준 및 방법 등에 관한 규정.json
+2024-12-09 15:23:30,916 - INFO - 문서 처리 중: [1313/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/매립시설의 일일복토재를 인공복토재로 사용하는 경우의 복토두께에 관한 규정.json
+2024-12-09 15:23:30,916 - INFO - 문서 처리 중: [1314/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/지정폐기물 공공처리시설 반입수수료.json
+2024-12-09 15:23:30,916 - INFO - 문서 처리 중: [1315/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/음식물류 폐기물 발생 억제 계획의 수립주기 및 평가방법 등에 관한 지침.json
+2024-12-09 15:23:30,917 - INFO - 문서 처리 중: [1316/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/집단급식소의 1일 평균 총 급식인원 산정기준.json
+2024-12-09 15:23:30,917 - INFO - 문서 처리 중: [1317/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리 현장정보의 전송방법 등에 관한 고시.json
+2024-12-09 15:23:30,918 - INFO - 문서 처리 중: [1318/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리사업 및 폐기물처리시설 설치·운영실태 평가방법 및 절차 등에 관한 규정.json
+2024-12-09 15:23:30,920 - INFO - 문서 처리 중: [1319/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/유기성오니 등을 토지개량제 및 매립시설 복토 용도로의 재활용 방법에 관한 규정.json
+2024-12-09 15:23:30,921 - INFO - 문서 처리 중: [1320/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물 유해특성의 성질 및 해당 기준.json
+2024-12-09 15:23:30,921 - INFO - 문서 처리 중: [1321/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/소각시설의 검사기관 지정.json
+2024-12-09 15:23:30,922 - INFO - 문서 처리 중: [1322/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/재활용환경성평가 수수료 고시.json
+2024-12-09 15:23:30,922 - INFO - 문서 처리 중: [1323/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/축산농가 등 폐석면 배출 시설물 지정.json
+2024-12-09 15:23:30,923 - INFO - 문서 처리 중: [1324/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리업자 등에 대한 영상정보처리기기의 설치·운영 등에 관한 고시.json
+2024-12-09 15:23:30,924 - INFO - 문서 처리 중: [1325/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물관리법 시행령.json
+2024-12-09 15:23:30,930 - INFO - 문서 처리 중: [1326/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물분석전문기관 및 잔류성오염물질 측정분석 전문기관의 평가에 관한 규정.json
+2024-12-09 15:23:30,932 - INFO - 문서 처리 중: [1327/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리 신고업무 처리지침.json
+2024-12-09 15:23:30,933 - INFO - 문서 처리 중: [1328/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/환경오염물질배출시설 등에 관한 통합지도·점검규정.json
+2024-12-09 15:23:30,939 - INFO - 문서 처리 중: [1329/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/재활용이 금지 또는 제한되는 폐기물 지정.json
+2024-12-09 15:23:30,939 - INFO - 문서 처리 중: [1330/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물 유해성 정보자료 작성 수수료 고시.json
+2024-12-09 15:23:30,940 - INFO - 문서 처리 중: [1331/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리업 허가 등에 관한 업무처리지침.json
+2024-12-09 15:23:30,940 - INFO - 문서 처리 중: [1332/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물 적정처리 현장 확인 수수료 고시.json
+2024-12-09 15:23:30,941 - INFO - 문서 처리 중: [1333/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물 재활용시설의 종류에 관한 규정.json
+2024-12-09 15:23:30,941 - INFO - 문서 처리 중: [1334/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/음식물류 폐기물을 바로 매립 처리할 수 있는 지역 지정.json
+2024-12-09 15:23:30,941 - INFO - 문서 처리 중: [1335/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/환경보전협회 교육수수료.json
+2024-12-09 15:23:30,942 - INFO - 문서 처리 중: [1336/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/재활용환경성평가를 위한 절차와 방법 등에 관한 규정.json
+2024-12-09 15:23:30,943 - INFO - 문서 처리 중: [1337/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/무선주파수인식방법을 이용한 의료폐기물의 인계·인수 등에 관한 고시.json
+2024-12-09 15:23:30,943 - INFO - 문서 처리 중: [1338/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물 재활용시설 외의 장소에서의 폐기물 재활용 용도 또는 방법에 관한 규정.json
+2024-12-09 15:23:30,944 - INFO - 문서 처리 중: [1339/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/의료폐기물 전용용기의 구조·규격·품질·표시 및 검사방법에 관한 고시.json
+2024-12-09 15:23:30,944 - INFO - 문서 처리 중: [1340/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물매립시설 사후관리 이행보증금의 비용산출기준 등에 관한 규정.json
+2024-12-09 15:23:30,945 - INFO - 문서 처리 중: [1341/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물적정처리추진센터의 운영 등에 관한 규정.json
+2024-12-09 15:23:30,945 - INFO - 문서 처리 중: [1342/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/수은전용용기 기준에 관한 고시.json
+2024-12-09 15:23:30,946 - INFO - 문서 처리 중: [1343/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/침출수매립시설환원정화설비 설치 및 관리기준.json
+2024-12-09 15:23:30,946 - INFO - 문서 처리 중: [1344/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/재활용환경성평가에 따른 재활용 승인 관련 업무처리지침.json
+2024-12-09 15:23:30,948 - INFO - 문서 처리 중: [1345/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물매립시설 사후관리 대행자 지정 고시.json
+2024-12-09 15:23:30,948 - INFO - 문서 처리 중: [1346/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물관리법 시행규칙.json
+2024-12-09 15:23:30,982 - INFO - 문서 처리 중: [1347/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물관리법.json
+2024-12-09 15:23:30,992 - INFO - 문서 처리 중: [1348/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/화재, 폭발 또는 유독가스 발생우려 폐기물의 종류 등에 관한 고시.json
+2024-12-09 15:23:30,992 - INFO - 문서 처리 중: [1349/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/정제연료유 등의 공급계획서 작성 및 제출방법.json
+2024-12-09 15:23:30,993 - INFO - 문서 처리 중: [1350/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물매립시설 사후관리 업무처리규정.json
+2024-12-09 15:23:30,993 - INFO - 문서 처리 중: [1351/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리시설 설치승인·신고업무 처리지침.json
+2024-12-09 15:23:30,994 - INFO - 문서 처리 중: [1352/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물매립시설 상부를 덮는 시설물 등의 설치 및 관리기준.json
+2024-12-09 15:23:30,995 - INFO - 문서 처리 중: [1353/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/방치폐기물 처리이행보증 업무처리지침.json
+2024-12-09 15:23:30,995 - INFO - 문서 처리 중: [1354/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/생활폐기물 중 특정 품목의 대행에 관한 고시.json
+2024-12-09 15:23:30,996 - INFO - 문서 처리 중: [1355/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/생활계 유해폐기물 처리계획 수립 및 평가 등에 관한 지침.json
+2024-12-09 15:23:30,997 - INFO - 문서 처리 중: [1356/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/유해특성을 확인해야하는 폐기물의 종류 및 발생업종에 관한 규정 고시.json
+2024-12-09 15:23:30,997 - INFO - 문서 처리 중: [1357/1357] /home/ubuntu-lynn/law_contents/폐기물관리법/폐기물처리시설 설치의 환경성조사서에 포함되어야 할 사항.json
+2024-12-09 15:23:30,998 - INFO - 로딩된 문서 수: 1357
+2024-12-09 15:23:43,637 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-12-09 15:23:56,626 - INFO - 문서를 벡터스토어에 성공적으로 추가했습니다.

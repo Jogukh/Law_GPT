@@ -1,2 +1,3 @@
 chroma_vectorstore/chroma.sqlite3
 law_vector/chroma.sqlite3
+.env

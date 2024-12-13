@@ -23,7 +23,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # .env 파일 로드
-load_dotenv()
+dotenv_path = ".env"
+load_dotenv(dotenv_path)
 
 # 환경 변수 로드
 FOLDER_PATH = os.getenv("FOLDER_PATH")
